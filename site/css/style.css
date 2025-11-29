@@ -750,6 +750,18 @@ pre code {
     flex: 0 0 180px;
   }
 
+  /* Project tabs - tablet */
+  .project-tab {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+
+  /* Docs tables - tablet */
+  .docs-table th,
+  .docs-table td {
+    padding: 12px 15px;
+  }
+
   /* Footer - tablet */
   .footer .container {
     gap: 40px;
@@ -866,6 +878,40 @@ pre code {
 
   .bot-detail-buttons .btn-secondary {
     margin-left: 0;
+  }
+
+  /* Project tabs - mobile */
+  .project-tabs {
+    gap: 8px;
+  }
+
+  .project-tab {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+
+  .project-panel .case-study {
+    padding: 25px;
+  }
+
+  /* Docs tables - mobile */
+  .docs-table {
+    font-size: 0.9rem;
+  }
+
+  .docs-table th,
+  .docs-table td {
+    padding: 10px 12px;
+  }
+
+  .docs-table code {
+    font-size: 0.8rem;
+  }
+
+  /* Code blocks - mobile */
+  pre {
+    padding: 15px;
+    font-size: 0.85rem;
   }
 
   /* Footer - mobile: just centered wordmark logo */
