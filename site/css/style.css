@@ -158,13 +158,27 @@ img {
   padding: 12px 28px;
   border-radius: 25px;
   font-weight: 600;
-  transition: background 0.2s, transform 0.2s;
+  border: 2px solid var(--blue);
+  transition: background 0.2s, transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+  cursor: pointer;
 }
 
 .btn:hover {
   background: var(--blue-dark);
+  border-color: var(--blue-dark);
   color: var(--white);
   transform: translateY(-2px);
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(25, 111, 210, 0.3);
+}
+
+.btn:active {
+  background: var(--blue-dark);
+  border-color: var(--blue-dark);
+  transform: translateY(0);
 }
 
 .btn-secondary {
@@ -176,7 +190,20 @@ img {
 
 .btn-secondary:hover {
   background: var(--blue);
+  border-color: var(--blue);
   color: var(--white);
+}
+
+.btn-secondary:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(25, 111, 210, 0.3);
+}
+
+.btn-secondary:active {
+  background: var(--blue-dark);
+  border-color: var(--blue-dark);
+  color: var(--white);
+  transform: translateY(0);
 }
 
 /* Section Dividers */
