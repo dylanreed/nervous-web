@@ -636,7 +636,7 @@ pre code {
 }
 
 .project-panel .case-study {
-  background: var(--white);
+  background: var(--bg-alt);
   border-radius: 10px;
   padding: 40px;
 }
