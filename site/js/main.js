@@ -15,4 +15,30 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
+
+  // FAQ collapsible sections
+  const faqHeaders = document.querySelectorAll('.faq-header');
+  const faqQuestions = document.querySelectorAll('.faq-question');
+
+  // Bot section headers
+  faqHeaders.forEach(header => {
+    header.addEventListener('click', function() {
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      const content = this.nextElementSibling;
+
+      this.setAttribute('aria-expanded', !isExpanded);
+      content.classList.toggle('open');
+    });
+  });
+
+  // Individual questions
+  faqQuestions.forEach(question => {
+    question.addEventListener('click', function() {
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      const answer = this.nextElementSibling;
+
+      this.setAttribute('aria-expanded', !isExpanded);
+      answer.classList.toggle('open');
+    });
+  });
 });
