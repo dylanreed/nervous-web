@@ -422,24 +422,28 @@ img {
 }
 
 .carousel-btn {
-  background: var(--blue);
-  color: var(--white);
+  background: transparent;
   border: none;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  font-size: 1.5rem;
   cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
+  transition: transform 0.2s, opacity 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  padding: 0;
+}
+
+.carousel-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .carousel-btn:hover {
-  background: var(--blue-dark);
-  transform: scale(1.1);
+  transform: scale(1.15);
+  opacity: 0.8;
 }
 
 .carousel-dots {
@@ -1101,9 +1105,8 @@ pre code {
   }
 
   .carousel-btn {
-    width: 32px;
-    height: 32px;
-    font-size: 1.1rem;
+    width: 30px;
+    height: 30px;
   }
 
   /* Docs tables - mobile */
