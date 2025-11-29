@@ -1,0 +1,5 @@
+# Hugo build lock
+.hugo_build.lock
+
+# Generated resource cache
+resources/_gen/
