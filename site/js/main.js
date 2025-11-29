@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
     switchToProject(projectParam);
   }
 
-  // Bot Carousel
+  // Bot Carousel - shows 3 cards at a time
   const carouselTrack = document.querySelector('.carousel-track');
   const carouselCards = document.querySelectorAll('.carousel-card');
   const carouselDotsContainer = document.querySelector('.carousel-dots');
@@ -87,49 +87,48 @@ document.addEventListener('DOMContentLoaded', function() {
   if (carouselTrack && carouselCards.length > 0) {
     let currentIndex = 0;
     let autoRotateInterval;
+    const visibleCount = 3;
+    const totalCards = carouselCards.length;
 
-    // Create dots
-    carouselCards.forEach((_, index) => {
+    // Create dots (one per card position)
+    for (let i = 0; i < totalCards; i++) {
       const dot = document.createElement('button');
       dot.classList.add('carousel-dot');
-      if (index === 0) dot.classList.add('active');
-      dot.setAttribute('aria-label', 'Go to slide ' + (index + 1));
-      dot.addEventListener('click', () => goToSlide(index));
+      if (i < visibleCount) dot.classList.add('active');
+      dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      dot.addEventListener('click', () => goToSlide(i));
       carouselDotsContainer.appendChild(dot);
-    });
+    }
 
     const dots = document.querySelectorAll('.carousel-dot');
 
-    function goToSlide(index) {
-      // Remove active/prev classes from all cards
-      carouselCards.forEach(card => {
-        card.classList.remove('active', 'prev');
-      });
+    function updateVisibleCards() {
+      // Hide all cards first
+      carouselCards.forEach(card => card.classList.remove('visible'));
       dots.forEach(dot => dot.classList.remove('active'));
 
-      // Set previous card for animation
-      if (index > currentIndex) {
-        carouselCards[currentIndex].classList.add('prev');
+      // Show 3 cards starting from currentIndex (wrapping around)
+      for (let i = 0; i < visibleCount; i++) {
+        const cardIndex = (currentIndex + i) % totalCards;
+        carouselCards[cardIndex].classList.add('visible');
+        dots[cardIndex].classList.add('active');
       }
+    }
 
-      currentIndex = index;
-
-      // Activate new card and dot
-      carouselCards[currentIndex].classList.add('active');
-      dots[currentIndex].classList.add('active');
-
-      // Reset auto-rotate timer
+    function goToSlide(index) {
+      currentIndex = index % totalCards;
+      updateVisibleCards();
       resetAutoRotate();
     }
 
     function nextSlide() {
-      const nextIndex = (currentIndex + 1) % carouselCards.length;
-      goToSlide(nextIndex);
+      currentIndex = (currentIndex + 1) % totalCards;
+      updateVisibleCards();
     }
 
     function prevSlide() {
-      const prevIndex = (currentIndex - 1 + carouselCards.length) % carouselCards.length;
-      goToSlide(prevIndex);
+      currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+      updateVisibleCards();
     }
 
     function startAutoRotate() {
@@ -142,8 +141,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Event listeners
-    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
-    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+    if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); resetAutoRotate(); });
+    if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); resetAutoRotate(); });
 
     // Pause on hover
     carouselTrack.addEventListener('mouseenter', () => {
@@ -154,7 +153,8 @@ document.addEventListener('DOMContentLoaded', function() {
       startAutoRotate();
     });
 
-    // Start auto-rotation
+    // Initialize and start
+    updateVisibleCards();
     startAutoRotate();
   }
 });
