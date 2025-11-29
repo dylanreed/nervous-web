@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merch Table Documentation - nervous</title>
+  <meta name="description" content="Complete documentation for Merch Table including commands, permissions, and setup guide.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Merch Table Documentation">
+  <meta property="og:description" content="Complete documentation for Merch Table including commands, permissions, and setup.">
+  <meta property="og:image" content="../images/norris-builder.png">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Merch Table Documentation">
+  <meta name="twitter:description" content="Complete documentation for Merch Table including commands, permissions, and setup.">
+  <meta name="twitter:image" content="../images/norris-builder.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link rel="apple-touch-icon" href="../images/webclip.png">
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <img src="../images/256x256.png" alt="nervous logo">
+        <img src="../images/logo-wordmark.png" alt="nervous" class="logo-wordmark">
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../work.html">Our Work</a></li>
+        <li><a href="../bots.html">Bots</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../podcast.html">Podcast</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+        <li><a href="https://calendly.com/nervous/intro" class="btn">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h1>merch table documentation</h1>
+        <p>Complete guide to commands, permissions, and setup.</p>
+        <div style="margin-top: 20px;">
+          <a href="../merchtable.html" class="btn btn-secondary">Back to Merch Table</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider white-to-gray"></div>
+
+  <!-- Quick Navigation -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2>Quick Navigation</h2>
+      <ul class="feature-list">
+        <li><a href="#setup">Setup Guide</a></li>
+        <li><a href="#commands">Commands Reference</a></li>
+        <li><a href="#permissions">Permissions Guide</a></li>
+        <li><a href="#features">Features</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="section-divider gray-to-white"></div>
+
+  <!-- Setup Guide -->
+  <section class="section" id="setup">
+    <div class="container">
+      <h2>Setup Guide</h2>
+
+      <h3>Step 1: Install the App</h3>
+      <p>Install Merch Table from the Shopify App Store. After installation, you'll see the app dashboard.</p>
+
+      <h3>Step 2: Connect Your Discord Server</h3>
+      <ol class="feature-list" style="list-style: decimal; padding-left: 25px;">
+        <li>On the Dashboard tab, click the "Invite Discord Bot" link</li>
+        <li>Select your Discord server and authorize the bot</li>
+        <li>Copy the Connection Code shown on the dashboard</li>
+        <li>In your Discord server, type <code>/connect</code></li>
+        <li>Enter the connection code when prompted</li>
+        <li>Wait a few seconds - the dashboard will show "Connected"</li>
+      </ol>
+
+      <h3>Step 3: Configure Discord Roles</h3>
+      <ol class="feature-list" style="list-style: decimal; padding-left: 25px;">
+        <li>Go to the Discord Roles tab in Shopify</li>
+        <li>Toggle ON the roles you want to sync (e.g., VIP, Member, Subscriber)</li>
+        <li>Toggle OFF admin/moderator roles you don't want synced</li>
+        <li>Click Save Configuration</li>
+      </ol>
+      <p>When customers link their accounts, these roles become Shopify customer tags (e.g., <code>discord_vip</code>).</p>
+
+      <h3>Step 4: Customers Link Their Accounts</h3>
+      <p>Your community members link their Discord to Shopify by:</p>
+      <ol class="feature-list" style="list-style: decimal; padding-left: 25px;">
+        <li>Running <code>/link_shopify</code> in your Discord server</li>
+        <li>Entering their email address (must match their Shopify account)</li>
+        <li>Clicking the verification link sent to their email</li>
+        <li>Logging into Shopify to complete the link</li>
+      </ol>
+      <p>Their Discord roles are now synced as Shopify customer tags!</p>
+
+      <h3>Step 5: Set Up Role-Based Discounts (Optional)</h3>
+      <ol class="feature-list" style="list-style: decimal; padding-left: 25px;">
+        <li>Go to the Discounts tab</li>
+        <li>Click + Add Discount</li>
+        <li>Select a Discord role tag (e.g., <code>discord_vip</code>)</li>
+        <li>Set the discount type (percentage or fixed amount)</li>
+        <li>Click Create Discount</li>
+      </ol>
+      <p>Customers with that role automatically get the discount at checkout!</p>
+
+      <h3>Step 6: Set Up VIP Products (Optional)</h3>
+      <p>Create an exclusive section for Discord members:</p>
+      <ol class="feature-list" style="list-style: decimal; padding-left: 25px;">
+        <li>Go to the Product Visibility tab</li>
+        <li>Fill in your Discord invite URL, page title, and description</li>
+        <li>Click Save Settings</li>
+        <li>Click + Add Product to add exclusive items</li>
+        <li>Select a product and choose which Discord roles can see it</li>
+        <li>Add the VIP URL to your store's navigation: <code>yourstore.com/apps/merch-table/vip</code></li>
+      </ol>
+
+      <h3>Step 7: Enable Cart Validation (Optional)</h3>
+      <p>Prevent customers without required roles from purchasing VIP products:</p>
+      <ol class="feature-list" style="list-style: decimal; padding-left: 25px;">
+        <li>In Shopify admin, go to Online Store > Themes > Customize</li>
+        <li>Click App embeds in the left sidebar</li>
+        <li>Find "Cart Validation" and toggle it ON</li>
+        <li>Click Save</li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="section-divider white-to-gray"></div>
+
+  <!-- Commands Reference -->
+  <section class="section section-alt" id="commands">
+    <div class="container">
+      <h2>Commands Reference</h2>
+
+      <h3>Admin Commands</h3>
+      <p>These commands require Discord Administrator permission.</p>
+
+      <h4><code>/connect</code></h4>
+      <p>Connect your Discord server to a Shopify store.</p>
+      <ul class="feature-list">
+        <li><code>code</code> (required) - Connection code from Shopify app (format: <code>CONNECT-ABC123</code>)</li>
+      </ul>
+      <p><strong>Usage:</strong></p>
+      <ol class="feature-list" style="list-style: decimal; padding-left: 25px;">
+        <li>Install Merch Table in your Shopify store</li>
+        <li>Copy the connection code from the Shopify admin dashboard</li>
+        <li>Run <code>/connect code:CONNECT-ABC123</code> in your Discord server</li>
+      </ol>
+      <p><strong>Note:</strong> Each Discord server can only connect to one Shopify store.</p>
+
+      <h4><code>/shopify_info</code></h4>
+      <p>View connection information for your server.</p>
+      <p><strong>Displays:</strong></p>
+      <ul class="feature-list">
+        <li>Connected Shopify store domain</li>
+        <li>Total number of linked users</li>
+        <li>New links in the past 24 hours</li>
+        <li>Connection timestamp</li>
+      </ul>
+
+      <h3>User Commands</h3>
+      <p>These commands are available to all server members.</p>
+
+      <h4><code>/link_shopify</code></h4>
+      <p>Link your Discord account to a Shopify customer account.</p>
+      <p><strong>Usage:</strong></p>
+      <ol class="feature-list" style="list-style: decimal; padding-left: 25px;">
+        <li>Run <code>/link_shopify</code></li>
+        <li>Enter the email address associated with your Shopify account in the modal</li>
+        <li>Your Discord roles will automatically sync as Shopify customer tags</li>
+      </ol>
+      <p><strong>Notes:</strong></p>
+      <ul class="feature-list">
+        <li>Rate limited to once every 5 minutes</li>
+        <li>You must have an existing Shopify customer account with the connected store</li>
+        <li>Your current Discord roles are sent to Shopify as tags (e.g., role "VIP" becomes tag <code>discord_vip</code>)</li>
+      </ul>
+
+      <h4><code>/unlink_shopify</code></h4>
+      <p>Remove the link between your Discord and Shopify accounts.</p>
+      <p><strong>What happens:</strong></p>
+      <ul class="feature-list">
+        <li>Your Discord account is unlinked from Shopify</li>
+        <li>Discord role tags are removed from your Shopify customer profile</li>
+        <li>You will lose access to any role-gated products or discounts</li>
+      </ul>
+
+      <h4><code>/shopify_status</code></h4>
+      <p>Check your current link status with Shopify.</p>
+      <p><strong>Displays:</strong></p>
+      <ul class="feature-list">
+        <li>Whether you're linked to a Shopify account</li>
+        <li>Your current Discord roles being tracked</li>
+        <li>Shopify tags that are synced</li>
+        <li>Last sync timestamp</li>
+      </ul>
+
+      <h3>Command Summary</h3>
+      <table class="docs-table">
+        <thead>
+          <tr>
+            <th>Command</th>
+            <th>Permission</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>/connect</code></td>
+            <td>Admin</td>
+            <td>Connect server to Shopify store</td>
+          </tr>
+          <tr>
+            <td><code>/shopify_info</code></td>
+            <td>Admin</td>
+            <td>View server connection info</td>
+          </tr>
+          <tr>
+            <td><code>/link_shopify</code></td>
+            <td>Everyone</td>
+            <td>Link Discord to Shopify account</td>
+          </tr>
+          <tr>
+            <td><code>/unlink_shopify</code></td>
+            <td>Everyone</td>
+            <td>Remove Discord-Shopify link</td>
+          </tr>
+          <tr>
+            <td><code>/shopify_status</code></td>
+            <td>Everyone</td>
+            <td>Check your link status</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="section-divider gray-to-white"></div>
+
+  <!-- Permissions -->
+  <section class="section" id="permissions">
+    <div class="container">
+      <h2>Permissions Guide</h2>
+
+      <h3>Discord Command Permissions</h3>
+      <table class="docs-table">
+        <thead>
+          <tr>
+            <th>User Type</th>
+            <th>Access Level</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Discord Admin</strong></td>
+            <td>Can connect server, view connection info</td>
+          </tr>
+          <tr>
+            <td><strong>Discord Member</strong></td>
+            <td>Can link/unlink account, check status</td>
+          </tr>
+          <tr>
+            <td><strong>Shopify Admin</strong></td>
+            <td>Full dashboard access, customer management</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Shopify Admin Access</h3>
+      <p>The Shopify admin dashboard is protected by Shopify session validation.</p>
+      <p><strong>What admins can do:</strong></p>
+      <ul class="feature-list">
+        <li>Connect/disconnect Discord servers</li>
+        <li>View and manage linked customers</li>
+        <li>Configure role-based discounts</li>
+        <li>Set up product visibility rules</li>
+        <li>Manage VIP section settings</li>
+        <li>Export customer data</li>
+        <li>Force-sync customer tags</li>
+      </ul>
+
+      <h3>Role-Based Features</h3>
+
+      <h4>Discord Role Sync</h4>
+      <p>When a user links their account:</p>
+      <ol class="feature-list" style="list-style: decimal; padding-left: 25px;">
+        <li>Their Discord roles are captured</li>
+        <li>Roles are converted to Shopify tags with <code>discord_</code> prefix</li>
+        <li>Example: Role "VIP Members" becomes tag <code>discord_vip_members</code></li>
+      </ol>
+      <p><strong>Note:</strong> <code>@everyone</code> is always excluded from sync. Admins can exclude additional roles from the Shopify dashboard.</p>
+
+      <h3>Data Isolation</h3>
+      <p>All data is scoped to individual shops:</p>
+      <ul class="feature-list">
+        <li>Discord servers can only connect to one Shopify store</li>
+        <li>Shopify stores can only connect to one Discord server</li>
+        <li>Customer links are isolated per shop</li>
+      </ul>
+
+      <h3>Rate Limiting</h3>
+      <table class="docs-table">
+        <thead>
+          <tr>
+            <th>Action</th>
+            <th>Cooldown</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>/link_shopify</code> command</td>
+            <td>5 minutes per user</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="section-divider white-to-gray"></div>
+
+  <!-- Features -->
+  <section class="section section-alt" id="features">
+    <div class="container">
+      <h2>Features</h2>
+
+      <h3>Role-Based Discounts</h3>
+      <p>Discounts can be configured to automatically apply based on Discord roles:</p>
+      <table class="docs-table">
+        <thead>
+          <tr>
+            <th>Setting</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Role</strong></td>
+            <td>Which Discord role triggers the discount</td>
+          </tr>
+          <tr>
+            <td><strong>Discount Code</strong></td>
+            <td>The Shopify discount to apply</td>
+          </tr>
+          <tr>
+            <td><strong>Auto-Apply</strong></td>
+            <td>Whether to apply automatically at checkout</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Product Visibility</h3>
+      <p>Products can be restricted to users with specific Discord roles:</p>
+      <ul class="feature-list">
+        <li>Uses Shopify product metafields</li>
+        <li>Cart validation checks for required tags</li>
+        <li>Products hidden from users without required role</li>
+      </ul>
+
+      <h3>Troubleshooting</h3>
+
+      <h4>Bot not responding to commands?</h4>
+      <ul class="feature-list">
+        <li>Make sure the bot has been invited and has proper permissions</li>
+        <li>Try <code>/shopify_info</code> to verify the server is connected</li>
+      </ul>
+
+      <h4>Customer's roles not syncing?</h4>
+      <ul class="feature-list">
+        <li>Check that the role is toggled ON in the Discord Roles tab</li>
+        <li>Have the customer run <code>/shopify_status</code> to trigger a sync</li>
+      </ul>
+
+      <h4>VIP page not loading?</h4>
+      <ul class="feature-list">
+        <li>Verify App Proxy is configured correctly in Partner Dashboard</li>
+        <li>Check that the proxy URL is correct</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="section-divider gray-to-white"></div>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Need Help?</h2>
+        <p>Have questions about Merch Table? We're here to help.</p>
+      </div>
+      <div style="text-align: center; margin-top: 30px;">
+        <a href="https://calendly.com/nervous/intro" class="btn">Contact Us</a>
+        <a href="../merchtable.html" class="btn btn-secondary">Back to Merch Table</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider white-to-yellow"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <img src="../images/256x256.png" alt="nervous logo">
+        <img src="../images/logo-wordmark.png" alt="nervous" class="logo-wordmark">
+      </a>
+      <ul class="footer-nav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../work.html">Our Work</a></li>
+        <li><a href="../bots.html">Bots</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../podcast.html">Podcast</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+        <li><a href="https://calendly.com/nervous/intro">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

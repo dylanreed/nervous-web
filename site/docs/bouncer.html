@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bouncer Bot Documentation - nervous</title>
+  <meta name="description" content="Complete documentation for Bouncer Bot including commands, permissions, and setup guide.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Bouncer Bot Documentation">
+  <meta property="og:description" content="Complete documentation for Bouncer Bot including commands, permissions, and setup.">
+  <meta property="og:image" content="../images/norris-security.png">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bouncer Bot Documentation">
+  <meta name="twitter:description" content="Complete documentation for Bouncer Bot including commands, permissions, and setup.">
+  <meta name="twitter:image" content="../images/norris-security.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link rel="apple-touch-icon" href="../images/webclip.png">
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <img src="../images/256x256.png" alt="nervous logo">
+        <img src="../images/logo-wordmark.png" alt="nervous" class="logo-wordmark">
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../work.html">Our Work</a></li>
+        <li><a href="../bots.html">Bots</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../podcast.html">Podcast</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+        <li><a href="https://calendly.com/nervous/intro" class="btn">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h1>bouncer bot documentation</h1>
+        <p>Complete guide to commands, permissions, and setup.</p>
+        <div style="margin-top: 20px;">
+          <a href="../bouncer.html" class="btn btn-secondary">Back to Bouncer Bot</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider white-to-gray"></div>
+
+  <!-- Quick Navigation -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2>Quick Navigation</h2>
+      <ul class="feature-list">
+        <li><a href="#commands">Commands Reference</a></li>
+        <li><a href="#permissions">Permissions Guide</a></li>
+        <li><a href="#setup">Setup Guide</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="section-divider gray-to-white"></div>
+
+  <!-- Commands Reference -->
+  <section class="section" id="commands">
+    <div class="container">
+      <h2>Commands Reference</h2>
+      <p>Bouncer Bot provides 17 slash commands for comprehensive moderation.</p>
+
+      <h3>Timeout Management</h3>
+
+      <h4><code>/timeout</code></h4>
+      <p>Temporarily restrict a user from sending messages or joining voice channels.</p>
+      <ul class="feature-list">
+        <li><code>user</code> (required) - The user to timeout</li>
+        <li><code>duration</code> (required) - How long (e.g., <code>30m</code>, <code>2h</code>, <code>7d</code>, <code>indefinite</code>)</li>
+        <li><code>reason</code> (optional) - Reason for the timeout</li>
+      </ul>
+
+      <h4><code>/untimeout</code></h4>
+      <p>Remove an active timeout from a user.</p>
+      <ul class="feature-list">
+        <li><code>user</code> (required) - The user to untimeout</li>
+        <li><code>reason</code> (optional) - Reason for removing the timeout</li>
+      </ul>
+
+      <h4><code>/timeouts</code></h4>
+      <p>View all currently active timeouts in the server.</p>
+
+      <h3>Quarantine System</h3>
+      <p>Quarantine removes all roles from a user and assigns a quarantine role, effectively isolating them while preserving their original roles for restoration.</p>
+
+      <h4><code>/quarantine</code></h4>
+      <p>Place a user in quarantine.</p>
+      <ul class="feature-list">
+        <li><code>user</code> (required) - The user to quarantine</li>
+        <li><code>duration</code> (optional) - How long (e.g., <code>1h</code>, <code>24h</code>, <code>indefinite</code>)</li>
+        <li><code>reason</code> (optional) - Reason for quarantine</li>
+      </ul>
+
+      <h4><code>/unquarantine</code></h4>
+      <p>Remove a user from quarantine and restore their original roles.</p>
+      <ul class="feature-list">
+        <li><code>user</code> (required) - The user to unquarantine</li>
+        <li><code>reason</code> (optional) - Reason for release</li>
+      </ul>
+
+      <h4><code>/quarantine-list</code></h4>
+      <p>View all currently quarantined users.</p>
+
+      <h3>Warnings & Infractions</h3>
+
+      <h4><code>/warn</code></h4>
+      <p>Issue a warning to a user. Can be linked to server rules.</p>
+      <ul class="feature-list">
+        <li><code>user</code> (required) - The user to warn</li>
+        <li><code>rule</code> (optional) - Rule number violated</li>
+        <li><code>reason</code> (optional) - Additional notes</li>
+      </ul>
+
+      <h4><code>/reverse</code></h4>
+      <p>Reverse a previous moderation action (warning, timeout, quarantine, etc.).</p>
+      <ul class="feature-list">
+        <li><code>reason</code> (required) - Reason for reversing</li>
+        <li><code>id</code> (optional) - The specific action ID to reverse</li>
+        <li><code>user</code> (optional) - Reverse the last action for this user</li>
+      </ul>
+
+      <h4><code>/modhistory</code></h4>
+      <p>View the moderation history for a user.</p>
+      <ul class="feature-list">
+        <li><code>user</code> (required) - The user to look up</li>
+        <li><code>page</code> (optional) - Page number for pagination</li>
+      </ul>
+
+      <h3>Server Configuration</h3>
+
+      <h4><code>/config quarantine-role</code></h4>
+      <p>Set the role assigned to quarantined users.</p>
+
+      <h4><code>/config log-channel</code></h4>
+      <p>Set the channel for moderation logs.</p>
+
+      <h4><code>/config view</code></h4>
+      <p>View current server configuration.</p>
+
+      <h3>Message Management</h3>
+
+      <h4><code>/wipe</code></h4>
+      <p>Delete messages from a user with optional date filtering.</p>
+      <ul class="feature-list">
+        <li><code>user</code> (required) - The user whose messages to delete</li>
+        <li><code>after</code> (optional) - Only delete messages after this date (YYYY-MM-DD)</li>
+        <li><code>before</code> (optional) - Only delete messages before this date (YYYY-MM-DD)</li>
+      </ul>
+
+      <h3>Server Rules</h3>
+
+      <h4><code>/rules list</code></h4>
+      <p>Display all server rules.</p>
+
+      <h4><code>/rules add</code></h4>
+      <p>Add a new rule.</p>
+      <ul class="feature-list">
+        <li><code>number</code> (required) - Rule number</li>
+        <li><code>text</code> (required) - Rule text</li>
+      </ul>
+
+      <h4><code>/rules remove</code></h4>
+      <p>Remove a rule by number.</p>
+
+      <h3>Preemptive Moderation</h3>
+
+      <h4><code>/preban</code></h4>
+      <p>Ban a user ID before they join the server.</p>
+      <ul class="feature-list">
+        <li><code>user_id</code> (required) - The Discord user ID to preban</li>
+        <li><code>reason</code> (optional) - Reason for the preban</li>
+      </ul>
+
+      <h4><code>/watchlist add</code></h4>
+      <p>Add a user to the watchlist for monitoring.</p>
+
+      <h4><code>/watchlist remove</code></h4>
+      <p>Remove a user from the watchlist.</p>
+
+      <h4><code>/watchlist view</code></h4>
+      <p>View all users on the watchlist.</p>
+
+      <h4><code>/leaveralert channel</code></h4>
+      <p>Set the channel for alerts when watched users leave.</p>
+
+      <h3>Bulk Role Management</h3>
+
+      <h4><code>/bulkrole add</code></h4>
+      <p>Add a role to all members with a specific role.</p>
+      <ul class="feature-list">
+        <li><code>target-role</code> (required) - Role whose members will receive the new role</li>
+        <li><code>role-to-add</code> (required) - Role to add</li>
+      </ul>
+
+      <h4><code>/bulkrole remove</code></h4>
+      <p>Remove a role from all members with a specific role.</p>
+
+      <h4><code>/bulkrole rollback</code></h4>
+      <p>Undo a previous bulk role operation (within 24 hours).</p>
+
+      <h4><code>/bulkrole history</code></h4>
+      <p>View recent bulk role operations.</p>
+
+      <h3>Moderation Reports</h3>
+
+      <h4><code>/modreport</code></h4>
+      <p>Generate moderation activity reports.</p>
+      <ul class="feature-list">
+        <li><code>period</code> (required) - Time period: <code>day</code>, <code>week</code>, <code>month</code>, or <code>all</code></li>
+        <li><code>format</code> (optional) - Output format: <code>embed</code>, <code>csv</code>, or <code>text</code></li>
+      </ul>
+
+      <h3>Duration Formats</h3>
+      <p>When specifying durations, use these formats:</p>
+      <ul class="feature-list">
+        <li><code>30s</code> - 30 seconds</li>
+        <li><code>30m</code> - 30 minutes</li>
+        <li><code>2h</code> - 2 hours</li>
+        <li><code>7d</code> - 7 days</li>
+        <li><code>2w</code> - 2 weeks</li>
+        <li><code>1mo</code> - 1 month</li>
+        <li><code>indefinite</code> - No expiration</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="section-divider white-to-gray"></div>
+
+  <!-- Permissions -->
+  <section class="section section-alt" id="permissions">
+    <div class="container">
+      <h2>Permissions Guide</h2>
+
+      <h3>Quick Reference</h3>
+      <table class="docs-table">
+        <thead>
+          <tr>
+            <th>Permission Level</th>
+            <th>Commands Available</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Moderate Members</strong></td>
+            <td><code>/timeout</code>, <code>/untimeout</code>, <code>/timeouts</code>, <code>/quarantine</code>, <code>/unquarantine</code>, <code>/quarantine-list</code>, <code>/warn</code>, <code>/modhistory</code>, <code>/watchlist</code>, <code>/modreport</code></td>
+          </tr>
+          <tr>
+            <td><strong>Manage Messages</strong></td>
+            <td><code>/wipe</code></td>
+          </tr>
+          <tr>
+            <td><strong>Ban Members</strong></td>
+            <td><code>/preban</code></td>
+          </tr>
+          <tr>
+            <td><strong>Manage Roles</strong></td>
+            <td><code>/bulkrole</code></td>
+          </tr>
+          <tr>
+            <td><strong>Manage Server</strong></td>
+            <td><code>/config</code>, <code>/rules</code>, <code>/reverse</code>, <code>/leaveralert</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Recommended Role Setup</h3>
+
+      <h4>Option 1: Single Moderator Role</h4>
+      <p>Create one role with all permissions for full access to all Bouncer Bot commands:</p>
+      <ul class="feature-list">
+        <li>Moderate Members</li>
+        <li>Manage Messages</li>
+        <li>Ban Members</li>
+        <li>Manage Roles</li>
+        <li>Manage Server</li>
+      </ul>
+
+      <h4>Option 2: Tiered Moderation Team</h4>
+      <p><strong>Junior Moderator:</strong> Moderate Members only</p>
+      <p><strong>Senior Moderator:</strong> Add Manage Messages + Ban Members</p>
+      <p><strong>Admin:</strong> All permissions</p>
+
+      <h3>Bot Permission Requirements</h3>
+      <p>The bot itself needs these permissions:</p>
+      <ul class="feature-list">
+        <li><strong>Moderate Members</strong> - Apply/remove timeouts</li>
+        <li><strong>Manage Roles</strong> - Quarantine system, bulk role operations</li>
+        <li><strong>Ban Members</strong> - Preban functionality</li>
+        <li><strong>Manage Messages</strong> - Message wiping</li>
+        <li><strong>Send Messages</strong> - Respond to commands</li>
+        <li><strong>Embed Links</strong> - Display rich embeds</li>
+        <li><strong>Read Message History</strong> - Message wiping with date filters</li>
+      </ul>
+
+      <h3>Role Hierarchy</h3>
+      <p>The bot's role must be positioned <strong>above</strong> any roles it needs to manage:</p>
+      <pre><code>Server Owner
+  Admin (your admins)
+    Bouncer Bot  ← Bot role here
+      Moderator
+        Quarantined  ← Must be below bot
+          Members
+            @everyone</code></pre>
+    </div>
+  </section>
+
+  <div class="section-divider gray-to-white"></div>
+
+  <!-- Setup -->
+  <section class="section" id="setup">
+    <div class="container">
+      <h2>Setup Guide</h2>
+
+      <h3>Step 1: Invite the Bot</h3>
+      <p>Contact us to get Bouncer Bot added to your server. We'll provide an invite link with the correct permissions.</p>
+
+      <h3>Step 2: Set Up Mod Logging</h3>
+      <p>Create a channel for moderation logs, then run:</p>
+      <pre><code>/config log-channel #mod-logs</code></pre>
+      <p>All moderation actions will now be logged to this channel.</p>
+
+      <h3>Step 3: Set Up Quarantine Role</h3>
+      <p>Create a role called "Quarantined" with minimal permissions:</p>
+      <ol class="feature-list" style="list-style: decimal; padding-left: 25px;">
+        <li>Create the role and place it below the bot's role</li>
+        <li>Remove all channel permissions for this role</li>
+        <li>Consider creating a "quarantine" channel only this role can see</li>
+        <li>Run: <code>/config quarantine-role @Quarantined</code></li>
+      </ol>
+
+      <h3>Step 4: Create Server Rules (Optional)</h3>
+      <p>Define rules that can be referenced in warnings:</p>
+      <pre><code>/rules add number:1 text:Be respectful to all members
+/rules add number:2 text:No spam or self-promotion
+/rules add number:3 text:Keep discussions in appropriate channels</code></pre>
+
+      <h3>Step 5: Set Up Leaver Alerts (Optional)</h3>
+      <p>Get notified when watched users leave:</p>
+      <pre><code>/leaveralert channel #mod-alerts</code></pre>
+
+      <h3>Step 6: Verify Configuration</h3>
+      <p>View your current configuration:</p>
+      <pre><code>/config view</code></pre>
+
+      <h3>Troubleshooting</h3>
+
+      <h4>"I cannot moderate this user"</h4>
+      <ul class="feature-list">
+        <li>The target user has a role equal to or higher than the bot</li>
+        <li>The target is the server owner (cannot be moderated)</li>
+      </ul>
+
+      <h4>"You cannot moderate this user"</h4>
+      <ul class="feature-list">
+        <li>Your role is not high enough to moderate the target user</li>
+        <li>You lack the required Discord permissions</li>
+      </ul>
+
+      <h4>Bot Can't Assign Roles</h4>
+      <ul class="feature-list">
+        <li>Move the bot's role higher in the role hierarchy</li>
+        <li>Ensure the target roles are below the bot's role</li>
+        <li>Check that the bot has Manage Roles permission</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="section-divider white-to-gray"></div>
+
+  <!-- CTA -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Need Help?</h2>
+        <p>Have questions about Bouncer Bot? We're here to help.</p>
+      </div>
+      <div style="text-align: center; margin-top: 30px;">
+        <a href="https://calendly.com/nervous/intro" class="btn">Contact Us</a>
+        <a href="../bouncer.html" class="btn btn-secondary">Back to Bouncer Bot</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider gray-to-yellow"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <img src="../images/256x256.png" alt="nervous logo">
+        <img src="../images/logo-wordmark.png" alt="nervous" class="logo-wordmark">
+      </a>
+      <ul class="footer-nav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../work.html">Our Work</a></li>
+        <li><a href="../bots.html">Bots</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../podcast.html">Podcast</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+        <li><a href="https://calendly.com/nervous/intro">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

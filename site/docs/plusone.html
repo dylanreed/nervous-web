@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plus One Documentation - nervous</title>
+  <meta name="description" content="Complete documentation for Plus One including commands, permissions, and setup guide.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Plus One Documentation">
+  <meta property="og:description" content="Complete documentation for Plus One including commands, permissions, and setup.">
+  <meta property="og:image" content="../images/plus-one.png">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Plus One Documentation">
+  <meta name="twitter:description" content="Complete documentation for Plus One including commands, permissions, and setup.">
+  <meta name="twitter:image" content="../images/plus-one.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  <link rel="apple-touch-icon" href="../images/webclip.png">
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <img src="../images/256x256.png" alt="nervous logo">
+        <img src="../images/logo-wordmark.png" alt="nervous" class="logo-wordmark">
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../work.html">Our Work</a></li>
+        <li><a href="../bots.html">Bots</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../podcast.html">Podcast</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+        <li><a href="https://calendly.com/nervous/intro" class="btn">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h1>plus one documentation</h1>
+        <p>Complete guide to commands, permissions, and setup.</p>
+        <div style="margin-top: 20px;">
+          <a href="../plusone.html" class="btn btn-secondary">Back to Plus One</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider white-to-gray"></div>
+
+  <!-- Quick Navigation -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2>Quick Navigation</h2>
+      <ul class="feature-list">
+        <li><a href="#setup">Setup Guide</a></li>
+        <li><a href="#commands">Commands Reference</a></li>
+        <li><a href="#permissions">Permissions Guide</a></li>
+        <li><a href="#quota-modes">Quota Modes</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="section-divider gray-to-white"></div>
+
+  <!-- Setup Guide -->
+  <section class="section" id="setup">
+    <div class="container">
+      <h2>Setup Guide</h2>
+
+      <h3>Step 1: Invite the Bot</h3>
+      <p>Contact us to get Plus One added to your server. We'll provide an invite link with the correct permissions.</p>
+
+      <h3>Step 2: Set Who Can Create Invites</h3>
+      <p>Define which members can create invites:</p>
+      <pre><code>/plusone config privilege-add type:role value:&lt;role-id&gt;</code></pre>
+      <p>You can add multiple rules for roles, permissions, or specific users.</p>
+
+      <h3>Step 3: Configure Quota Mode</h3>
+      <p>Choose how invite quotas are calculated:</p>
+      <pre><code>/plusone config quota-mode mode:fixed
+/plusone config quota-fixed amount:3</code></pre>
+      <p>See <a href="#quota-modes">Quota Modes</a> for all options.</p>
+
+      <h3>Step 4: Enable Trial Invites (Optional)</h3>
+      <p>Let new members prove themselves with temporary access:</p>
+      <pre><code>/plusone config trial days:7 role:@TrialMember</code></pre>
+
+      <h3>Step 5: Verify Configuration</h3>
+      <p>Check your current settings:</p>
+      <pre><code>/plusone status</code></pre>
+    </div>
+  </section>
+
+  <div class="section-divider white-to-gray"></div>
+
+  <!-- Commands Reference -->
+  <section class="section section-alt" id="commands">
+    <div class="container">
+      <h2>Commands Reference</h2>
+
+      <h3>User Commands</h3>
+      <p>These commands are available to users with invite privileges.</p>
+
+      <h4><code>/invite create</code></h4>
+      <p>Create a new single-use invite link.</p>
+      <ul class="feature-list">
+        <li><code>trial</code> (optional) - If true, creates a trial invite that grants temporary access</li>
+      </ul>
+      <p>The invite link expires after 7 days if unused. Trial invites grant the configured trial role, which is automatically removed after the trial period ends.</p>
+
+      <h4><code>/invite list</code></h4>
+      <p>View your invite history and remaining quota.</p>
+      <p><strong>Shows:</strong></p>
+      <ul class="feature-list">
+        <li>Current quota status</li>
+        <li>Pending invites (created but not yet used)</li>
+        <li>Used invites count</li>
+        <li>Expired invites count</li>
+      </ul>
+
+      <h4><code>/invite revoke</code></h4>
+      <p>Delete an unused invite and restore your quota.</p>
+      <ul class="feature-list">
+        <li><code>code</code> (required) - The invite code to revoke</li>
+      </ul>
+      <p>Only works on invites you created that haven't been used yet.</p>
+
+      <h3>Admin Commands</h3>
+      <p>These commands require the <strong>Manage Server</strong> permission.</p>
+
+      <h4><code>/plusone config quota-mode</code></h4>
+      <p>Set how invite quotas are calculated.</p>
+      <ul class="feature-list">
+        <li><code>mode</code> (required) - One of: <code>fixed</code>, <code>tiered</code>, <code>replenishing</code>, <code>earned</code></li>
+      </ul>
+
+      <h4><code>/plusone config quota-fixed</code></h4>
+      <p>Set the default invite quota (used in fixed mode and as fallback).</p>
+      <ul class="feature-list">
+        <li><code>amount</code> (required) - Number of invites (0-100)</li>
+      </ul>
+
+      <h4><code>/plusone config quota-tier</code></h4>
+      <p>Add or update a role-based quota tier.</p>
+      <ul class="feature-list">
+        <li><code>role</code> (required) - The role to configure</li>
+        <li><code>amount</code> (required) - Number of invites for this role</li>
+        <li><code>priority</code> (optional) - Higher priority wins if user has multiple roles (default: 0)</li>
+      </ul>
+      <p><strong>Example:</strong></p>
+      <pre><code>/plusone config quota-tier role:@Moderator amount:10 priority:5
+/plusone config quota-tier role:@Member amount:3 priority:1</code></pre>
+
+      <h4><code>/plusone config quota-replenish</code></h4>
+      <p>Configure automatic quota restoration (for replenishing mode).</p>
+      <ul class="feature-list">
+        <li><code>amount</code> (required) - Invites to restore per period</li>
+        <li><code>days</code> (required) - Days between restorations</li>
+      </ul>
+      <p><strong>Example:</strong> Grant 1 invite every 30 days:</p>
+      <pre><code>/plusone config quota-replenish amount:1 days:30</code></pre>
+
+      <h4><code>/plusone config trial</code></h4>
+      <p>Configure trial invites.</p>
+      <ul class="feature-list">
+        <li><code>days</code> (required) - Trial duration in days (use 0 to disable)</li>
+        <li><code>role</code> (required when enabling) - Role to grant during trial</li>
+      </ul>
+      <p>When trial expires, the role is removed but the user stays in the server.</p>
+
+      <h4><code>/plusone config privilege-add</code></h4>
+      <p>Define who can create invites.</p>
+      <ul class="feature-list">
+        <li><code>type</code> (required) - Rule type: <code>role</code>, <code>permission</code>, or <code>user</code></li>
+        <li><code>value</code> (required) - Role ID, permission name, or user ID</li>
+        <li><code>quota</code> (optional) - Override quota for this rule</li>
+      </ul>
+      <p><strong>Valid permission values:</strong></p>
+      <ul class="feature-list">
+        <li><code>ADMINISTRATOR</code></li>
+        <li><code>MANAGE_GUILD</code></li>
+        <li><code>MANAGE_ROLES</code></li>
+        <li><code>KICK_MEMBERS</code></li>
+        <li><code>BAN_MEMBERS</code></li>
+        <li><code>MODERATE_MEMBERS</code></li>
+      </ul>
+      <p>If no rules are configured, defaults to allowing users with Manage Server permission.</p>
+
+      <h4><code>/plusone config privilege-remove</code></h4>
+      <p>Remove a privilege rule.</p>
+      <ul class="feature-list">
+        <li><code>rule_id</code> (required) - The rule ID (shown in <code>/plusone status</code>)</li>
+      </ul>
+
+      <h4><code>/plusone grant</code></h4>
+      <p>Manually grant invite quota to a user (earned mode only).</p>
+      <ul class="feature-list">
+        <li><code>user</code> (required) - User to grant quota to</li>
+        <li><code>amount</code> (required) - Number of invites to grant</li>
+      </ul>
+
+      <h4><code>/plusone status</code></h4>
+      <p>Display current bot configuration.</p>
+      <p><strong>Shows:</strong></p>
+      <ul class="feature-list">
+        <li>Quota mode and default quota</li>
+        <li>Replenish rate (if applicable)</li>
+        <li>Trial invite settings</li>
+        <li>Quota tiers</li>
+        <li>Privilege rules</li>
+      </ul>
+
+      <h4><code>/plusone audit</code></h4>
+      <p>View invite usage history.</p>
+      <ul class="feature-list">
+        <li><code>user</code> (optional) - Filter by invite creator</li>
+      </ul>
+      <p>Shows total invites created, used, pending, and expired.</p>
+    </div>
+  </section>
+
+  <div class="section-divider gray-to-white"></div>
+
+  <!-- Permissions -->
+  <section class="section" id="permissions">
+    <div class="container">
+      <h2>Permissions Guide</h2>
+
+      <h3>Bot Permissions</h3>
+      <p>Plus One requires these Discord permissions:</p>
+      <table class="docs-table">
+        <thead>
+          <tr>
+            <th>Permission</th>
+            <th>Why It's Needed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Manage Server</strong></td>
+            <td>Read server invites to track which invite was used when members join</td>
+          </tr>
+          <tr>
+            <td><strong>Manage Roles</strong></td>
+            <td>Add and remove trial roles from members</td>
+          </tr>
+          <tr>
+            <td><strong>Create Instant Invite</strong></td>
+            <td>Generate invite links on behalf of users</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Privileged Intents</h3>
+      <p>The bot requires Server Members Intent to detect when members join/leave.</p>
+
+      <h3>Role Hierarchy</h3>
+      <p>For trial roles to work, the bot's highest role must be <strong>above</strong> the trial role:</p>
+      <pre><code>Bot Role        ← Must be here or higher
+Trial Role      ← The role granted to trial members
+@everyone</code></pre>
+
+      <h3>User Permissions</h3>
+      <table class="docs-table">
+        <thead>
+          <tr>
+            <th>Commands</th>
+            <th>Requirement</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>All <code>/plusone</code> commands</td>
+            <td>Manage Server permission</td>
+          </tr>
+          <tr>
+            <td><code>/invite</code> commands</td>
+            <td>Configurable via privilege rules</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Troubleshooting</h3>
+
+      <h4>"Cannot create trial invites"</h4>
+      <p>The bot cannot manage the trial role. Check:</p>
+      <ul class="feature-list">
+        <li>Bot has Manage Roles permission</li>
+        <li>Bot's highest role is above the trial role</li>
+      </ul>
+
+      <h4>"Failed to create invite"</h4>
+      <p>The bot cannot create invites in this channel. Check:</p>
+      <ul class="feature-list">
+        <li>Bot has Create Instant Invite permission</li>
+        <li>Channel permissions don't override this</li>
+      </ul>
+
+      <h4>Invite tracking not working</h4>
+      <p>The bot cannot read server invites. Check:</p>
+      <ul class="feature-list">
+        <li>Bot has Manage Server permission</li>
+        <li>Privileged intents are enabled</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="section-divider white-to-gray"></div>
+
+  <!-- Quota Modes -->
+  <section class="section section-alt" id="quota-modes">
+    <div class="container">
+      <h2>Quota Modes</h2>
+      <p>Choose how invite quotas are calculated for your server.</p>
+
+      <h3>Fixed Mode</h3>
+      <p>Everyone gets the same number of invites.</p>
+      <pre><code>/plusone config quota-mode mode:fixed
+/plusone config quota-fixed amount:5</code></pre>
+      <p><strong>Best for:</strong> Simple communities where all members are treated equally.</p>
+
+      <h3>Tiered Mode</h3>
+      <p>Different roles get different quota amounts.</p>
+      <pre><code>/plusone config quota-mode mode:tiered
+/plusone config quota-tier role:@Moderator amount:10 priority:5
+/plusone config quota-tier role:@Trusted amount:5 priority:3
+/plusone config quota-tier role:@Member amount:2 priority:1</code></pre>
+      <p><strong>Best for:</strong> Communities that want to reward trusted members with more invite power.</p>
+      <p><strong>Note:</strong> If a user has multiple roles, the highest priority tier is used.</p>
+
+      <h3>Replenishing Mode</h3>
+      <p>Quotas restore automatically over time.</p>
+      <pre><code>/plusone config quota-mode mode:replenishing
+/plusone config quota-fixed amount:3
+/plusone config quota-replenish amount:1 days:30</code></pre>
+      <p>This grants 1 invite every 30 days, up to the maximum of 3.</p>
+      <p><strong>Best for:</strong> Slow, sustainable growth over time.</p>
+
+      <h3>Earned Mode</h3>
+      <p>Admins manually grant invite quota as rewards.</p>
+      <pre><code>/plusone config quota-mode mode:earned
+/plusone grant user:@someone amount:5</code></pre>
+      <p><strong>Best for:</strong> Exclusive communities where invites are special rewards.</p>
+    </div>
+  </section>
+
+  <div class="section-divider gray-to-white"></div>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Need Help?</h2>
+        <p>Have questions about Plus One? We're here to help.</p>
+      </div>
+      <div style="text-align: center; margin-top: 30px;">
+        <a href="https://calendly.com/nervous/intro" class="btn">Contact Us</a>
+        <a href="../plusone.html" class="btn btn-secondary">Back to Plus One</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider white-to-yellow"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <img src="../images/256x256.png" alt="nervous logo">
+        <img src="../images/logo-wordmark.png" alt="nervous" class="logo-wordmark">
+      </a>
+      <ul class="footer-nav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../work.html">Our Work</a></li>
+        <li><a href="../bots.html">Bots</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../podcast.html">Podcast</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+        <li><a href="https://calendly.com/nervous/intro">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
