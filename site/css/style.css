@@ -356,7 +356,8 @@ img {
 
 .card img {
   max-height: 120px;
-  margin-bottom: 15px;
+  margin: 0 auto 15px;
+  display: block;
 }
 
 .card h3 {
