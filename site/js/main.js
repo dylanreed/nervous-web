@@ -41,4 +41,22 @@ document.addEventListener('DOMContentLoaded', function() {
       answer.classList.toggle('open');
     });
   });
+
+  // Project tabs (Our Work page)
+  const projectTabs = document.querySelectorAll('.project-tab');
+  const projectPanels = document.querySelectorAll('.project-panel');
+
+  projectTabs.forEach(tab => {
+    tab.addEventListener('click', function() {
+      const projectId = this.getAttribute('data-project');
+
+      // Remove active class from all tabs and panels
+      projectTabs.forEach(t => t.classList.remove('active'));
+      projectPanels.forEach(p => p.classList.remove('active'));
+
+      // Add active class to clicked tab and corresponding panel
+      this.classList.add('active');
+      document.getElementById('project-' + projectId).classList.add('active');
+    });
+  });
 });

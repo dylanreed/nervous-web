@@ -588,6 +588,58 @@ pre code {
   color: var(--text);
 }
 
+/* Project Tabs (Our Work page) */
+.project-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.project-tab {
+  padding: 12px 24px;
+  background: var(--white);
+  border: 2px solid var(--blue);
+  border-radius: 30px;
+  font-family: 'TT Travels', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--blue);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.project-tab:hover {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.project-tab.active {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.project-panels {
+  position: relative;
+}
+
+.project-panel {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-panel.active {
+  display: block;
+  opacity: 1;
+}
+
+.project-panel .case-study {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 40px;
+}
+
 /* Blog */
 .blog-posts {
   display: grid;
