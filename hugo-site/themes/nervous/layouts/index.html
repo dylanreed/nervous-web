@@ -1,0 +1,93 @@
+{{ define "main" }}
+<!-- Hero Section -->
+<section class="hero section">
+    <div class="container">
+        <h1>{{ .Params.hero.title }}</h1>
+        <img src="{{ .Site.BaseURL }}images/{{ .Params.hero.image }}" alt="Campfire illustration" class="hero-image" />
+        {{ range .Params.hero.text }}
+        <p>{{ . | safeHTML }}</p>
+        {{ end }}
+        <a href="{{ $.Site.Params.calendlyURL }}" class="btn">Contact us</a>
+    </div>
+</section>
+
+{{ partial "section-divider.html" "white-to-gray" }}
+
+<!-- Value Proposition -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header">
+            <h2>{{ .Params.valueProposition.headline | safeHTML }}</h2>
+        </div>
+
+        {{ range .Params.valueProposition.blocks }}
+        <div class="content-block{{ if .reverse }} reverse{{ end }}">
+            <div class="content-block-text">
+                {{ range .text }}
+                <p>{{ . | safeHTML }}</p>
+                {{ end }}
+            </div>
+            <div class="content-block-image">
+                <img src="{{ $.Site.BaseURL }}images/{{ .image }}" alt="{{ .imageAlt }}" loading="lazy" />
+            </div>
+        </div>
+        {{ end }}
+
+        <div style="text-align: center; margin-top: 30px">
+            <a href="{{ $.Site.Params.calendlyURL }}" class="btn">Contact us</a>
+        </div>
+    </div>
+</section>
+
+{{ partial "section-divider.html" "gray-to-white" }}
+
+<!-- Process Steps -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2>{{ .Params.process.headline }}</h2>
+        </div>
+
+        <div class="steps">
+            {{ range .Params.process.steps }}
+            <div class="step">
+                <div class="step-image">
+                    <img src="{{ $.Site.BaseURL }}images/{{ .image }}" alt="{{ .imageAlt }}" loading="lazy" />
+                </div>
+                <div class="step-content">
+                    <h3>{{ .title }}</h3>
+                    <p>{{ .description }}</p>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+
+        <div style="text-align: center; margin-top: 50px">
+            <a href="{{ $.Site.Params.calendlyURL }}" class="btn">Contact us</a>
+        </div>
+    </div>
+</section>
+
+{{ partial "section-divider.html" "white-to-gray" }}
+
+<!-- Our Work Preview -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header">
+            <h2>{{ .Params.work.headline }}</h2>
+            <p>{{ .Params.work.intro }}</p>
+        </div>
+
+        <div class="cards">
+            {{ range .Params.work.items }}
+            <a href="/work/?project={{ .slug }}" class="card">
+                <img src="{{ $.Site.BaseURL }}images/{{ .image }}" alt="{{ .name }}" loading="lazy" />
+                <h3>{{ .name }}</h3>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ partial "section-divider.html" "gray-to-yellow" }}
+{{ end }}

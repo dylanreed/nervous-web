@@ -1,0 +1,16 @@
+{{ define "main" }}
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h1>404</h1>
+            <p>Oops! The page you're looking for doesn't exist.</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="{{ .Site.BaseURL }}" class="btn">Go Home</a>
+        </div>
+    </div>
+</section>
+
+{{ partial "section-divider.html" "white-to-yellow" }}
+{{ end }}

@@ -1,0 +1,16 @@
+<footer class="footer">
+    <div class="container">
+        <a href="{{ .Site.BaseURL }}" class="logo">
+            <img src="{{ .Site.BaseURL }}images/256x256.webp" alt="{{ .Site.Title }} logo" loading="lazy" />
+            <img src="{{ .Site.BaseURL }}images/logo-wordmark.webp" alt="{{ .Site.Title }}" class="logo-wordmark" loading="lazy" />
+        </a>
+        <ul class="footer-nav">
+            {{ range .Site.Menus.main }}
+            <li><a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }}><strong>{{ .Name }}</strong>{{ else }}>{{ .Name }}{{ end }}</a></li>
+            {{ end }}
+            <li><a href="{{ .Site.Params.calendlyURL }}">Contact</a></li>
+        </ul>
+    </div>
+</footer>
+
+<script src="{{ .Site.BaseURL }}js/main.js"></script>

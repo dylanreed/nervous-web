@@ -1,0 +1,18 @@
+<nav class="navbar">
+    <div class="container">
+        <a href="{{ .Site.BaseURL }}" class="logo">
+            <img src="{{ .Site.BaseURL }}images/256x256.webp" alt="{{ .Site.Title }} logo" />
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+        <ul class="nav-menu">
+            {{ range .Site.Menus.main }}
+            <li><a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} class="active"{{ end }}>{{ .Name }}</a></li>
+            {{ end }}
+            <li>
+                <a href="{{ .Site.Params.calendlyURL }}" class="btn">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>

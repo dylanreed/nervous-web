@@ -1,0 +1,25 @@
+{{ define "main" }}
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h1>{{ .Title }}</h1>
+            {{ with .Params.intro }}<p>{{ . }}</p>{{ end }}
+        </div>
+
+        {{ if .Pages }}
+        <div class="blog-posts">
+            {{ range .Pages }}
+            <div class="blog-post">
+                <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                {{ with .Summary }}<p>{{ . }}</p>{{ end }}
+            </div>
+            {{ end }}
+        </div>
+        {{ end }}
+
+        {{ .Content }}
+    </div>
+</section>
+
+{{ partial "section-divider.html" "white-to-yellow" }}
+{{ end }}

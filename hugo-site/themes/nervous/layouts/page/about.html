@@ -1,0 +1,26 @@
+{{ define "main" }}
+<!-- About Section -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h1>{{ .Title }}</h1>
+        </div>
+
+        <div class="team">
+            {{ range .Params.team }}
+            <div class="team-member">
+                <img src="{{ $.Site.BaseURL }}images/{{ .image }}" loading="lazy" alt="{{ .name }}">
+                <h3>{{ .name }}</h3>
+                <p>{{ .bio }}</p>
+            </div>
+            {{ end }}
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="{{ $.Site.Params.calendlyURL }}" class="btn">Get in Touch</a>
+        </div>
+    </div>
+</section>
+
+{{ partial "section-divider.html" "white-to-yellow" }}
+{{ end }}

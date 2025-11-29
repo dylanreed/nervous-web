@@ -1,0 +1,59 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{{ if .IsHome }}{{ .Site.Title }} | {{ .Site.Params.description }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+{{ with .Params.canonical }}<link rel="canonical" href="{{ . }}">{{ else }}<link rel="canonical" href="{{ .Permalink }}">{{ end }}
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }} | {{ .Site.Params.description }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}">
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta property="og:image" content="{{ .Site.BaseURL }}{{ with .Params.ogImage }}{{ . }}{{ else }}{{ .Site.Params.ogImage }}{{ end }}">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="{{ .Permalink }}">
+<meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }} | {{ .Site.Params.description }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}">
+<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta name="twitter:image" content="{{ .Site.BaseURL }}{{ with .Params.ogImage }}{{ . }}{{ else }}{{ .Site.Params.ogImage }}{{ end }}">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="{{ .Site.BaseURL }}images/favicon.png" />
+<link rel="apple-touch-icon" href="{{ .Site.BaseURL }}images/webclip.png" />
+
+<link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css" />
+
+{{ if .IsHome }}
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "{{ .Site.Title }}",
+    "description": "{{ .Site.Params.description }}",
+    "url": "{{ .Site.BaseURL }}",
+    "logo": "{{ .Site.BaseURL }}images/256x256.png",
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "url": "{{ .Site.Params.calendlyURL }}"
+    },
+    "service": {
+        "@type": "Service",
+        "serviceType": "Community Management",
+        "provider": {
+            "@type": "Organization",
+            "name": "{{ .Site.Title }}"
+        },
+        "areaServed": "Worldwide",
+        "description": "Discord community strategy, activation, and moderation services for brands"
+    }
+}
+</script>
+{{ end }}

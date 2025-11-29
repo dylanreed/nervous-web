@@ -1,0 +1,52 @@
+{{ define "main" }}
+<!-- Header -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h1>{{ .Title }}</h1>
+            <p>{{ .Params.intro }}</p>
+        </div>
+    </div>
+</section>
+
+{{ partial "section-divider.html" "white-to-gray" }}
+
+<!-- Tabbed Case Studies -->
+<section class="section section-alt">
+    <div class="container">
+        <!-- Tab Buttons -->
+        <div class="project-tabs">
+            {{ range .Pages }}
+            <button class="project-tab btn-secondary" data-project="{{ .Params.slug }}">{{ .Title }}</button>
+            {{ end }}
+        </div>
+
+        <!-- Project Panels -->
+        <div class="project-panels">
+            {{ range .Pages }}
+            <div class="project-panel" id="project-{{ .Params.slug }}">
+                <div class="case-study">
+                    <div class="content-block">
+                        <div class="content-block-text">
+                            <h2>{{ .Title }}</h2>
+                            <p>{{ .Params.tagline }}</p>
+                        </div>
+                        <div class="content-block-image">
+                            <img src="{{ $.Site.BaseURL }}images/{{ .Params.image }}" loading="lazy" alt="{{ .Title }}">
+                        </div>
+                    </div>
+
+                    {{ .Content }}
+
+                    <div style="text-align: center; margin-top: 30px;">
+                        <a href="{{ $.Site.Params.calendlyURL }}" class="btn">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ partial "section-divider.html" "gray-to-yellow" }}
+{{ end }}
