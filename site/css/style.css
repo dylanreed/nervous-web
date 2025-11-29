@@ -336,17 +336,19 @@ img {
 
 /* Cards Grid */
 .cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .card {
-  background: var(--bg);
+  background: var(--bg-alt);
   border-radius: 10px;
   padding: 20px;
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
+  flex: 0 1 200px;
 }
 
 .card:hover {
@@ -356,7 +358,8 @@ img {
 
 .card img {
   max-height: 120px;
-  margin-bottom: 15px;
+  margin: 0 auto 15px;
+  display: block;
 }
 
 .card h3 {
