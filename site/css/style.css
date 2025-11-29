@@ -47,9 +47,34 @@ h1, h2, h3, h4 {
   line-height: 1.2;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.5rem; }
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+h2:first-child {
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
 
 a {
   color: var(--blue);
@@ -91,6 +116,10 @@ img {
 .navbar .logo img {
   height: 60px;
   width: auto;
+}
+
+.navbar .logo-wordmark {
+  display: none;
 }
 
 .nav-menu {
@@ -395,6 +424,14 @@ img {
   left: 0;
 }
 
+/* Bot Detail Pages */
+.bot-tagline {
+  font-size: 1.4rem;
+  color: var(--blue);
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
 /* Blog */
 .blog-posts {
   display: grid;
@@ -454,8 +491,13 @@ img {
   gap: 60px;
 }
 
-.footer .logo img {
+.footer .logo img:not(.logo-wordmark) {
   height: 50px;
+}
+
+.footer .logo-wordmark {
+  display: none;
+  height: 40px;
 }
 
 .footer-nav {
@@ -475,10 +517,45 @@ img {
   color: var(--blue);
 }
 
-/* Responsive */
+/* Responsive - Tablet */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .content-block {
+    gap: 30px;
+  }
+
+  .content-block-image {
+    flex: 0 0 200px;
+  }
+
+  /* Bot listing - tablet */
+  .bot-listing .content-block-image {
+    flex: 0 0 180px;
+  }
+
+  /* Footer - tablet */
+  .footer .container {
+    gap: 40px;
+  }
+
+  .footer-nav {
+    gap: 25px;
+  }
+}
+
+/* Responsive - Mobile */
 @media (max-width: 768px) {
   h1 { font-size: 2rem; }
   h2 { font-size: 1.6rem; }
+  h3 { font-size: 1.3rem; }
 
   .hero { padding: 60px 0; }
   .hero h1 { font-size: 2.2rem; }
@@ -531,5 +608,79 @@ img {
   .podcast-info {
     flex-direction: column;
     text-align: center;
+  }
+
+  /* Bot listing - mobile */
+  .bot-listing {
+    margin-bottom: 30px;
+  }
+
+  .bot-listing .content-block-image {
+    max-width: 150px;
+    margin: 0 auto;
+  }
+
+  .bot-listing h3 {
+    margin-top: 20px;
+  }
+
+  .bot-price {
+    font-size: 1.1rem;
+  }
+
+  .feature-list li {
+    padding: 6px 0 6px 20px;
+    font-size: 0.95rem;
+  }
+
+  /* Bot detail pages - mobile */
+  .bot-detail-header {
+    text-align: center;
+  }
+
+  .bot-detail-header .content-block-image {
+    max-width: 180px;
+    margin: 0 auto 20px;
+  }
+
+  .bot-detail-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .bot-detail-buttons .btn {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  .bot-detail-buttons .btn-secondary {
+    margin-left: 0;
+  }
+
+  /* Footer - mobile: just centered wordmark logo */
+  .footer .container {
+    justify-content: center;
+    align-items: center;
+    min-height: 80px;
+  }
+
+  .footer-nav {
+    display: none;
+  }
+
+  .footer .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer .logo img:not(.logo-wordmark) {
+    display: none;
+  }
+
+  .footer .logo-wordmark {
+    display: block;
   }
 }

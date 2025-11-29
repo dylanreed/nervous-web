@@ -1,205 +1,451 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Discord Bots - nervous</title>
-  <meta name="description" content="Custom Discord bots for community management. Bouncer Bot for moderation, Plus One for invite management, and Merch Table for Shopify integration.">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Discord Bots - nervous</title>
+        <meta
+            name="description"
+            content="Custom Discord bots for community management. Bouncer Bot for moderation, Plus One for invite management, and Merch Table for Shopify integration."
+        />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Discord Bots by nervous">
-  <meta property="og:description" content="Custom Discord bots for community management. Moderation, invite management, and Shopify integration.">
-  <meta property="og:image" content="images/norris-bot.png">
-  <meta property="og:type" content="website">
+        <!-- Open Graph -->
+        <meta property="og:title" content="Discord Bots by nervous" />
+        <meta
+            property="og:description"
+            content="Custom Discord bots for community management. Moderation, invite management, and Shopify integration."
+        />
+        <meta property="og:image" content="images/norris-bot.png" />
+        <meta property="og:type" content="website" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Discord Bots by nervous">
-  <meta name="twitter:description" content="Custom Discord bots for community management.">
-  <meta name="twitter:image" content="images/norris-bot.png">
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Discord Bots by nervous" />
+        <meta
+            name="twitter:description"
+            content="Custom Discord bots for community management."
+        />
+        <meta name="twitter:image" content="images/norris-bot.png" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="apple-touch-icon" href="images/webclip.png">
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="images/favicon.png" />
+        <link rel="apple-touch-icon" href="images/webclip.png" />
 
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <img src="images/256x256.png" alt="nervous logo">
-      </a>
-      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-      <ul class="nav-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="work.html">Our Work</a></li>
-        <li><a href="bots.html" class="active">Bots</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="podcast.html">Podcast</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="https://calendly.com/nervous/intro" class="btn">Contact Us</a></li>
-      </ul>
-    </div>
-  </nav>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="images/256x256.png" alt="nervous logo" />
+                    <img
+                        src="images/logo-wordmark.png"
+                        alt="nervous"
+                        class="logo-wordmark"
+                    />
+                </a>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    &#9776;
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="work.html">Our Work</a></li>
+                    <li><a href="bots.html" class="active">Bots</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="podcast.html">Podcast</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li>
+                        <a href="https://calendly.com/nervous/intro" class="btn"
+                            >Contact Us</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-  <!-- Header -->
-  <section class="section">
-    <div class="container">
-      <div class="bots-hero">
-        <img src="images/norris-bot.png" alt="" class="bots-hero-icon">
-        <div class="section-header">
-          <h1>Discord Bots</h1>
-          <p>Custom-built tools to help you manage, grow, and monetize your Discord community.</p>
-        </div>
-        <img src="images/norris-bot.png" alt="" class="bots-hero-icon">
-      </div>
-    </div>
-  </section>
+        <!-- Header -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Discord Bots</h1>
+                    <p>
+                        Custom-built tools to help you manage, grow, and
+                        monetize your Discord community.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-  <div class="section-divider white-to-gray"></div>
+        <div class="section-divider white-to-gray"></div>
 
-  <!-- Bouncer Bot -->
-  <section id="bouncer-bot" class="section section-alt">
-    <div class="container">
-      <div class="bot-listing">
-        <div class="content-block">
-          <div class="content-block-text">
-            <h2>Bouncer Bot</h2>
-            <p><strong>Enterprise-grade Discord moderation with complete audit trails.</strong></p>
-            <p>Built for communities that need accountability, consistency, and control. Features timeouts (including beyond Discord's 28-day limit), intelligent quarantine with automatic role restoration, rule-linked warnings, bulk role management with 24-hour rollback, pre-ban protection, and comprehensive moderation reports with CSV export.</p>
-          </div>
-          <div class="content-block-image">
-            <img src="images/norris-security.png" alt="Bouncer Bot illustration">
-          </div>
-        </div>
+        <!-- Merch Table -->
+        <section id="merch-table" class="section section-alt">
+            <div class="container">
+                <div class="bot-listing">
+                    <div class="content-block">
+                        <div class="content-block-text">
+                            <h2>merch table</h2>
+                            <p class="bot-tagline">Turn your Discord community into customers.</p>
+                            <p>
+                                <strong
+                                    >Connect your Discord community to your
+                                    Shopify store.</strong
+                                >
+                            </p>
+                            <p>
+                                Merch Table lets you offer exclusive products to
+                                members based on their Discord roles — Server
+                                Boosters, Patreon supporters, or any custom role
+                                you create. Perfect for creators, gaming
+                                communities, and anyone who wants to reward
+                                their most engaged Discord members with
+                                exclusive merch.
+                            </p>
+                        </div>
+                        <div class="content-block-image">
+                            <img
+                                src="images/norris-builder.png"
+                                alt="Merch Table illustration"
+                            />
+                        </div>
+                    </div>
 
-        <h3>Key Features</h3>
-        <ul class="feature-list">
-          <li>Timeouts & Quarantine with auto-expiry</li>
-          <li>Complete moderation history & analytics</li>
-          <li>Bulk role operations with rollback</li>
-          <li>Pre-ban & watchlist for raid protection</li>
-          <li>Rule-linked warning system</li>
-          <li>CSV export for compliance</li>
-        </ul>
+                    <h3>Key Features</h3>
+                    <ul class="feature-list">
+                        <li>
+                            Role-based product access — restrict products to
+                            specific Discord roles
+                        </li>
+                        <li>
+                            Automatic sync — customer tags update when roles
+                            change
+                        </li>
+                        <li>
+                            Cart validation — prevents unauthorized purchases at
+                            checkout
+                        </li>
+                        <li>
+                            Simple linking — members connect accounts with
+                            /link_shopify
+                        </li>
+                        <li>
+                            Admin dashboard — manage visibility rules and
+                            monitor linked accounts
+                        </li>
+                    </ul>
 
-        <p class="bot-price">Starting at $xx.xx/month</p>
+                    <h3>Use Cases</h3>
+                    <ul class="feature-list">
+                        <li>
+                            Server Boosters — Exclusive merch for members who
+                            boost your server
+                        </li>
+                        <li>
+                            Patreon Supporters — Sync Patreon roles to unlock
+                            special products
+                        </li>
+                        <li>
+                            VIP Members — Reward your most active community
+                            members
+                        </li>
+                        <li>
+                            Early Access — Let specific roles purchase new drops
+                            first
+                        </li>
+                        <li>
+                            Limited Editions — Restrict rare items to long-time
+                            members
+                        </li>
+                    </ul>
 
-        <div style="margin-top: 30px;">
-          <a href="https://calendly.com/nervous/intro" class="btn">Get Bouncer Bot</a>
-          <a href="bouncer.html" class="btn btn-secondary">More Info</a>
-        </div>
-      </div>
-    </div>
-  </section>
+                    <p class="bot-price">Starting at $xx.xx/month</p>
 
-  <div class="section-divider gray-to-white"></div>
+                    <div style="margin-top: 30px">
+                        <a href="https://calendly.com/nervous/intro" class="btn"
+                            >Get Merch Table</a
+                        >
+                        <a href="merchtable.html" class="btn btn-secondary"
+                            >More Info</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Plus One -->
-  <section id="plus-one" class="section">
-    <div class="container">
-      <div class="bot-listing">
-        <div class="content-block">
-          <div class="content-block-text">
-            <h2>Plus One</h2>
-            <p><strong>Controlled community growth through invite management.</strong></p>
-            <p>Give your trusted members the power to invite others—with limits you control. Plus One creates single-use Discord invites with optional trial periods, tracks who invited whom, and automatically manages temporary access. Perfect for private communities, exclusive servers, and invite-only spaces.</p>
-          </div>
-          <div class="content-block-image">
-            <img src="images/plus-one.png" alt="Plus One illustration" style="transform: scale(1.3);">
-          </div>
-        </div>
+        <div class="section-divider gray-to-white"></div>
 
-        <h3>Key Features</h3>
-        <ul class="feature-list">
-          <li>Single-use invite links with quota limits</li>
-          <li>Trial invites with auto-expiring roles</li>
-          <li>Full invite tracking and audit logs</li>
-          <li>Flexible quota modes (fixed, tiered, earned, or replenishing)</li>
-        </ul>
+        <!-- Anxious Analytics -->
+        <section id="anxious-analytics" class="section">
+            <div class="container">
+                <div class="bot-listing">
+                    <div class="content-block">
+                        <div class="content-block-text">
+                            <h2>anxious analytics</h2>
+                            <p class="bot-tagline">Because your community is more than a message count.</p>
+                            <p>
+                                <strong
+                                    >Community intelligence that actually
+                                    matters.</strong
+                                >
+                            </p>
+                            <p>
+                                Go beyond vanity metrics with AI-powered
+                                sentiment analysis, relationship mapping, and
+                                community health scoring. Anxious Analytics uses
+                                GPT-4 for real insights instead of meaningless
+                                word clouds, and applies the Wilson Confidence
+                                Index to measure conversation quality—the same
+                                algorithm Reddit and Amazon use for rankings.
+                            </p>
+                        </div>
+                        <div class="content-block-image">
+                            <img
+                                src="images/anxious-analytics.png"
+                                alt="Anxious Analytics illustration"
+                            />
+                        </div>
+                    </div>
 
-        <p class="bot-price">Starting at $xx.xx/month</p>
+                    <h3>Key Features</h3>
+                    <ul class="feature-list">
+                        <li>GPT-4 sentiment analysis for real insights</li>
+                        <li>User relationship mapping & conversation flow</li>
+                        <li>
+                            Community health scoring with AI recommendations
+                        </li>
+                        <li>Automated moderator checklists & reminders</li>
+                        <li>Member risk assessment & spam detection</li>
+                        <li>GDPR-compliant on-demand processing</li>
+                    </ul>
 
-        <div style="margin-top: 30px;">
-          <a href="https://calendly.com/nervous/intro" class="btn">Get Plus One</a>
-          <a href="plusone.html" class="btn btn-secondary">More Info</a>
-        </div>
-      </div>
-    </div>
-  </section>
+                    <p class="bot-price">Starting at $xx.xx/month</p>
 
-  <div class="section-divider white-to-gray"></div>
+                    <div style="margin-top: 30px">
+                        <a href="https://calendly.com/nervous/intro" class="btn"
+                            >Schedule a Demo</a
+                        >
+                        <a href="anxious.html" class="btn btn-secondary"
+                            >More Info</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Merch Table -->
-  <section id="merch-table" class="section section-alt">
-    <div class="container">
-      <div class="bot-listing">
-        <div class="content-block">
-          <div class="content-block-text">
-            <h2>Merch Table</h2>
-            <p><strong>Connect your Discord community to your Shopify store.</strong></p>
-            <p>Merch Table lets you offer exclusive products to members based on their Discord roles — Server Boosters, Patreon supporters, or any custom role you create. Perfect for creators, gaming communities, and anyone who wants to reward their most engaged Discord members with exclusive merch.</p>
-          </div>
-          <div class="content-block-image">
-            <img src="images/norris-builder.png" alt="Merch Table illustration">
-          </div>
-        </div>
+        <div class="section-divider white-to-gray"></div>
 
-        <h3>Key Features</h3>
-        <ul class="feature-list">
-          <li>Role-based product access — restrict products to specific Discord roles</li>
-          <li>Automatic sync — customer tags update when roles change</li>
-          <li>Cart validation — prevents unauthorized purchases at checkout</li>
-          <li>Simple linking — members connect accounts with /link_shopify</li>
-          <li>Admin dashboard — manage visibility rules and monitor linked accounts</li>
-        </ul>
+        <!-- Roadie -->
+        <section id="roadie" class="section section-alt">
+            <div class="container">
+                <div class="bot-listing">
+                    <div class="content-block">
+                        <div class="content-block-text">
+                            <h2>roadie</h2>
+                            <p class="bot-tagline">Turn event attendees into lifelong community members.</p>
+                            <p>
+                                <strong
+                                    >QR-powered Discord onboarding for live events.</strong
+                                >
+                            </p>
+                            <p>
+                                Capitalize on the excitement of in-person events. Roadie lets attendees scan a QR code to instantly join your Discord server with automatic role assignment—no manual searching or typing required. Keep the momentum going long after the event ends.
+                            </p>
+                        </div>
+                        <div class="content-block-image">
+                            <img
+                                src="images/discoball.png"
+                                alt="Roadie illustration"
+                            />
+                        </div>
+                    </div>
 
-        <h3>Use Cases</h3>
-        <ul class="feature-list">
-          <li>Server Boosters — Exclusive merch for members who boost your server</li>
-          <li>Patreon Supporters — Sync Patreon roles to unlock special products</li>
-          <li>VIP Members — Reward your most active community members</li>
-          <li>Early Access — Let specific roles purchase new drops first</li>
-          <li>Limited Editions — Restrict rare items to long-time members</li>
-        </ul>
+                    <h3>Key Features</h3>
+                    <ul class="feature-list">
+                        <li>Instant QR code onboarding — no typing server addresses</li>
+                        <li>Automatic role assignment for event-specific access</li>
+                        <li>Exclusive channels for VIP areas and post-event Q&As</li>
+                        <li>Fully automated — no manual work for event staff</li>
+                        <li>Build hype for future events with engaged past attendees</li>
+                    </ul>
 
-        <p class="bot-price">Starting at $xx.xx/month</p>
+                    <h3>Perfect For</h3>
+                    <ul class="feature-list">
+                        <li>Bands, artists, and promoters — concerts, festivals, meet & greets</li>
+                        <li>Tech companies — conferences, product launches, developer events</li>
+                        <li>Gaming studios — conventions, tournaments, PAX, E3</li>
+                        <li>Consumer brands — pop-ups, launch parties, sponsored events</li>
+                        <li>Creators and influencers — fan conventions, meet and greets</li>
+                    </ul>
 
-        <div style="margin-top: 30px;">
-          <a href="https://calendly.com/nervous/intro" class="btn">Get Merch Table</a>
-          <a href="merchtable.html" class="btn btn-secondary">More Info</a>
-        </div>
-      </div>
-    </div>
-  </section>
+                    <p class="bot-price">Starting at $xx.xx/month</p>
 
-  <div class="section-divider gray-to-yellow"></div>
+                    <div style="margin-top: 30px">
+                        <a href="https://calendly.com/nervous/intro" class="btn"
+                            >Get Roadie</a
+                        >
+                        <a href="roadie.html" class="btn btn-secondary"
+                            >More Info</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <img src="images/256x256.png" alt="nervous logo">
-      </a>
-      <ul class="footer-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="work.html">Our Work</a></li>
-        <li><a href="bots.html" class="active">Bots</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="podcast.html">Podcast</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="https://calendly.com/nervous/intro">Contact</a></li>
-      </ul>
-    </div>
-  </footer>
+        <div class="section-divider gray-to-white"></div>
 
-  <script src="js/main.js"></script>
-</body>
+        <!-- Bouncer Bot -->
+        <section id="bouncer-bot" class="section">
+            <div class="container">
+                <div class="bot-listing">
+                    <div class="content-block">
+                        <div class="content-block-text">
+                            <h2>bouncer bot</h2>
+                            <p class="bot-tagline">Because your community deserves better than chaos.</p>
+                            <p>
+                                <strong
+                                    >Enterprise-grade Discord moderation with
+                                    complete audit trails.</strong
+                                >
+                            </p>
+                            <p>
+                                Built for communities that need accountability,
+                                consistency, and control. Features timeouts
+                                (including beyond Discord's 28-day limit),
+                                intelligent quarantine with automatic role
+                                restoration, rule-linked warnings, bulk role
+                                management with 24-hour rollback, pre-ban
+                                protection, and comprehensive moderation reports
+                                with CSV export.
+                            </p>
+                        </div>
+                        <div class="content-block-image">
+                            <img
+                                src="images/norris-security.png"
+                                alt="Bouncer Bot illustration"
+                            />
+                        </div>
+                    </div>
+
+                    <h3>Key Features</h3>
+                    <ul class="feature-list">
+                        <li>Timeouts & Quarantine with auto-expiry</li>
+                        <li>Complete moderation history & analytics</li>
+                        <li>Bulk role operations with rollback</li>
+                        <li>Pre-ban & watchlist for raid protection</li>
+                        <li>Rule-linked warning system</li>
+                        <li>CSV export for compliance</li>
+                    </ul>
+
+                    <p class="bot-price">Starting at $xx.xx/month</p>
+
+                    <div style="margin-top: 30px">
+                        <a href="https://calendly.com/nervous/intro" class="btn"
+                            >Get Bouncer Bot</a
+                        >
+                        <a href="bouncer.html" class="btn btn-secondary"
+                            >More Info</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider white-to-gray"></div>
+
+        <!-- Plus One -->
+        <section id="plus-one" class="section section-alt">
+            <div class="container">
+                <div class="bot-listing">
+                    <div class="content-block">
+                        <div class="content-block-text">
+                            <h2>plus one</h2>
+                            <p class="bot-tagline">Grow your community without losing control.</p>
+                            <p>
+                                <strong
+                                    >Controlled community growth through invite
+                                    management.</strong
+                                >
+                            </p>
+                            <p>
+                                Give your trusted members the power to invite
+                                others—with limits you control. Plus One creates
+                                single-use Discord invites with optional trial
+                                periods, tracks who invited whom, and
+                                automatically manages temporary access. Perfect
+                                for private communities, exclusive servers, and
+                                invite-only spaces.
+                            </p>
+                        </div>
+                        <div class="content-block-image">
+                            <img
+                                src="images/plus-one.png"
+                                alt="Plus One illustration"
+                                style="transform: scale(1.3)"
+                            />
+                        </div>
+                    </div>
+
+                    <h3>Key Features</h3>
+                    <ul class="feature-list">
+                        <li>Single-use invite links with quota limits</li>
+                        <li>Trial invites with auto-expiring roles</li>
+                        <li>Full invite tracking and audit logs</li>
+                        <li>
+                            Flexible quota modes (fixed, tiered, earned, or
+                            replenishing)
+                        </li>
+                    </ul>
+
+                    <p class="bot-price">Starting at $xx.xx/month</p>
+
+                    <div style="margin-top: 30px">
+                        <a href="https://calendly.com/nervous/intro" class="btn"
+                            >Get Plus One</a
+                        >
+                        <a href="plusone.html" class="btn btn-secondary"
+                            >More Info</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider gray-to-yellow"></div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="images/256x256.png" alt="nervous logo" />
+                    <img
+                        src="images/logo-wordmark.png"
+                        alt="nervous"
+                        class="logo-wordmark"
+                    />
+                </a>
+                <ul class="footer-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="work.html">Our Work</a></li>
+                    <li><a href="bots.html" class="active">Bots</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="podcast.html">Podcast</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li>
+                        <a href="https://calendly.com/nervous/intro">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+        <script src="js/main.js"></script>
+    </body>
 </html>
