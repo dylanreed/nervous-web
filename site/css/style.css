@@ -539,6 +539,18 @@ img {
   margin-bottom: 10px;
 }
 
+/* Inline code styling */
+code {
+  display: inline-block;
+  background: var(--white);
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
 /* Command blocks */
 .command-list {
   display: flex;
