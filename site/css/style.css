@@ -591,6 +591,7 @@ pre code {
 /* Project Tabs (Our Work page) */
 .project-tabs {
   display: flex;
+  justify-content: center;
   gap: 10px;
   margin-bottom: 30px;
   flex-wrap: wrap;

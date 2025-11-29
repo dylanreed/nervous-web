@@ -46,17 +46,34 @@ document.addEventListener('DOMContentLoaded', function() {
   const projectTabs = document.querySelectorAll('.project-tab');
   const projectPanels = document.querySelectorAll('.project-panel');
 
-  projectTabs.forEach(tab => {
-    tab.addEventListener('click', function() {
-      const projectId = this.getAttribute('data-project');
+  // Function to switch tabs
+  function switchToProject(projectId) {
+    const targetTab = document.querySelector('.project-tab[data-project="' + projectId + '"]');
+    const targetPanel = document.getElementById('project-' + projectId);
 
+    if (targetTab && targetPanel) {
       // Remove active class from all tabs and panels
       projectTabs.forEach(t => t.classList.remove('active'));
       projectPanels.forEach(p => p.classList.remove('active'));
 
-      // Add active class to clicked tab and corresponding panel
-      this.classList.add('active');
-      document.getElementById('project-' + projectId).classList.add('active');
+      // Add active class to target tab and panel
+      targetTab.classList.add('active');
+      targetPanel.classList.add('active');
+    }
+  }
+
+  // Handle tab clicks
+  projectTabs.forEach(tab => {
+    tab.addEventListener('click', function() {
+      const projectId = this.getAttribute('data-project');
+      switchToProject(projectId);
     });
   });
+
+  // Check for project parameter in URL on page load
+  const urlParams = new URLSearchParams(window.location.search);
+  const projectParam = urlParams.get('project');
+  if (projectParam && projectTabs.length > 0) {
+    switchToProject(projectParam);
+  }
 });
