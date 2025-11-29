@@ -1,0 +1,120 @@
+{{ define "main" }}
+<!-- Hero Section -->
+<section class="hero section">
+    <div class="container">
+        <h1>{{ .Params.hero.title }}</h1>
+        <img src="{{ .Site.BaseURL }}images/{{ .Params.hero.image }}" alt="{{ .Params.hero.imageAlt }}" class="hero-image" />
+        {{ range .Params.hero.text }}
+        <p>{{ . | safeHTML }}</p>
+        {{ end }}
+        <a href="{{ .Site.Params.calendlyURL }}" class="btn">Contact us</a>
+    </div>
+</section>
+
+{{ partial "section-divider.html" "white-to-gray" }}
+
+<!-- Value Proposition -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header">
+            <h2>{{ .Params.valueProposition.title | safeHTML }}</h2>
+        </div>
+
+        {{ range $index, $block := .Params.valueProposition.blocks }}
+        <div class="content-block{{ if eq (mod $index 2) 1 }} reverse{{ end }}">
+            <div class="content-block-text">
+                {{ range $block.text }}
+                <p>{{ . | safeHTML }}</p>
+                {{ end }}
+            </div>
+            <div class="content-block-image">
+                <img src="{{ $.Site.BaseURL }}images/{{ $block.image }}" loading="lazy" alt="{{ $block.imageAlt }}" />
+            </div>
+        </div>
+        {{ end }}
+
+        <div style="text-align: center; margin-top: 30px">
+            <a href="{{ .Site.Params.calendlyURL }}" class="btn">Contact us</a>
+        </div>
+    </div>
+</section>
+
+{{ partial "section-divider.html" "gray-to-white" }}
+
+<!-- Process Steps -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2>{{ .Params.process.title }}</h2>
+        </div>
+
+        <div class="steps">
+            {{ range .Params.process.steps }}
+            <div class="step">
+                <div class="step-image">
+                    <img src="{{ $.Site.BaseURL }}images/{{ .image }}" loading="lazy" alt="{{ .imageAlt }}" />
+                </div>
+                <div class="step-content">
+                    <h3>{{ .title }}</h3>
+                    <p>{{ .text }}</p>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+
+        <div style="text-align: center; margin-top: 50px">
+            <a href="{{ .Site.Params.calendlyURL }}" class="btn">Contact us</a>
+        </div>
+    </div>
+</section>
+
+{{ partial "section-divider.html" "white-to-gray" }}
+
+<!-- Discord Bots Carousel -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header">
+            <h2>{{ .Params.bots.title }}</h2>
+            <p>{{ .Params.bots.description | safeHTML }}</p>
+        </div>
+
+        <div class="bot-carousel">
+            <button class="carousel-btn carousel-prev" aria-label="Previous bot"><img src="{{ .Site.BaseURL }}images/arrow-left.webp" alt="Previous"></button>
+            <div class="carousel-track">
+                {{ range .Params.bots.items }}
+                <a href="{{ $.Site.BaseURL }}bots/{{ .slug }}/" class="carousel-card">
+                    <img src="{{ $.Site.BaseURL }}images/{{ .image }}" loading="lazy" alt="{{ .name }} illustration" />
+                    <h3>{{ .name }}</h3>
+                    <p>{{ .tagline }}</p>
+                </a>
+                {{ end }}
+            </div>
+            <button class="carousel-btn carousel-next" aria-label="Next bot"><img src="{{ .Site.BaseURL }}images/arrow_right.webp" alt="Next"></button>
+        </div>
+        <div class="carousel-dots"></div>
+    </div>
+</section>
+
+{{ partial "section-divider.html" "gray-to-white" }}
+
+<!-- Our Work Preview -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2>{{ .Params.work.title }}</h2>
+            <p>{{ .Params.work.description }}</p>
+        </div>
+
+        <div class="cards">
+            {{ range (where .Site.RegularPages "Section" "work") }}
+            <a href="{{ .Permalink }}" class="card">
+                <img src="{{ $.Site.BaseURL }}images/{{ .Params.image }}" loading="lazy" alt="{{ .Params.imageAlt }}" />
+                <h3>{{ .Title }}</h3>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ partial "section-divider.html" "white-to-yellow" }}
+{{ end }}

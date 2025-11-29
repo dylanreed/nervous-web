@@ -1,0 +1,42 @@
+{{ define "main" }}
+<!-- Header -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h1>{{ .Title }}</h1>
+            <p>{{ .Params.intro }}</p>
+        </div>
+    </div>
+</section>
+
+{{ partial "section-divider.html" "white-to-gray" }}
+
+<!-- FAQ Content -->
+<section class="section section-alt">
+    <div class="container">
+        {{ range .Pages.ByWeight }}
+        <div class="faq-section">
+            <button class="faq-header" aria-expanded="false">
+                <h2>{{ .Title | lower }}</h2>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+                {{ range .Params.questions }}
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>{{ .q }}</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>{{ .a | safeHTML }}</p>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section>
+
+{{ partial "section-divider.html" "gray-to-yellow" }}
+{{ end }}

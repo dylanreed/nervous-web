@@ -1,0 +1,48 @@
+baseURL = 'https://www.nervous.net/'
+languageCode = 'en-us'
+title = 'Nervous'
+theme = 'nervous'
+
+[params]
+  description = "Discord Community Management & Moderation Agency"
+  tagline = "Build thriving brand communities on Discord"
+  ogImage = "images/og-home.jpg"
+  calendlyURL = "https://calendly.com/nervous/intro"
+
+[params.contact]
+  cta = "Contact Us"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Our Work"
+    url = "/work/"
+    weight = 2
+  [[menu.main]]
+    name = "Bots"
+    url = "/bots/"
+    weight = 3
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 4
+  [[menu.main]]
+    name = "Podcast"
+    url = "/podcast/"
+    weight = 5
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 6
+  [[menu.main]]
+    name = "FAQ"
+    url = "/faq/"
+    weight = 7
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

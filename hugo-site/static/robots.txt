@@ -1,0 +1,17 @@
+# robots.txt for nervous.net
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.nervous.net/sitemap.xml
+
+# Disallow crawling of hidden/draft pages
+Disallow: /bots.html
+Disallow: /blog.html
+Disallow: /merchtable.html
+Disallow: /anxious.html
+Disallow: /bouncer.html
+Disallow: /plusone.html
+Disallow: /roadie.html
+Disallow: /docs/
