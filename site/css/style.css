@@ -337,14 +337,14 @@ img {
 /* Cards Grid */
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .card {
   background: var(--bg);
   border-radius: 10px;
-  padding: 30px;
+  padding: 20px;
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -355,12 +355,12 @@ img {
 }
 
 .card img {
-  max-height: 150px;
-  margin-bottom: 20px;
+  max-height: 120px;
+  margin-bottom: 15px;
 }
 
 .card h3 {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 /* Team */
