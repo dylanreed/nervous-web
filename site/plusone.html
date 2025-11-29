@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plus One - Controlled Community Growth</title>
+  <meta name="description" content="Sustainable growth for private Discord communities. Single-use invites, quota management, and trial access control.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Plus One - Controlled Community Growth">
+  <meta property="og:description" content="Sustainable growth for private Discord communities.">
+  <meta property="og:image" content="images/plus-one.png">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Plus One - Controlled Community Growth">
+  <meta name="twitter:description" content="Sustainable growth for private Discord communities.">
+  <meta name="twitter:image" content="images/plus-one.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/webclip.png">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="images/256x256.png" alt="nervous logo">
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Our Work</a></li>
+        <li><a href="bots.html">Bots</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="podcast.html">Podcast</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://calendly.com/nervous/intro" class="btn">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="section">
+    <div class="container">
+      <div class="content-block">
+        <div class="content-block-text">
+          <h1>Plus One</h1>
+          <p><strong>Sustainable Growth for Private Communities</strong></p>
+          <p>Your community is exclusive for a reason. Plus One lets you grow carefully by putting invite power in the hands of your trusted members—with the controls you need to keep it sustainable.</p>
+          <div style="margin-top: 30px;">
+            <a href="https://calendly.com/nervous/intro" class="btn">Get Plus One</a>
+            <a href="bots.html" class="btn btn-secondary">Back to Bots</a>
+          </div>
+        </div>
+        <div class="content-block-image">
+          <img src="images/plus-one.png" alt="Plus One illustration" style="transform: scale(1.3);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider white-to-gray"></div>
+
+  <!-- The Problem -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2>The Problem</h2>
+      <p>Growing a private Discord server is a balancing act:</p>
+      <ul class="feature-list">
+        <li>Open invites flood your community with strangers</li>
+        <li>Closed invites put all the work on moderators</li>
+        <li>No way to track who invited whom</li>
+        <li>Trial periods require manual role management</li>
+        <li>Neither approach scales as your community grows</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="section-divider gray-to-white"></div>
+
+  <!-- The Solution -->
+  <section class="section">
+    <div class="container">
+      <h2>The Solution</h2>
+      <p>Plus One creates single-use Discord invite links that your members can share. Each invite is tracked, quota-limited, and optionally time-limited. You always know who invited whom, and you decide how many invites each member gets.</p>
+
+      <h3>Controlled Invite Generation</h3>
+      <p>Members generate real Discord invite links through a simple slash command. Each link works once, then expires. No more anonymous invite codes floating around the internet.</p>
+
+      <h3>Flexible Quota System</h3>
+      <p>Choose how members earn their invites:</p>
+      <ul class="feature-list">
+        <li><strong>Fixed</strong> — Everyone gets the same number of invites</li>
+        <li><strong>Tiered</strong> — Different roles get different quotas</li>
+        <li><strong>Replenishing</strong> — Invites restore over time (e.g., 1 per month)</li>
+        <li><strong>Earned</strong> — Admins manually grant invites as rewards</li>
+      </ul>
+
+      <h3>Trial Invites</h3>
+      <p>Let new members prove themselves before getting full access. Trial invites grant a temporary role that automatically expires after a set period. The member stays in the server but loses access to private channels.</p>
+
+      <h3>Complete Audit Trail</h3>
+      <p>See exactly who invited whom and when. Track pending invites, used invites, and expired invites. Identify your best recruiters and spot patterns.</p>
+
+      <h3>Privilege Control</h3>
+      <p>Define exactly who can create invites—specific roles, permissions, or individual users. Override quotas for special cases without changing your global settings.</p>
+    </div>
+  </section>
+
+  <div class="section-divider white-to-gray"></div>
+
+  <!-- Commands -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2>All Commands</h2>
+
+      <div class="command-table">
+        <h3>Member Commands</h3>
+        <p><code>/invite create</code>, <code>/invite create trial:true</code>, <code>/invite list</code>, <code>/invite revoke</code></p>
+
+        <h3>Quota Config</h3>
+        <p><code>/plusone config quota-mode</code>, <code>/plusone config quota-fixed</code>, <code>/plusone config quota-tier</code>, <code>/plusone config quota-replenish</code></p>
+
+        <h3>Trial Config</h3>
+        <p><code>/plusone config trial</code></p>
+
+        <h3>Privileges</h3>
+        <p><code>/plusone config privilege-add</code>, <code>/plusone grant</code></p>
+
+        <h3>Admin</h3>
+        <p><code>/plusone status</code>, <code>/plusone audit</code></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider gray-to-white"></div>
+
+  <!-- Built Right + Best For -->
+  <section class="section">
+    <div class="container">
+      <h2>Built Right</h2>
+      <ul class="feature-list">
+        <li><strong>Real Discord invites</strong> — Uses native Discord invite system</li>
+        <li><strong>Automatic tracking</strong> — No manual logging required</li>
+        <li><strong>Role restoration</strong> — Trial members keep the server, lose access gracefully</li>
+        <li><strong>Audit-ready</strong> — Full history of every invite created and used</li>
+      </ul>
+
+      <h2 style="margin-top: 50px;">Best For</h2>
+      <ul class="feature-list">
+        <li>Exclusive communities</li>
+        <li>Paid membership servers</li>
+        <li>Gaming guilds with recruitment</li>
+        <li>Professional networks</li>
+        <li>Any invite-only space</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="section-divider white-to-gray"></div>
+
+  <!-- Get Started -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Get Started</h2>
+        <p>Add Plus One to your server and run:</p>
+      </div>
+      <ol class="feature-list" style="list-style: decimal; padding-left: 25px;">
+        <li><code>/plusone status</code> — See the default configuration</li>
+        <li><code>/plusone config quota-mode mode:tiered</code> — Set your quota mode</li>
+        <li>Your members can start creating invites immediately</li>
+      </ol>
+      <p style="margin-top: 30px;"><em>Plus One: Grow your community without losing control.</em></p>
+      <div style="margin-top: 30px;">
+        <a href="https://calendly.com/nervous/intro" class="btn">Get Plus One</a>
+        <a href="bots.html" class="btn btn-secondary">Back to Bots</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider gray-to-yellow"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="images/256x256.png" alt="nervous logo">
+      </a>
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Our Work</a></li>
+        <li><a href="bots.html">Bots</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="podcast.html">Podcast</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://calendly.com/nervous/intro">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merch Table - Discord to Shopify Integration</title>
+  <meta name="description" content="Connect your Discord community to your Shopify store. Offer exclusive products based on Discord roles.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Merch Table - Discord to Shopify Integration">
+  <meta property="og:description" content="Connect your Discord community to your Shopify store.">
+  <meta property="og:image" content="images/norris-builder.png">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Merch Table - Discord to Shopify Integration">
+  <meta name="twitter:description" content="Connect your Discord community to your Shopify store.">
+  <meta name="twitter:image" content="images/norris-builder.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/webclip.png">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="images/256x256.png" alt="nervous logo">
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Our Work</a></li>
+        <li><a href="bots.html">Bots</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="podcast.html">Podcast</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://calendly.com/nervous/intro" class="btn">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="section">
+    <div class="container">
+      <div class="content-block">
+        <div class="content-block-text">
+          <h1>Merch Table</h1>
+          <p><strong>Connect Your Discord Community to Your Shopify Store</strong></p>
+          <p>Merch Table lets you offer exclusive products to members based on their Discord roles — Server Boosters, Patreon supporters, or any custom role you create. Perfect for creators, gaming communities, and anyone who wants to reward their most engaged Discord members.</p>
+          <div style="margin-top: 30px;">
+            <a href="https://calendly.com/nervous/intro" class="btn">Get Merch Table</a>
+            <a href="bots.html" class="btn btn-secondary">Back to Bots</a>
+          </div>
+        </div>
+        <div class="content-block-image">
+          <img src="images/norris-builder.png" alt="Merch Table illustration">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider white-to-gray"></div>
+
+  <!-- The Problem -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2>The Problem</h2>
+      <p>Running exclusive merch for your Discord community is a hassle:</p>
+      <ul class="feature-list">
+        <li>No way to verify Discord roles on your Shopify store</li>
+        <li>Manual verification doesn't scale</li>
+        <li>Exclusive products get shared with non-members</li>
+        <li>Role changes don't sync to store access</li>
+        <li>No connection between your community and commerce</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="section-divider gray-to-white"></div>
+
+  <!-- The Solution -->
+  <section class="section">
+    <div class="container">
+      <h2>The Solution</h2>
+      <p>Merch Table bridges your Discord server and Shopify store. Members link their accounts once, and their Discord roles automatically control what they can purchase.</p>
+
+      <h3>Role-Based Product Access</h3>
+      <p>Restrict any product to specific Discord roles. Only members with the right roles can see and purchase exclusive items.</p>
+
+      <h3>Automatic Sync</h3>
+      <p>When a member gains or loses a role in Discord, their Shopify customer tags update automatically. No manual intervention required.</p>
+
+      <h3>Cart Validation</h3>
+      <p>Even if someone finds a direct link to a restricted product, Merch Table validates their roles at checkout. No unauthorized purchases slip through.</p>
+
+      <h3>Simple Account Linking</h3>
+      <p>Members connect their Discord and Shopify accounts with a single slash command: <code>/link_shopify</code>. The bot handles the OAuth flow and links the accounts securely.</p>
+
+      <h3>Admin Dashboard</h3>
+      <p>Manage visibility rules, monitor linked accounts, and troubleshoot issues from a clean admin interface.</p>
+    </div>
+  </section>
+
+  <div class="section-divider white-to-gray"></div>
+
+  <!-- Commands -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2>All Commands</h2>
+
+      <div class="command-table">
+        <h3>Member Commands</h3>
+        <p><code>/link_shopify</code>, <code>/unlink_shopify</code>, <code>/shopify_status</code></p>
+
+        <h3>Admin Commands</h3>
+        <p><code>/merchtable config</code>, <code>/merchtable rules add</code>, <code>/merchtable rules remove</code>, <code>/merchtable rules list</code></p>
+
+        <h3>Troubleshooting</h3>
+        <p><code>/merchtable lookup</code>, <code>/merchtable sync</code></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider gray-to-white"></div>
+
+  <!-- Built Right + Best For -->
+  <section class="section">
+    <div class="container">
+      <h2>Built Right</h2>
+      <ul class="feature-list">
+        <li><strong>Secure OAuth</strong> — Industry-standard authentication for both Discord and Shopify</li>
+        <li><strong>Real-time sync</strong> — Role changes reflect immediately</li>
+        <li><strong>Shopify native</strong> — Works with your existing store setup</li>
+        <li><strong>Privacy-focused</strong> — Only stores the minimum data needed</li>
+      </ul>
+
+      <h2 style="margin-top: 50px;">Best For</h2>
+      <ul class="feature-list">
+        <li>Server Boosters — Exclusive merch for members who boost your server</li>
+        <li>Patreon Supporters — Sync Patreon roles to unlock special products</li>
+        <li>VIP Members — Reward your most active community members</li>
+        <li>Early Access — Let specific roles purchase new drops first</li>
+        <li>Limited Editions — Restrict rare items to long-time members</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="section-divider white-to-gray"></div>
+
+  <!-- Get Started -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Get Started</h2>
+        <p>Set up Merch Table in minutes:</p>
+      </div>
+      <ol class="feature-list" style="list-style: decimal; padding-left: 25px;">
+        <li>Install Merch Table on your Shopify store</li>
+        <li>Connect your Discord server</li>
+        <li>Set up visibility rules (which roles can see which products)</li>
+        <li>Members link their accounts with <code>/link_shopify</code> in Discord</li>
+        <li>Linked members with the right roles can purchase exclusive products</li>
+      </ol>
+      <p style="margin-top: 30px;"><em>Merch Table: Turn your Discord community into customers.</em></p>
+      <div style="margin-top: 30px;">
+        <a href="https://calendly.com/nervous/intro" class="btn">Get Merch Table</a>
+        <a href="bots.html" class="btn btn-secondary">Back to Bots</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider gray-to-yellow"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="images/256x256.png" alt="nervous logo">
+      </a>
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Our Work</a></li>
+        <li><a href="bots.html">Bots</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="podcast.html">Podcast</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://calendly.com/nervous/intro">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
