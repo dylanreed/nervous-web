@@ -665,16 +665,31 @@ pre code {
   font-size: 1rem;
   color: var(--blue);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background 0.2s, transform 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
 
 .project-tab:hover {
   background: var(--blue);
+  border-color: var(--blue);
   color: var(--white);
+  transform: translateY(-2px);
+}
+
+.project-tab:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(25, 111, 210, 0.3);
+}
+
+.project-tab:active {
+  background: var(--blue-dark);
+  border-color: var(--blue-dark);
+  color: var(--white);
+  transform: translateY(0);
 }
 
 .project-tab.active {
   background: var(--blue);
+  border-color: var(--blue);
   color: var(--white);
 }
 
