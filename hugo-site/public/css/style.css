@@ -758,22 +758,27 @@ pre code {
 .project-tabs {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   margin-bottom: 30px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 5px;
 }
 
 .project-tab {
-  padding: 12px 24px;
+  padding: 10px 16px;
   background: transparent;
   border: 2px solid var(--blue);
   border-radius: 30px;
   font-family: 'TT Travels', sans-serif;
   font-weight: 800;
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: var(--blue);
   cursor: pointer;
   transition: background 0.2s, transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .project-tab:hover {
@@ -1100,8 +1105,8 @@ pre code {
 
   /* Project tabs - tablet */
   .project-tab {
-    padding: 10px 18px;
-    font-size: 0.9rem;
+    padding: 8px 14px;
+    font-size: 0.8rem;
   }
 
   /* Docs tables - tablet */
@@ -1230,12 +1235,15 @@ pre code {
 
   /* Project tabs - mobile */
   .project-tabs {
-    gap: 8px;
+    justify-content: flex-start;
+    gap: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .project-tab {
-    padding: 8px 14px;
-    font-size: 0.85rem;
+    padding: 6px 12px;
+    font-size: 0.75rem;
   }
 
   .project-panel .case-study {
