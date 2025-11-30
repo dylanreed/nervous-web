@@ -9,6 +9,7 @@ image: "norris-security.webp"
 imageAlt: "bouncer illustration"
 price: "Starting at $xx.xx/month"
 ctaText: "Get bouncer"
+docsSlug: "bouncer"
 features:
   - "Timeouts & Quarantine with auto-expiry"
   - "Complete moderation history & analytics"

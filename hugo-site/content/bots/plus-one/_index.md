@@ -10,6 +10,7 @@ imageAlt: "plus one illustration"
 imageStyle: "transform: scale(1.3);"
 price: "Starting at $xx.xx/month"
 ctaText: "Get plus one"
+docsSlug: "plus-one"
 features:
   - "Single-use invite links with quota limits"
   - "Trial invites with auto-expiring roles"

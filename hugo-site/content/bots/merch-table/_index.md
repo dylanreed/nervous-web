@@ -9,6 +9,7 @@ image: "norris-builder.webp"
 imageAlt: "merch table illustration"
 price: "Starting at $xx.xx/month"
 ctaText: "Get merch table for Shopify"
+docsSlug: "merch-table"
 features:
   - "Role-based product access — restrict products to specific Discord roles"
   - "Automatic sync — customer tags update when roles change"
