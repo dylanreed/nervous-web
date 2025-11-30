@@ -367,15 +367,59 @@
                             <p class="bot-tagline">Turn support chaos into organized conversations.</p>
                             <p><strong>Professional ticketing workflows for Discord communities.</strong></p>
                             <p><p>When your community needs help, they shouldn&rsquo;t have to shout into the void. Ten-Four creates private ticket channels where users get dedicated support without cluttering your public channels. Staff can claim tickets, loop in teammates, and close with optional ratings—while every conversation gets preserved as a searchable transcript.</p>
-<h2 id="documentation">Documentation</h2>
-<h3 id="getting-started">Getting Started</h3>
-<p>Ten-Four uses an interactive setup wizard. Run <code>/setup_ten_four</code> and the bot walks you through three simple steps:</p>
+<hr>
+<h2 id="how-it-works">How It Works</h2>
+<h3 id="1-setup-wizard">1. Setup Wizard</h3>
+<p>Run <code>/setup_ten_four</code> and the bot walks you through configuration in three simple steps:</p>
 <ol>
 <li><strong>Select your panel channel</strong> — Where the &ldquo;Create Ticket&rdquo; button appears</li>
 <li><strong>Select your support role</strong> — Who can see and respond to tickets</li>
 <li><strong>Select your log channel</strong> — Where transcripts are saved when tickets close</li>
 </ol>
-<h3 id="commands">Commands</h3>
+<p>No config files, no complicated permissions. Just click through the wizard and you&rsquo;re ready to go.</p>
+<h3 id="2-ticket-creation">2. Ticket Creation</h3>
+<p>Users click a button in your panel channel to create a private ticket. The bot:</p>
+<ul>
+<li>Creates a new private channel (e.g., <code>ticket-0042</code>)</li>
+<li>Sets permissions so only the user and support team can see it</li>
+<li>Posts a welcome message with action buttons</li>
+<li>Tracks activity on every message</li>
+</ul>
+<h3 id="3-ticket-management">3. Ticket Management</h3>
+<p>Each ticket channel includes action buttons for your support team:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Button</th>
+          <th>What It Does</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Claim</strong></td>
+          <td>Mark yourself as handling this ticket</td>
+      </tr>
+      <tr>
+          <td><strong>Add User</strong></td>
+          <td>Bring another team member into the conversation</td>
+      </tr>
+      <tr>
+          <td><strong>Close</strong></td>
+          <td>Close the ticket with optional satisfaction rating</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="4-transcripts">4. Transcripts</h3>
+<p>When a ticket closes, Ten-Four automatically:</p>
+<ol>
+<li>Fetches the complete message history (up to 500 messages)</li>
+<li>Formats it as a readable transcript with timestamps</li>
+<li>Posts it to your log channel as a text file</li>
+<li>Deletes the ticket channel</li>
+</ol>
+<p>Transcripts include message content, author info, timestamps, attachments, and embed content—everything you need for audit trails and quality review.</p>
+<hr>
+<h2 id="commands">Commands</h2>
 <table>
   <thead>
       <tr>
@@ -398,13 +442,8 @@
       </tr>
   </tbody>
 </table>
-<h3 id="ticket-actions">Ticket Actions</h3>
-<p>Each ticket channel includes action buttons:</p>
-<ul>
-<li><strong>Claim</strong> — Mark yourself as handling this ticket</li>
-<li><strong>Add User</strong> — Bring another team member into the conversation</li>
-<li><strong>Close</strong> — Close the ticket (prompts for optional rating)</li>
-</ul>
+<hr>
+<h2 id="features-in-depth">Features In Depth</h2>
 <h3 id="multi-category-support">Multi-Category Support</h3>
 <p>Route different ticket types to different teams. Each category can have:</p>
 <ul>
@@ -412,20 +451,108 @@
 <li>Dedicated support role</li>
 <li>Separate permission settings</li>
 </ul>
-<p>Users see category buttons on the panel and choose the type of help they need.</p>
-<h3 id="transcripts">Transcripts</h3>
-<p>When a ticket closes, Ten-Four automatically:</p>
-<ol>
-<li>Fetches the complete message history (up to 500 messages)</li>
-<li>Formats it as a readable transcript with timestamps</li>
-<li>Posts it to your log channel as a text file</li>
-<li>Deletes the ticket channel</li>
-</ol>
-<p>Transcripts include message content, author info, timestamps, attachments, and embed content.</p>
+<p>Users see category buttons on the panel and choose the type of help they need. Technical issues go to your dev team, billing questions go to support, general inquiries go to community managers.</p>
 <h3 id="inactivity-reminders">Inactivity Reminders</h3>
-<p>Configure how long a ticket can sit idle before the bot sends a reminder. The reminder pings your support team and asks the user if they still need help or want to close the ticket.</p>
+<p>Configure how long a ticket can sit idle before the bot sends a reminder. The reminder:</p>
+<ul>
+<li>Pings your support team so nothing falls through the cracks</li>
+<li>Asks the user if they still need help or want to close the ticket</li>
+<li>Runs hourly checks to catch stale tickets</li>
+</ul>
 <h3 id="satisfaction-ratings">Satisfaction Ratings</h3>
-<p>Optionally prompt users to rate their support experience when closing tickets. Ratings are stored and can be used to track support quality over time.</p>
+<p>Optionally prompt users to rate their support experience when closing tickets:</p>
+<ul>
+<li>Quick thumbs up/thumbs down rating</li>
+<li>Configurable delay before ticket channel is deleted</li>
+<li>Ratings stored for tracking support quality over time</li>
+</ul>
+<hr>
+<h2 id="test-checklist">Test Checklist</h2>
+<p>After setup, verify everything works:</p>
+<ul>
+<li><input disabled="" type="checkbox"> <code>/ping</code> responds with latency</li>
+<li><input disabled="" type="checkbox"> <code>/setup_ten_four</code> creates setup channel</li>
+<li><input disabled="" type="checkbox"> Setup wizard completes all 3 steps</li>
+<li><input disabled="" type="checkbox"> Ticket panel appears in selected channel</li>
+<li><input disabled="" type="checkbox"> Clicking &ldquo;Create Ticket&rdquo; creates private channel</li>
+<li><input disabled="" type="checkbox"> Ticket channel only visible to creator + support role</li>
+<li><input disabled="" type="checkbox"> &ldquo;Claim&rdquo; button works and updates embed</li>
+<li><input disabled="" type="checkbox"> &ldquo;Add User&rdquo; adds user to channel</li>
+<li><input disabled="" type="checkbox"> &ldquo;Close&rdquo; shows confirmation dialog</li>
+<li><input disabled="" type="checkbox"> Closing ticket generates transcript</li>
+<li><input disabled="" type="checkbox"> Transcript appears in log channel</li>
+<li><input disabled="" type="checkbox"> Ticket channel is deleted after close</li>
+</ul>
+<hr>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="bot-doesnt-respond-to-commands">Bot doesn&rsquo;t respond to commands</h3>
+<ol>
+<li>Check bot is online (green dot in member list)</li>
+<li>Verify the bot was invited with correct permissions</li>
+<li>Wait a few minutes for Discord to propagate commands</li>
+</ol>
+<h3 id="missing-permissions-errors">&ldquo;Missing Permissions&rdquo; errors</h3>
+<ol>
+<li>Re-invite the bot with the correct permissions</li>
+<li>Ensure the bot&rsquo;s role is higher than roles it needs to manage</li>
+<li>Check channel-specific permission overwrites</li>
+</ol>
+<h3 id="transcripts-not-generating">Transcripts not generating</h3>
+<ol>
+<li>Check bot has &ldquo;Read Message History&rdquo; permission</li>
+<li>Verify log channel exists and bot can send messages there</li>
+</ol>
+<h3 id="commands-not-appearing">Commands not appearing</h3>
+<ol>
+<li>Try in a different channel</li>
+<li>Wait up to 1 hour for command propagation</li>
+<li>Contact support if commands still don&rsquo;t appear</li>
+</ol>
+<hr>
+<h2 id="required-permissions">Required Permissions</h2>
+<p>Ten-Four needs these Discord permissions to function:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Permission</th>
+          <th>Why It&rsquo;s Needed</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Manage Channels</td>
+          <td>Create/delete ticket channels</td>
+      </tr>
+      <tr>
+          <td>View Channels</td>
+          <td>See channels to interact with</td>
+      </tr>
+      <tr>
+          <td>Send Messages</td>
+          <td>Send bot messages and embeds</td>
+      </tr>
+      <tr>
+          <td>Manage Messages</td>
+          <td>Delete messages if needed</td>
+      </tr>
+      <tr>
+          <td>Embed Links</td>
+          <td>Send rich ticket embeds</td>
+      </tr>
+      <tr>
+          <td>Attach Files</td>
+          <td>Send transcript files</td>
+      </tr>
+      <tr>
+          <td>Read Message History</td>
+          <td>Generate ticket transcripts</td>
+      </tr>
+      <tr>
+          <td>Mention Everyone</td>
+          <td>Mention support roles in tickets</td>
+      </tr>
+  </tbody>
+</table>
 </p>
                         </div>
                         <div class="content-block-image">
