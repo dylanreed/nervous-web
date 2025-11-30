@@ -1,4 +1,83 @@
 {{ define "main" }}
+{{/* Check if this is the main bots section (has child sections) or an individual bot (no children) */}}
+{{ if .Sections }}
+{{/* Main bots listing page */}}
+<!-- Header -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h1>{{ .Title }}</h1>
+            <p>{{ .Params.intro }}</p>
+        </div>
+    </div>
+</section>
+
+{{ partial "section-divider.html" "white-to-gray" }}
+
+<!-- Tabbed Bots -->
+<section class="section section-alt">
+    <div class="container">
+
+        <!-- Tab Buttons -->
+        <div class="project-tabs">
+            {{ range .Sections.ByWeight }}
+            <button class="project-tab{{ if eq .Params.weight 1 }} active{{ end }}" data-project="{{ .Params.slug }}">{{ .Title }}</button>
+            {{ end }}
+        </div>
+
+        <!-- Bot Panels -->
+        <div class="project-panels">
+            {{ range .Sections.ByWeight }}
+            <div class="project-panel{{ if eq .Params.weight 1 }} active{{ end }}" id="project-{{ .Params.slug }}">
+                <div class="case-study">
+                    <div class="content-block">
+                        <div class="content-block-text">
+                            <h2>{{ .Title | lower }}</h2>
+                            <p class="bot-tagline">{{ .Params.tagline }}</p>
+                            <p><strong>{{ .Params.subtitle }}</strong></p>
+                            {{ with .Params.intro }}<p>{{ . | safeHTML }}</p>{{ end }}
+                        </div>
+                        <div class="content-block-image">
+                            <img src="{{ $.Site.BaseURL }}images/{{ .Params.image }}" loading="lazy" alt="{{ .Params.imageAlt }}"{{ with .Params.imageStyle }} style="{{ . }}"{{ end }}>
+                        </div>
+                    </div>
+
+                    <h3>Key Features</h3>
+                    <ul class="feature-list">
+                        {{ range .Params.features }}
+                        <li>{{ . | safeHTML }}</li>
+                        {{ end }}
+                    </ul>
+
+                    {{ with .Params.useCases }}
+                    <h3>{{ $.Params.useCasesTitle | default "Use Cases" }}</h3>
+                    <ul class="feature-list">
+                        {{ range . }}
+                        <li>{{ . }}</li>
+                        {{ end }}
+                    </ul>
+                    {{ end }}
+
+                    <p class="bot-price">{{ .Params.price }}</p>
+
+                    <div style="margin-top: 30px;">
+                        <a href="{{ $.Site.Params.calendlyURL }}" class="btn">{{ .Params.ctaText }}</a>
+                        <a href="{{ .Permalink }}" class="btn btn-secondary">More Info</a>
+                        {{ with .Params.docsSlug }}
+                        <a href="/docs/{{ . }}/" class="btn btn-secondary">Documentation</a>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ partial "section-divider.html" "gray-to-yellow" }}
+
+{{ else }}
+{{/* Individual bot detail page */}}
 <!-- Header -->
 <section class="section">
     <div class="container">
@@ -137,4 +216,5 @@
 {{ end }}
 
 {{ partial "section-divider.html" "gray-to-yellow" }}
+{{ end }}
 {{ end }}
