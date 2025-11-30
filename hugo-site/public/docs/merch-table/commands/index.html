@@ -3,22 +3,22 @@
     <head>
         <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Merch Table documentation | Nervous</title>
-<meta name="description" content="Complete guide to connecting your Discord community with your Shopify store.">
-<link rel="canonical" href="https://www.nervous.net/docs/merch-table/">
+<title>Commands | Nervous</title>
+<meta name="description" content="Discord commands for Merch Table.">
+<link rel="canonical" href="https://www.nervous.net/docs/merch-table/commands/">
 
 
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.nervous.net/docs/merch-table/">
-<meta property="og:title" content="Merch Table documentation | Nervous">
-<meta property="og:description" content="Complete guide to connecting your Discord community with your Shopify store.">
+<meta property="og:url" content="https://www.nervous.net/docs/merch-table/commands/">
+<meta property="og:title" content="Commands | Nervous">
+<meta property="og:description" content="Discord commands for Merch Table.">
 <meta property="og:image" content="https://www.nervous.net/images/og-home.jpg">
 
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://www.nervous.net/docs/merch-table/">
-<meta name="twitter:title" content="Merch Table documentation | Nervous">
-<meta name="twitter:description" content="Complete guide to connecting your Discord community with your Shopify store.">
+<meta name="twitter:url" content="https://www.nervous.net/docs/merch-table/commands/">
+<meta name="twitter:title" content="Commands | Nervous">
+<meta name="twitter:description" content="Discord commands for Merch Table.">
 <meta name="twitter:image" content="https://www.nervous.net/images/og-home.jpg">
 
 
@@ -84,6 +84,7 @@
 
         <main>
             
+
 <section class="section docs-section">
     <div class="container docs-container">
         
@@ -95,7 +96,7 @@
                 
                 <a href="https://www.nervous.net/docs/merch-table/getting-started/" class="docs-nav-item">Getting Started</a>
                 
-                <a href="https://www.nervous.net/docs/merch-table/commands/" class="docs-nav-item">Commands</a>
+                <a href="https://www.nervous.net/docs/merch-table/commands/" class="docs-nav-item active">Commands</a>
                 
                 <a href="https://www.nervous.net/docs/merch-table/discounts/" class="docs-nav-item">Role-Based Discounts</a>
                 
@@ -108,47 +109,114 @@
         
         <div class="docs-content">
             <div class="docs-header">
-                <h1>Merch Table documentation</h1>
+                <h1>Commands</h1>
                 
-                <p class="docs-description">Complete guide to connecting your Discord community with your Shopify store.</p>
+                <p class="docs-description">Discord commands for Merch Table.</p>
                 
             </div>
 
             <div class="content">
-                <p>Welcome to the Merch Table documentation. Merch Table bridges your Discord community and Shopify store, enabling role-based discounts, VIP products, and seamless account linking.</p>
-<p>Select a topic from the sidebar to get started, or browse the documentation sections below.</p>
+                <p>Merch Table uses Discord slash commands. All commands start with <code>/</code>.</p>
+<h2 id="user-commands">User Commands</h2>
+<p>These commands are available to all members in your Discord server.</p>
+<h3 id="link_shopify">/link_shopify</h3>
+<p>Link your Discord account to your Shopify customer account.</p>
+<p><strong>Process:</strong></p>
+<ol>
+<li>Run <code>/link_shopify</code></li>
+<li>Enter your email address (must match your Shopify account)</li>
+<li>Click the verification link sent to your email</li>
+<li>Log into Shopify to complete the link</li>
+</ol>
+<p>Once linked, your Discord roles sync automatically as Shopify customer tags.</p>
+<hr>
+<h3 id="unlink_shopify">/unlink_shopify</h3>
+<p>Remove the link between your Discord and Shopify accounts.</p>
+<p>After unlinking:</p>
+<ul>
+<li>Your Discord role tags are removed from your Shopify account</li>
+<li>You&rsquo;ll need to link again to restore the connection</li>
+</ul>
+<hr>
+<h3 id="shopify_status">/shopify_status</h3>
+<p>Check your current link status and synced roles.</p>
+<p><strong>Shows:</strong></p>
+<ul>
+<li>Whether your account is linked</li>
+<li>Which Discord roles are synced to Shopify</li>
+<li>Your Shopify customer email (if linked)</li>
+</ul>
+<p>Use this to verify your roles synced correctly after linking.</p>
+<hr>
+<h2 id="admin-commands">Admin Commands</h2>
+<p>These commands require <strong>Administrator</strong> or <strong>Manage Server</strong> permission in Discord.</p>
+<h3 id="connect">/connect</h3>
+<p>Connect your Discord server to your Shopify store.</p>
+<p><strong>Usage:</strong></p>
+<pre tabindex="0"><code>/connect
+</code></pre><p>When prompted, enter the connection code from your Shopify app dashboard.</p>
+<p>This is a one-time setup step. After connecting, the dashboard shows your server&rsquo;s status.</p>
+<hr>
+<h3 id="shopify_info">/shopify_info</h3>
+<p>View connection information for your server.</p>
+<p><strong>Shows:</strong></p>
+<ul>
+<li>Connected Shopify store name</li>
+<li>Store URL</li>
+<li>Connection status</li>
+<li>Number of linked members</li>
+</ul>
+<p>Use this to verify your server is properly connected.</p>
+<hr>
+<h2 id="permission-requirements">Permission Requirements</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Command</th>
+          <th>Who Can Use</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>/link_shopify</code></td>
+          <td>Any member</td>
+      </tr>
+      <tr>
+          <td><code>/unlink_shopify</code></td>
+          <td>Any member</td>
+      </tr>
+      <tr>
+          <td><code>/shopify_status</code></td>
+          <td>Any member</td>
+      </tr>
+      <tr>
+          <td><code>/connect</code></td>
+          <td>Server administrators</td>
+      </tr>
+      <tr>
+          <td><code>/shopify_info</code></td>
+          <td>Server administrators</td>
+      </tr>
+  </tbody>
+</table>
 
             </div>
 
             
-            <div class="docs-pages-list">
-                <h2>Documentation</h2>
-                <ul>
+            <div class="docs-pagination">
                 
-                    <li>
-                        <a href="https://www.nervous.net/docs/merch-table/getting-started/">
-                            <strong>Getting Started</strong>
-                            <br><span>Connect your Discord server to your Shopify store.</span>
-                        </a>
-                    </li>
+                <a href="https://www.nervous.net/docs/merch-table/getting-started/" class="docs-prev">
+                    <span>&larr; Previous</span>
+                    <strong>Getting Started</strong>
+                </a>
                 
-                    <li>
-                        <a href="https://www.nervous.net/docs/merch-table/commands/">
-                            <strong>Commands</strong>
-                            <br><span>Discord commands for Merch Table.</span>
-                        </a>
-                    </li>
                 
-                    <li>
-                        <a href="https://www.nervous.net/docs/merch-table/discounts/">
-                            <strong>Role-Based Discounts</strong>
-                            <br><span>Create automatic discounts for Discord role holders.</span>
-                        </a>
-                    </li>
+                <a href="https://www.nervous.net/docs/merch-table/discounts/" class="docs-next">
+                    <span>Next &rarr;</span>
+                    <strong>Role-Based Discounts</strong>
+                </a>
                 
-                </ul>
             </div>
-            
         </div>
     </div>
 </section>

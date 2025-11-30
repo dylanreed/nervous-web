@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Role-Based Discounts | Nervous</title>
+<meta name="description" content="Create automatic discounts for Discord role holders.">
+<link rel="canonical" href="https://www.nervous.net/docs/merch-table/discounts/">
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.nervous.net/docs/merch-table/discounts/">
+<meta property="og:title" content="Role-Based Discounts | Nervous">
+<meta property="og:description" content="Create automatic discounts for Discord role holders.">
+<meta property="og:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.nervous.net/docs/merch-table/discounts/">
+<meta name="twitter:title" content="Role-Based Discounts | Nervous">
+<meta name="twitter:description" content="Create automatic discounts for Discord role holders.">
+<meta name="twitter:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet" />
+
+
+<link rel="icon" type="image/png" href="https://www.nervous.net/images/favicon.png" />
+<link rel="apple-touch-icon" href="https://www.nervous.net/images/webclip.png" />
+
+<link rel="stylesheet" href="https://www.nervous.net/css/style.css" />
+
+
+
+    </head>
+    <body>
+        <nav class="navbar">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+        <ul class="nav-menu">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro" class="btn">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+        <main>
+            
+
+<section class="section docs-section">
+    <div class="container docs-container">
+        
+        <aside class="docs-sidebar">
+            <div class="docs-sidebar-header">
+                <h3>Merch Table documentation</h3>
+            </div>
+            <nav class="docs-nav">
+                
+                <a href="https://www.nervous.net/docs/merch-table/getting-started/" class="docs-nav-item">Getting Started</a>
+                
+                <a href="https://www.nervous.net/docs/merch-table/commands/" class="docs-nav-item">Commands</a>
+                
+                <a href="https://www.nervous.net/docs/merch-table/discounts/" class="docs-nav-item active">Role-Based Discounts</a>
+                
+            </nav>
+            <div class="docs-back">
+                <a href="/bots/merch-table/">&larr; Back to Merch Table</a>
+            </div>
+        </aside>
+
+        
+        <div class="docs-content">
+            <div class="docs-header">
+                <h1>Role-Based Discounts</h1>
+                
+                <p class="docs-description">Create automatic discounts for Discord role holders.</p>
+                
+            </div>
+
+            <div class="content">
+                <p>Merch Table lets you create automatic discounts that apply to customers based on their Discord roles. VIP members, subscribers, and other role holders get discounts automatically at checkout.</p>
+<h2 id="how-it-works">How It Works</h2>
+<ol>
+<li>Discord roles sync as customer tags (e.g., <code>discord_vip</code>)</li>
+<li>You create discounts targeting specific tags</li>
+<li>Customers with matching tags see discounts applied automatically</li>
+</ol>
+<hr>
+<h2 id="setting-up-discounts">Setting Up Discounts</h2>
+<h3 id="step-1-ensure-roles-are-syncing">Step 1: Ensure Roles Are Syncing</h3>
+<p>Before creating discounts, verify the Discord roles you want to target are enabled:</p>
+<ol>
+<li>Go to the <strong>Discord Roles</strong> tab in your Shopify app</li>
+<li>Confirm the relevant roles are toggled <strong>ON</strong></li>
+<li>Save your configuration</li>
+</ol>
+<h3 id="step-2-create-a-discount">Step 2: Create a Discount</h3>
+<ol>
+<li>Go to the <strong>Discounts</strong> tab in your Shopify app</li>
+<li>Click <strong>+ Add Discount</strong></li>
+<li>Select a Discord role tag (e.g., <code>discord_vip</code>)</li>
+<li>Choose the discount type:
+<ul>
+<li><strong>Percentage</strong> - e.g., 15% off</li>
+<li><strong>Fixed amount</strong> - e.g., $10 off</li>
+</ul>
+</li>
+<li>Click <strong>Create Discount</strong></li>
+</ol>
+<p>The discount is now active and applies automatically at checkout.</p>
+<hr>
+<h2 id="discount-examples">Discount Examples</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Role</th>
+          <th>Tag</th>
+          <th>Discount</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>VIP</td>
+          <td><code>discord_vip</code></td>
+          <td>20% off everything</td>
+      </tr>
+      <tr>
+          <td>Subscriber</td>
+          <td><code>discord_subscriber</code></td>
+          <td>15% off everything</td>
+      </tr>
+      <tr>
+          <td>Member</td>
+          <td><code>discord_member</code></td>
+          <td>10% off first order</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="how-customers-get-discounts">How Customers Get Discounts</h2>
+<p>Customers don&rsquo;t need to enter a code. The process is automatic:</p>
+<ol>
+<li>Customer links their Discord account via <code>/link_shopify</code></li>
+<li>Their Discord roles sync as Shopify customer tags</li>
+<li>At checkout, discounts matching their tags apply automatically</li>
+</ol>
+<hr>
+<h2 id="managing-discounts">Managing Discounts</h2>
+<h3 id="view-active-discounts">View Active Discounts</h3>
+<p>The <strong>Discounts</strong> tab shows all role-based discounts you&rsquo;ve created, including:</p>
+<ul>
+<li>Target role/tag</li>
+<li>Discount amount</li>
+<li>Usage count</li>
+</ul>
+<h3 id="edit-a-discount">Edit a Discount</h3>
+<p>Click on any discount to modify:</p>
+<ul>
+<li>Discount percentage/amount</li>
+<li>Minimum purchase requirements</li>
+<li>Product restrictions</li>
+</ul>
+<h3 id="delete-a-discount">Delete a Discount</h3>
+<p>Click the delete icon next to any discount to remove it. This takes effect immediately.</p>
+<hr>
+<h2 id="tips">Tips</h2>
+<h3 id="stacking-discounts">Stacking Discounts</h3>
+<p>If a customer has multiple roles with discounts, Shopify&rsquo;s standard discount stacking rules apply. Consider this when setting up multiple role discounts.</p>
+<h3 id="role-hierarchy">Role Hierarchy</h3>
+<p>Create tiered discounts that reward higher engagement:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Role</th>
+          <th>Discount</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>New Member</td>
+          <td>5% off</td>
+      </tr>
+      <tr>
+          <td>Active Member</td>
+          <td>10% off</td>
+      </tr>
+      <tr>
+          <td>VIP</td>
+          <td>20% off</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="testing">Testing</h3>
+<ol>
+<li>Link your own Discord account</li>
+<li>Assign yourself the target role</li>
+<li>Run <code>/shopify_status</code> to verify the tag synced</li>
+<li>Add items to cart and check that the discount applies</li>
+</ol>
+
+            </div>
+
+            
+            <div class="docs-pagination">
+                
+                <a href="https://www.nervous.net/docs/merch-table/commands/" class="docs-prev">
+                    <span>&larr; Previous</span>
+                    <strong>Commands</strong>
+                </a>
+                
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="section-divider white-to-yellow"></div>
+
+
+        </main>
+
+        <footer class="footer">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+            <img src="https://www.nervous.net/images/logo-wordmark.webp" alt="Nervous" class="logo-wordmark" />
+        </a>
+        <ul class="footer-nav">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro">Contact</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<script src="https://www.nervous.net/js/main.js"></script>
+
+    </body>
+</html>

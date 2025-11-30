@@ -118,14 +118,14 @@ img {
 }
 
 .navbar .logo img {
-  height: 40px;
+  height: 60px;
   width: auto;
 }
 
 .nav-menu {
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 30px;
   align-items: center;
 }
 
