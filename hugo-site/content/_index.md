@@ -64,6 +64,10 @@ bots:
       slug: "plus-one"
       tagline: "Controlled invite management"
       image: "plus-one.webp"
+    - name: "Ten-Four Ticketing"
+      slug: "ten-four"
+      tagline: "Professional support ticketing"
+      image: "ten_four_walkies.png"
 
 work:
   title: "Our Work"
