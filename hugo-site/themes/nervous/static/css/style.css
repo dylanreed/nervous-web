@@ -113,6 +113,10 @@ img {
   padding: 15px 20px;
 }
 
+.navbar .logo {
+  margin-left: -10px;
+}
+
 .navbar .logo img {
   height: 60px;
   width: auto;
@@ -120,7 +124,7 @@ img {
 
 .navbar .logo-wordmark {
   display: block;
-  height: 40px;
+  height: 28px;
   width: auto;
 }
 
