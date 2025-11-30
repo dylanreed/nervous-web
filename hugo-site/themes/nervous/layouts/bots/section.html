@@ -1,0 +1,140 @@
+{{ define "main" }}
+<!-- Header -->
+<section class="section">
+    <div class="container">
+        <div class="content-block bot-detail-header">
+            <div class="content-block-text">
+                <h1>{{ .Title | lower }}</h1>
+                <p class="bot-tagline">{{ .Params.tagline }}</p>
+                <p><strong>{{ .Params.subtitle }}</strong></p>
+                <p>{{ .Params.intro | safeHTML }}</p>
+                <div class="bot-detail-buttons" style="margin-top: 30px;">
+                    <a href="{{ $.Site.Params.calendlyURL }}" class="btn">{{ .Params.ctaText }}</a>
+                    {{ with .Params.docsSlug }}
+                    <a href="/docs/{{ . }}/" class="btn btn-secondary">Documentation</a>
+                    {{ end }}
+                    <a href="/bots/" class="btn btn-secondary">Back to Bots</a>
+                </div>
+            </div>
+            <div class="content-block-image">
+                <img src="{{ $.Site.BaseURL }}images/{{ .Params.image }}" loading="lazy" alt="{{ .Params.imageAlt }}"{{ with .Params.imageStyle }} style="{{ . }}"{{ end }}>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ partial "section-divider.html" "white-to-gray" }}
+
+<!-- The Problem -->
+{{ with .Params.problem }}
+<section class="section section-alt">
+    <div class="container">
+        <h2>The Problem</h2>
+        <p>{{ .intro }}</p>
+        <ul class="feature-list">
+            {{ range .points }}
+            <li>{{ . }}</li>
+            {{ end }}
+        </ul>
+    </div>
+</section>
+
+{{ partial "section-divider.html" "gray-to-white" }}
+{{ end }}
+
+<!-- The Solution -->
+{{ with .Params.solution }}
+<section class="section">
+    <div class="container">
+        <h2>The Solution</h2>
+        <p>{{ .intro }}</p>
+
+        {{ range .sections }}
+        <h3>{{ .title }}</h3>
+        {{ if .text }}<p>{{ .text | safeHTML }}</p>{{ end }}
+        {{ with .points }}
+        <ul class="feature-list">
+            {{ range . }}
+            <li>{{ . | safeHTML }}</li>
+            {{ end }}
+        </ul>
+        {{ end }}
+        {{ end }}
+    </div>
+</section>
+
+{{ partial "section-divider.html" "white-to-gray" }}
+{{ end }}
+
+<!-- Commands -->
+{{ with .Params.commands }}
+<section class="section section-alt">
+    <div class="container">
+        <h2>All Commands</h2>
+
+        <div class="command-table">
+            {{ range . }}
+            <h3>{{ .category }}</h3>
+            <div class="command-list">
+                {{ range .items }}
+                <span class="command">{{ . }}</span>
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ partial "section-divider.html" "gray-to-white" }}
+{{ end }}
+
+<!-- Built Right / Best For -->
+{{ if or .Params.builtRight .Params.bestFor }}
+<section class="section">
+    <div class="container">
+        {{ with .Params.builtRight }}
+        <h2>Built Right</h2>
+        <ul class="feature-list">
+            {{ range . }}
+            <li>{{ . | safeHTML }}</li>
+            {{ end }}
+        </ul>
+        {{ end }}
+
+        {{ with .Params.bestFor }}
+        <h2 style="margin-top: 50px;">{{ $.Params.bestForTitle | default "Best For" }}</h2>
+        <ul class="feature-list">
+            {{ range . }}
+            <li>{{ . }}</li>
+            {{ end }}
+        </ul>
+        {{ end }}
+    </div>
+</section>
+
+{{ partial "section-divider.html" "white-to-gray" }}
+{{ end }}
+
+<!-- Get Started -->
+{{ with .Params.getStarted }}
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header">
+            <h2>Get Started</h2>
+            <p>{{ .intro }}</p>
+        </div>
+        <ol class="feature-list" style="list-style: decimal; padding-left: 25px;">
+            {{ range .steps }}
+            <li>{{ . | safeHTML }}</li>
+            {{ end }}
+        </ol>
+        <div style="margin-top: 30px;">
+            <a href="{{ $.Site.Params.calendlyURL }}" class="btn">{{ $.Params.ctaText }}</a>
+            <a href="/bots/" class="btn btn-secondary">Back to Bots</a>
+        </div>
+    </div>
+</section>
+{{ end }}
+
+{{ partial "section-divider.html" "gray-to-yellow" }}
+{{ end }}
