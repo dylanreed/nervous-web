@@ -1,14 +1,14 @@
 ---
-title: "Ten-Four Ticketing"
+title: "10-4 ticketing"
 slug: "ten-four"
 weight: 6
 tagline: "Turn support chaos into organized conversations."
 subtitle: "Professional Ticketing Workflows for Discord Communities"
-intro: "When your community needs help, they shouldn't have to shout into the void. Ten-Four creates private ticket channels where users get dedicated support without cluttering your public channels. Staff can claim tickets, loop in teammates, and close with optional ratings—while every conversation gets preserved as a searchable transcript."
+intro: "When your community needs help, they shouldn't have to shout into the void. 10-4 creates private ticket channels where users get dedicated support without cluttering your public channels. Staff can claim tickets, loop in teammates, and close with optional ratings—while every conversation gets preserved as a searchable transcript."
 image: "ten_four_walkies.png"
-imageAlt: "Ten-Four Ticketing illustration"
+imageAlt: "10-4 ticketing illustration"
 price: "Starting at $xx.xx/month"
-ctaText: "Get Ten-Four"
+ctaText: "Get 10-4"
 docsSlug: "ten-four"
 features:
   - "One-click ticket creation with private channels"
@@ -36,7 +36,7 @@ problem:
     - "No metrics on support quality or response times"
 
 solution:
-  intro: "Ten-Four brings professional ticketing workflows to Discord without the complexity of external tools."
+  intro: "10-4 brings professional ticketing workflows to Discord without the complexity of external tools."
   sections:
     - title: "One-Click Ticket Creation"
       text: "Users click a button in your support channel to create a private ticket. No commands to remember, no confusion. The bot creates a dedicated channel visible only to the user and your support team."
@@ -45,7 +45,7 @@ solution:
     - title: "Multi-Category Routing"
       text: "Route different ticket types to different teams. Technical issues go to your dev team, billing questions go to support, general inquiries go to community managers. Each category gets its own button and support role."
     - title: "Automatic Transcripts"
-      text: "When a ticket closes, Ten-Four automatically generates a complete transcript with timestamps, authors, attachments, and embeds. Transcripts are saved to your log channel for audit trails and quality review."
+      text: "When a ticket closes, 10-4 automatically generates a complete transcript with timestamps, authors, attachments, and embeds. Transcripts are saved to your log channel for audit trails and quality review."
     - title: "Inactivity Reminders"
       text: "Configure how long tickets can sit idle before the bot sends a reminder. Your support team gets pinged, and the user is asked if they still need help. Nothing falls through the cracks."
     - title: "Satisfaction Ratings"
@@ -81,9 +81,9 @@ bestFor:
   - "Any community that needs accountability in support"
 
 getStarted:
-  intro: "Set up Ten-Four in minutes with our interactive wizard:"
+  intro: "Set up 10-4 in minutes with our interactive wizard:"
   steps:
-    - "Add Ten-Four to your server"
+    - "Add 10-4 to your server"
     - "Run <code>/setup_ten_four</code> to launch the setup wizard"
     - "Select your panel channel (where the ticket button appears)"
     - "Select your support role (who can see and respond to tickets)"

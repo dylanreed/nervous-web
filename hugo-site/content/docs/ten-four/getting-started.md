@@ -1,10 +1,10 @@
 ---
 title: "Getting Started"
 weight: 1
-description: "Set up Ten-Four Ticketing in your Discord server in minutes."
+description: "Set up 10-4 ticketing in your Discord server in minutes."
 ---
 
-Getting Ten-Four running in your server takes just a few minutes. The bot uses an interactive setup wizard that guides you through configuration without touching any config files.
+Getting 10-4 running in your server takes just a few minutes. The bot uses an interactive setup wizard that guides you through configuration without touching any config files.
 
 ## Prerequisites
 
@@ -17,7 +17,7 @@ Before starting, make sure you have:
 
 ## Step 1: Invite the Bot
 
-Contact us to get Ten-Four added to your server. We'll provide an invite link with the correct permissions pre-configured.
+Contact us to get 10-4 added to your server. We'll provide an invite link with the correct permissions pre-configured.
 
 ## Step 2: Run the Setup Wizard
 

@@ -4,7 +4,7 @@ weight: 3
 description: "Route different ticket types to different support teams."
 ---
 
-Ten-Four supports multiple ticket categories, allowing you to route different types of requests to different teams.
+10-4 supports multiple ticket categories, allowing you to route different types of requests to different teams.
 
 ## How Categories Work
 

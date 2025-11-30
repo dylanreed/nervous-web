@@ -1,11 +1,11 @@
 ---
-title: "Roadie"
+title: "roadie"
 slug: "roadie"
 weight: 3
 tagline: "Turn event attendees into lifelong community members."
 subtitle: "QR-powered Discord onboarding for live events."
 image: "roadie-badge.webp"
-imageAlt: "Roadie illustration"
+imageAlt: "roadie illustration"
 price: "Starting at $xx.xx/month"
 ctaText: "Schedule a Demo"
 features:

@@ -1,14 +1,14 @@
 ---
-title: "Merch Table"
+title: "merch table"
 slug: "merchtable"
 weight: 1
 tagline: "Turn your community into customers."
 subtitle: "Connect your community to your Shopify store."
 intro: "Merch Table lets you offer exclusive products to members based on their Discord roles — Server Boosters, Patreon supporters, or any custom role you create. Perfect for creators, gaming communities, and anyone who wants to reward their most engaged Discord members with exclusive merch."
 image: "norris-builder.webp"
-imageAlt: "Merch Table illustration"
+imageAlt: "merch table illustration"
 price: "Starting at $xx.xx/month"
-ctaText: "Get Merch Table for Shopify"
+ctaText: "Get merch table for Shopify"
 features:
   - "Role-based product access — restrict products to specific Discord roles"
   - "Automatic sync — customer tags update when roles change"

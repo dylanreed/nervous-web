@@ -1,15 +1,15 @@
 ---
-title: "Plus One"
+title: "+1"
 slug: "plusone"
 weight: 5
 tagline: "Grow your community without losing control."
 subtitle: "Sustainable Growth for Private Communities"
-intro: "Give your trusted members the power to invite others—with limits you control. Plus One creates single-use Discord invites with optional trial periods, tracks who invited whom, and automatically manages temporary access. Perfect for private communities, exclusive servers, and invite-only spaces."
+intro: "Give your trusted members the power to invite others—with limits you control. +1 creates single-use Discord invites with optional trial periods, tracks who invited whom, and automatically manages temporary access. Perfect for private communities, exclusive servers, and invite-only spaces."
 image: "plus-one.webp"
-imageAlt: "Plus One illustration"
+imageAlt: "+1 illustration"
 imageStyle: "transform: scale(1.3);"
 price: "Starting at $xx.xx/month"
-ctaText: "Get Plus One"
+ctaText: "Get +1"
 features:
   - "Single-use invite links with quota limits"
   - "Trial invites with auto-expiring roles"
@@ -26,7 +26,7 @@ problem:
     - "Can't track who invited whom"
 
 solution:
-  intro: "Plus One creates single-use Discord invite links that your members can share. Each invite is tracked, quota-limited, and optionally time-limited. You always know who invited whom, and you decide how many invites each member gets."
+  intro: "+1 creates single-use Discord invite links that your members can share. Each invite is tracked, quota-limited, and optionally time-limited. You always know who invited whom, and you decide how many invites each member gets."
   sections:
     - title: "Controlled Invite Generation"
       text: "Members generate real Discord invite links through a simple slash command. Each link works once, then expires. No more anonymous invite codes floating around the internet."
@@ -71,9 +71,9 @@ bestFor:
   - "Professional Networks — Control growth while rewarding active members"
 
 getStarted:
-  intro: "Set up Plus One in minutes:"
+  intro: "Set up +1 in minutes:"
   steps:
-    - "Add Plus One to your server"
+    - "Add +1 to your server"
     - "Run <code>/plusone status</code> to see the default configuration"
     - "Configure your quota mode and privileges"
     - "Your members can start creating invites immediately"

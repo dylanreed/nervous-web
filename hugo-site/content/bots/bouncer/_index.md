@@ -1,14 +1,14 @@
 ---
-title: "Bouncer Bot"
+title: "bouncer"
 slug: "bouncer"
 weight: 4
 tagline: "Because your community deserves better than chaos."
 subtitle: "Enterprise-grade Discord moderation with complete audit trails."
 intro: "Enterprise-grade Discord moderation with complete audit trails. Features timeouts (including beyond Discord's 28-day limit), intelligent quarantine with automatic role restoration, rule-linked warnings, bulk role management with 24-hour rollback, pre-ban protection, and comprehensive moderation reports with CSV export. Built for communities that need accountability, consistency, and control."
 image: "norris-security.webp"
-imageAlt: "Bouncer Bot illustration"
+imageAlt: "bouncer illustration"
 price: "Starting at $xx.xx/month"
-ctaText: "Get Bouncer Bot"
+ctaText: "Get bouncer"
 features:
   - "Timeouts & Quarantine with auto-expiry"
   - "Complete moderation history & analytics"
@@ -27,7 +27,7 @@ problem:
     - "No visibility into which mods are active or what rules get broken most"
 
 solution:
-  intro: "Bouncer Bot is a moderation powerhouse designed for servers that need more than basic tools."
+  intro: "bouncer is a moderation powerhouse designed for servers that need more than basic tools."
   sections:
     - title: "Flexible Discipline"
       text: "<strong>Timeouts</strong> that work your way—30 minutes, 7 days, or indefinite. Go beyond Discord's 28-day limit when you need to. <strong>Quarantine</strong> isolates problem members by removing all roles and assigning a quarantine role. When it's over, their original roles are automatically restored. No spreadsheets required. <strong>Warnings</strong> link directly to your server rules. Track which rules get broken and how often."
@@ -98,7 +98,7 @@ bestFor:
   - "Any server with a moderation team"
 
 getStarted:
-  intro: "Add Bouncer Bot to your server and run:"
+  intro: "Add bouncer to your server and run:"
   steps:
     - "<code>/config log-channel #mod-logs</code> — Set your logging channel"
     - "<code>/config quarantine-role @Quarantine</code> — Set your quarantine role"

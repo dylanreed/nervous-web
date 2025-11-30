@@ -53,7 +53,7 @@ Transcripts are posted to your designated log channel as a file attachment. The 
 
 ## Message Limits
 
-Ten-Four fetches up to **500 messages** per ticket for the transcript. For most support tickets, this is more than enough. If a ticket exceeds 500 messages, the most recent 500 are captured.
+10-4 fetches up to **500 messages** per ticket for the transcript. For most support tickets, this is more than enough. If a ticket exceeds 500 messages, the most recent 500 are captured.
 
 ## Privacy Considerations
 

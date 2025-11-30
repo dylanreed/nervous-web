@@ -4,7 +4,7 @@ weight: 5
 description: "Automatic alerts to prevent tickets from going cold."
 ---
 
-Ten-Four monitors ticket activity and sends reminders when tickets sit idle too long. This prevents support requests from falling through the cracks.
+10-4 monitors ticket activity and sends reminders when tickets sit idle too long. This prevents support requests from falling through the cracks.
 
 ## How It Works
 
@@ -26,7 +26,7 @@ The timestamp updates with every message, resetting the inactivity timer.
 
 ## Reminder Message
 
-When a ticket goes inactive, Ten-Four posts a reminder that:
+When a ticket goes inactive, 10-4 posts a reminder that:
 
 - Mentions your support role
 - Asks the user if they still need help

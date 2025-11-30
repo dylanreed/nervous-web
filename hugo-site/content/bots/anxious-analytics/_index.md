@@ -1,11 +1,11 @@
 ---
-title: "Anxious Analytics"
+title: "anxious analytics"
 slug: "anxious"
 weight: 2
 tagline: "Because your community is more than a message count."
 subtitle: "Community intelligence that actually matters."
 image: "anxious-analytics.webp"
-imageAlt: "Anxious Analytics illustration"
+imageAlt: "anxious analytics illustration"
 price: "Starting at $xx.xx/month"
 ctaText: "Schedule a Demo"
 features:

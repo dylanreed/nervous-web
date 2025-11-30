@@ -1,10 +1,10 @@
 ---
 title: "Commands"
 weight: 2
-description: "Complete reference for Ten-Four slash commands and ticket actions."
+description: "Complete reference for 10-4 slash commands and ticket actions."
 ---
 
-Ten-Four uses Discord slash commands for setup and management. All commands start with `/`.
+10-4 uses Discord slash commands for setup and management. All commands start with `/`.
 
 ## Slash Commands
 
@@ -16,7 +16,7 @@ Ten-Four uses Discord slash commands for setup and management. All commands star
 
 ### /setup_ten_four
 
-Starts the configuration wizard to set up Ten-Four in your server. This command:
+Starts the configuration wizard to set up 10-4 in your server. This command:
 
 - Creates a private setup channel
 - Walks you through panel, role, and log channel selection
@@ -74,7 +74,7 @@ Closes the ticket. The process:
 
 ## Permission Requirements
 
-Ten-Four checks permissions before executing actions:
+10-4 checks permissions before executing actions:
 
 | Action | Required Permission |
 |--------|---------------------|

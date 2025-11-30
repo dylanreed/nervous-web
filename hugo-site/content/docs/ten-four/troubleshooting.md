@@ -1,10 +1,10 @@
 ---
 title: "Troubleshooting"
 weight: 6
-description: "Solutions to common Ten-Four issues."
+description: "Solutions to common 10-4 issues."
 ---
 
-Having trouble with Ten-Four? This guide covers the most common issues and their solutions.
+Having trouble with 10-4? This guide covers the most common issues and their solutions.
 
 ## Bot Doesn't Respond to Commands
 
