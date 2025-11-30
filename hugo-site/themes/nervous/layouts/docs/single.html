@@ -1,0 +1,53 @@
+{{ define "main" }}
+{{ $section := .Parent }}
+<section class="section docs-section">
+    <div class="container docs-container">
+        <!-- Sidebar -->
+        <aside class="docs-sidebar">
+            <div class="docs-sidebar-header">
+                <h3>{{ $section.Title }}</h3>
+            </div>
+            <nav class="docs-nav">
+                {{ range $section.Pages.ByWeight }}
+                <a href="{{ .Permalink }}" class="docs-nav-item{{ if eq $.Permalink .Permalink }} active{{ end }}">{{ .Title }}</a>
+                {{ end }}
+            </nav>
+            <div class="docs-back">
+                <a href="/bots/{{ $section.Params.botSlug }}/">&larr; Back to {{ $section.Params.botName }}</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="docs-content">
+            <div class="docs-header">
+                <h1>{{ .Title }}</h1>
+                {{ with .Params.description }}
+                <p class="docs-description">{{ . }}</p>
+                {{ end }}
+            </div>
+
+            <div class="content">
+                {{ .Content }}
+            </div>
+
+            <!-- Prev/Next Navigation -->
+            <div class="docs-pagination">
+                {{ with .PrevInSection }}
+                <a href="{{ .Permalink }}" class="docs-prev">
+                    <span>&larr; Previous</span>
+                    <strong>{{ .Title }}</strong>
+                </a>
+                {{ end }}
+                {{ with .NextInSection }}
+                <a href="{{ .Permalink }}" class="docs-next">
+                    <span>Next &rarr;</span>
+                    <strong>{{ .Title }}</strong>
+                </a>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ partial "section-divider.html" "white-to-yellow" }}
+{{ end }}

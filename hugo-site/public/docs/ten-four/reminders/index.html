@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Inactivity Reminders | Nervous</title>
+<meta name="description" content="Automatic alerts to prevent tickets from going cold.">
+<link rel="canonical" href="https://www.nervous.net/docs/ten-four/reminders/">
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.nervous.net/docs/ten-four/reminders/">
+<meta property="og:title" content="Inactivity Reminders | Nervous">
+<meta property="og:description" content="Automatic alerts to prevent tickets from going cold.">
+<meta property="og:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.nervous.net/docs/ten-four/reminders/">
+<meta name="twitter:title" content="Inactivity Reminders | Nervous">
+<meta name="twitter:description" content="Automatic alerts to prevent tickets from going cold.">
+<meta name="twitter:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet" />
+
+
+<link rel="icon" type="image/png" href="https://www.nervous.net/images/favicon.png" />
+<link rel="apple-touch-icon" href="https://www.nervous.net/images/webclip.png" />
+
+<link rel="stylesheet" href="https://www.nervous.net/css/style.css" />
+
+
+
+    </head>
+    <body>
+        <nav class="navbar">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+        <ul class="nav-menu">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro" class="btn">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+        <main>
+            
+
+<section class="section docs-section">
+    <div class="container docs-container">
+        
+        <aside class="docs-sidebar">
+            <div class="docs-sidebar-header">
+                <h3>Ten-Four Documentation</h3>
+            </div>
+            <nav class="docs-nav">
+                
+                <a href="https://www.nervous.net/docs/ten-four/getting-started/" class="docs-nav-item">Getting Started</a>
+                
+                <a href="https://www.nervous.net/docs/ten-four/commands/" class="docs-nav-item">Commands</a>
+                
+                <a href="https://www.nervous.net/docs/ten-four/categories/" class="docs-nav-item">Multiple Categories</a>
+                
+                <a href="https://www.nervous.net/docs/ten-four/transcripts/" class="docs-nav-item">Transcripts</a>
+                
+                <a href="https://www.nervous.net/docs/ten-four/reminders/" class="docs-nav-item active">Inactivity Reminders</a>
+                
+                <a href="https://www.nervous.net/docs/ten-four/troubleshooting/" class="docs-nav-item">Troubleshooting</a>
+                
+            </nav>
+            <div class="docs-back">
+                <a href="/bots/ten-four/">&larr; Back to Ten-Four Ticketing</a>
+            </div>
+        </aside>
+
+        
+        <div class="docs-content">
+            <div class="docs-header">
+                <h1>Inactivity Reminders</h1>
+                
+                <p class="docs-description">Automatic alerts to prevent tickets from going cold.</p>
+                
+            </div>
+
+            <div class="content">
+                <p>Ten-Four monitors ticket activity and sends reminders when tickets sit idle too long. This prevents support requests from falling through the cracks.</p>
+<h2 id="how-it-works">How It Works</h2>
+<p>The bot runs hourly checks on all open tickets:</p>
+<ol>
+<li>Checks the last activity timestamp for each ticket</li>
+<li>Compares against your configured threshold</li>
+<li>Sends a reminder to tickets that exceed the threshold</li>
+<li>Tracks which tickets have been reminded to avoid duplicates</li>
+</ol>
+<h2 id="what-counts-as-activity">What Counts as Activity</h2>
+<p>Activity is tracked when:</p>
+<ul>
+<li>A message is sent in the ticket channel</li>
+<li>Any user (creator or support) sends a message</li>
+</ul>
+<p>The timestamp updates with every message, resetting the inactivity timer.</p>
+<h2 id="reminder-message">Reminder Message</h2>
+<p>When a ticket goes inactive, Ten-Four posts a reminder that:</p>
+<ul>
+<li>Mentions your support role</li>
+<li>Asks the user if they still need help</li>
+<li>Provides options to keep the ticket open or close it</li>
+</ul>
+<p>This serves two purposes:</p>
+<ol>
+<li><strong>Alerts support</strong> — Your team sees tickets that need attention</li>
+<li><strong>Checks with user</strong> — The user can close resolved tickets they forgot about</li>
+</ol>
+<h2 id="configuration">Configuration</h2>
+<p>During setup, you can configure:</p>
+<ul>
+<li><strong>Reminder threshold</strong> — How many hours of inactivity before a reminder is sent</li>
+<li><strong>Support role to mention</strong> — Who gets pinged in the reminder</li>
+</ul>
+<p>Common configurations:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Community Type</th>
+          <th>Threshold</th>
+          <th>Notes</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>High-volume support</td>
+          <td>4-8 hours</td>
+          <td>Quick turnaround expected</td>
+      </tr>
+      <tr>
+          <td>Standard community</td>
+          <td>24 hours</td>
+          <td>Daily check-in on tickets</td>
+      </tr>
+      <tr>
+          <td>Low-volume/hobbyist</td>
+          <td>48-72 hours</td>
+          <td>More relaxed expectations</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="set-realistic-thresholds">Set Realistic Thresholds</h3>
+<p>Match your threshold to your team&rsquo;s availability. Don&rsquo;t set 4-hour reminders if you can only check tickets once a day.</p>
+<h3 id="monitor-reminder-frequency">Monitor Reminder Frequency</h3>
+<p>If you&rsquo;re getting too many reminders, either:</p>
+<ul>
+<li>Your threshold is too short</li>
+<li>You need more support staff</li>
+<li>Tickets are being left open after resolution</li>
+</ul>
+<h3 id="use-reminders-as-a-metric">Use Reminders as a Metric</h3>
+<p>Track how often reminders fire. Frequent reminders might indicate:</p>
+<ul>
+<li>Understaffing</li>
+<li>Need for better ticket routing</li>
+<li>Training opportunities</li>
+</ul>
+<h3 id="close-resolved-tickets">Close Resolved Tickets</h3>
+<p>Train your team to close tickets promptly after resolution. Open tickets continue to be monitored and can generate unnecessary reminders.</p>
+<h2 id="disabling-reminders">Disabling Reminders</h2>
+<p>If you don&rsquo;t want inactivity reminders, you can disable them during setup. However, we recommend keeping them enabled—they&rsquo;re a safety net that catches forgotten tickets.</p>
+
+            </div>
+
+            
+            <div class="docs-pagination">
+                
+                <a href="https://www.nervous.net/docs/ten-four/troubleshooting/" class="docs-prev">
+                    <span>&larr; Previous</span>
+                    <strong>Troubleshooting</strong>
+                </a>
+                
+                
+                <a href="https://www.nervous.net/docs/ten-four/transcripts/" class="docs-next">
+                    <span>Next &rarr;</span>
+                    <strong>Transcripts</strong>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="section-divider white-to-yellow"></div>
+
+
+        </main>
+
+        <footer class="footer">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+            <img src="https://www.nervous.net/images/logo-wordmark.webp" alt="Nervous" class="logo-wordmark" />
+        </a>
+        <ul class="footer-nav">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro">Contact</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<script src="https://www.nervous.net/js/main.js"></script>
+
+    </body>
+</html>

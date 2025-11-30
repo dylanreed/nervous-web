@@ -827,6 +827,168 @@ pre code {
   padding: 40px;
 }
 
+/* Documentation Pages */
+.docs-section {
+  background: var(--white);
+}
+
+.docs-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1100px;
+}
+
+.docs-sidebar {
+  flex: 0 0 220px;
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.docs-sidebar-header h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--blue);
+}
+
+.docs-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.docs-nav-item {
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.9rem;
+  color: var(--text);
+  transition: background 0.2s, color 0.2s;
+}
+
+.docs-nav-item:hover {
+  background: var(--bg);
+  color: var(--blue);
+}
+
+.docs-nav-item.active {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.docs-back {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid var(--bg);
+}
+
+.docs-back a {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.docs-back a:hover {
+  color: var(--blue);
+}
+
+.docs-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.docs-header {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--bg);
+}
+
+.docs-header h1 {
+  margin-bottom: 10px;
+}
+
+.docs-description {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.docs-pages-list {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid var(--bg);
+}
+
+.docs-pages-list ul {
+  list-style: none;
+  display: grid;
+  gap: 15px;
+}
+
+.docs-pages-list li a {
+  display: block;
+  padding: 20px;
+  background: var(--bg);
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.docs-pages-list li a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.docs-pages-list li a strong {
+  display: block;
+  color: var(--blue);
+  margin-bottom: 5px;
+}
+
+.docs-pages-list li a span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.docs-pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid var(--bg);
+}
+
+.docs-prev,
+.docs-next {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 20px;
+  background: var(--bg);
+  border-radius: 8px;
+  transition: background 0.2s;
+  max-width: 45%;
+}
+
+.docs-prev:hover,
+.docs-next:hover {
+  background: var(--bg-alt);
+}
+
+.docs-prev span,
+.docs-next span {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.docs-prev strong,
+.docs-next strong {
+  color: var(--blue);
+}
+
+.docs-next {
+  text-align: right;
+  margin-left: auto;
+}
+
 /* Blog */
 .blog-posts {
   display: grid;
@@ -1127,6 +1289,21 @@ pre code {
   pre {
     padding: 15px;
     font-size: 0.85rem;
+  }
+
+  /* Docs - mobile */
+  .docs-container {
+    flex-direction: column;
+  }
+
+  .docs-sidebar {
+    position: static;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .docs-content {
+    margin-left: 0;
   }
 
   /* Footer - mobile: just centered wordmark logo */

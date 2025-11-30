@@ -60,6 +60,9 @@
                     <div style="margin-top: 30px;">
                         <a href="{{ $.Site.Params.calendlyURL }}" class="btn">{{ .Params.ctaText }}</a>
                         <a href="{{ .Permalink }}" class="btn btn-secondary">More Info</a>
+                        {{ with .Params.docsSlug }}
+                        <a href="/docs/{{ . }}/" class="btn btn-secondary">Documentation</a>
+                        {{ end }}
                     </div>
                 </div>
             </div>

@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Commands | Nervous</title>
+<meta name="description" content="Complete reference for Ten-Four slash commands and ticket actions.">
+<link rel="canonical" href="https://www.nervous.net/docs/ten-four/commands/">
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.nervous.net/docs/ten-four/commands/">
+<meta property="og:title" content="Commands | Nervous">
+<meta property="og:description" content="Complete reference for Ten-Four slash commands and ticket actions.">
+<meta property="og:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.nervous.net/docs/ten-four/commands/">
+<meta name="twitter:title" content="Commands | Nervous">
+<meta name="twitter:description" content="Complete reference for Ten-Four slash commands and ticket actions.">
+<meta name="twitter:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet" />
+
+
+<link rel="icon" type="image/png" href="https://www.nervous.net/images/favicon.png" />
+<link rel="apple-touch-icon" href="https://www.nervous.net/images/webclip.png" />
+
+<link rel="stylesheet" href="https://www.nervous.net/css/style.css" />
+
+
+
+    </head>
+    <body>
+        <nav class="navbar">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+        <ul class="nav-menu">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro" class="btn">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+        <main>
+            
+
+<section class="section docs-section">
+    <div class="container docs-container">
+        
+        <aside class="docs-sidebar">
+            <div class="docs-sidebar-header">
+                <h3>Ten-Four Documentation</h3>
+            </div>
+            <nav class="docs-nav">
+                
+                <a href="https://www.nervous.net/docs/ten-four/getting-started/" class="docs-nav-item">Getting Started</a>
+                
+                <a href="https://www.nervous.net/docs/ten-four/commands/" class="docs-nav-item active">Commands</a>
+                
+                <a href="https://www.nervous.net/docs/ten-four/categories/" class="docs-nav-item">Multiple Categories</a>
+                
+                <a href="https://www.nervous.net/docs/ten-four/transcripts/" class="docs-nav-item">Transcripts</a>
+                
+                <a href="https://www.nervous.net/docs/ten-four/reminders/" class="docs-nav-item">Inactivity Reminders</a>
+                
+                <a href="https://www.nervous.net/docs/ten-four/troubleshooting/" class="docs-nav-item">Troubleshooting</a>
+                
+            </nav>
+            <div class="docs-back">
+                <a href="/bots/ten-four/">&larr; Back to Ten-Four Ticketing</a>
+            </div>
+        </aside>
+
+        
+        <div class="docs-content">
+            <div class="docs-header">
+                <h1>Commands</h1>
+                
+                <p class="docs-description">Complete reference for Ten-Four slash commands and ticket actions.</p>
+                
+            </div>
+
+            <div class="content">
+                <p>Ten-Four uses Discord slash commands for setup and management. All commands start with <code>/</code>.</p>
+<h2 id="slash-commands">Slash Commands</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Command</th>
+          <th>Description</th>
+          <th>Who Can Use</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>/setup_ten_four</code></td>
+          <td>Launch the interactive setup wizard</td>
+          <td>Server Administrators</td>
+      </tr>
+      <tr>
+          <td><code>/ticket</code></td>
+          <td>Manually create a ticket</td>
+          <td>Anyone</td>
+      </tr>
+      <tr>
+          <td><code>/ping</code></td>
+          <td>Check if the bot is online</td>
+          <td>Anyone</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="setup_ten_four">/setup_ten_four</h3>
+<p>Starts the configuration wizard to set up Ten-Four in your server. This command:</p>
+<ul>
+<li>Creates a private setup channel</li>
+<li>Walks you through panel, role, and log channel selection</li>
+<li>Can be run again to reconfigure settings</li>
+</ul>
+<h3 id="ticket">/ticket</h3>
+<p>Creates a ticket without using the panel button. Useful for:</p>
+<ul>
+<li>Testing ticket creation</li>
+<li>Creating tickets on behalf of users</li>
+<li>Situations where the panel isn&rsquo;t accessible</li>
+</ul>
+<h3 id="ping">/ping</h3>
+<p>Quick health check that returns the bot&rsquo;s latency. Use this to verify the bot is online and responding.</p>
+<h2 id="ticket-actions">Ticket Actions</h2>
+<p>Each ticket channel includes action buttons. These are not slash commands—they&rsquo;re buttons that appear in the ticket channel.</p>
+<h3 id="claim">Claim</h3>
+<p><strong>Who can use:</strong> Support team members</p>
+<p>Marks you as the person handling this ticket. When you claim a ticket:</p>
+<ul>
+<li>Your name appears in the ticket embed</li>
+<li>Other team members know you&rsquo;re working on it</li>
+<li>Helps prevent duplicate responses</li>
+</ul>
+<h3 id="add-user">Add User</h3>
+<p><strong>Who can use:</strong> Support team members</p>
+<p>Opens a menu to add another team member to the ticket. Use this to:</p>
+<ul>
+<li>Loop in specialists for complex issues</li>
+<li>Escalate to senior staff</li>
+<li>Get a second opinion</li>
+</ul>
+<p>The added user gains access to the ticket channel and can see the full history.</p>
+<h3 id="close">Close</h3>
+<p><strong>Who can use:</strong> Ticket creator or support team members</p>
+<p>Closes the ticket. The process:</p>
+<ol>
+<li>Click &ldquo;Close&rdquo; button</li>
+<li>Confirm you want to close</li>
+<li>(Optional) User rates their experience</li>
+<li>Transcript is generated and saved</li>
+<li>Ticket channel is deleted</li>
+</ol>
+<h2 id="permission-requirements">Permission Requirements</h2>
+<p>Ten-Four checks permissions before executing actions:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Action</th>
+          <th>Required Permission</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Setup wizard</td>
+          <td>Administrator</td>
+      </tr>
+      <tr>
+          <td>Create ticket</td>
+          <td>None (any member)</td>
+      </tr>
+      <tr>
+          <td>Claim ticket</td>
+          <td>Support role</td>
+      </tr>
+      <tr>
+          <td>Add user</td>
+          <td>Support role</td>
+      </tr>
+      <tr>
+          <td>Close ticket</td>
+          <td>Ticket creator OR support role</td>
+      </tr>
+      <tr>
+          <td>View transcripts</td>
+          <td>Access to log channel</td>
+      </tr>
+  </tbody>
+</table>
+
+            </div>
+
+            
+            <div class="docs-pagination">
+                
+                <a href="https://www.nervous.net/docs/ten-four/categories/" class="docs-prev">
+                    <span>&larr; Previous</span>
+                    <strong>Multiple Categories</strong>
+                </a>
+                
+                
+                <a href="https://www.nervous.net/docs/ten-four/getting-started/" class="docs-next">
+                    <span>Next &rarr;</span>
+                    <strong>Getting Started</strong>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="section-divider white-to-yellow"></div>
+
+
+        </main>
+
+        <footer class="footer">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+            <img src="https://www.nervous.net/images/logo-wordmark.webp" alt="Nervous" class="logo-wordmark" />
+        </a>
+        <ul class="footer-nav">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro">Contact</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<script src="https://www.nervous.net/js/main.js"></script>
+
+    </body>
+</html>

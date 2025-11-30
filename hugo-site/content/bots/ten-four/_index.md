@@ -8,6 +8,7 @@ image: "ten_four_walkies.png"
 imageAlt: "Ten-Four Ticketing illustration"
 price: "Starting at $xx.xx/month"
 ctaText: "Get Ten-Four"
+docsSlug: "ten-four"
 features:
   - "One-click ticket creation with private channels"
   - "Multi-category routing to different support teams"

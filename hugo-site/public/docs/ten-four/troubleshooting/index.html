@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Troubleshooting | Nervous</title>
+<meta name="description" content="Solutions to common Ten-Four issues.">
+<link rel="canonical" href="https://www.nervous.net/docs/ten-four/troubleshooting/">
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.nervous.net/docs/ten-four/troubleshooting/">
+<meta property="og:title" content="Troubleshooting | Nervous">
+<meta property="og:description" content="Solutions to common Ten-Four issues.">
+<meta property="og:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.nervous.net/docs/ten-four/troubleshooting/">
+<meta name="twitter:title" content="Troubleshooting | Nervous">
+<meta name="twitter:description" content="Solutions to common Ten-Four issues.">
+<meta name="twitter:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet" />
+
+
+<link rel="icon" type="image/png" href="https://www.nervous.net/images/favicon.png" />
+<link rel="apple-touch-icon" href="https://www.nervous.net/images/webclip.png" />
+
+<link rel="stylesheet" href="https://www.nervous.net/css/style.css" />
+
+
+
+    </head>
+    <body>
+        <nav class="navbar">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+        <ul class="nav-menu">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro" class="btn">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+        <main>
+            
+
+<section class="section docs-section">
+    <div class="container docs-container">
+        
+        <aside class="docs-sidebar">
+            <div class="docs-sidebar-header">
+                <h3>Ten-Four Documentation</h3>
+            </div>
+            <nav class="docs-nav">
+                
+                <a href="https://www.nervous.net/docs/ten-four/getting-started/" class="docs-nav-item">Getting Started</a>
+                
+                <a href="https://www.nervous.net/docs/ten-four/commands/" class="docs-nav-item">Commands</a>
+                
+                <a href="https://www.nervous.net/docs/ten-four/categories/" class="docs-nav-item">Multiple Categories</a>
+                
+                <a href="https://www.nervous.net/docs/ten-four/transcripts/" class="docs-nav-item">Transcripts</a>
+                
+                <a href="https://www.nervous.net/docs/ten-four/reminders/" class="docs-nav-item">Inactivity Reminders</a>
+                
+                <a href="https://www.nervous.net/docs/ten-four/troubleshooting/" class="docs-nav-item active">Troubleshooting</a>
+                
+            </nav>
+            <div class="docs-back">
+                <a href="/bots/ten-four/">&larr; Back to Ten-Four Ticketing</a>
+            </div>
+        </aside>
+
+        
+        <div class="docs-content">
+            <div class="docs-header">
+                <h1>Troubleshooting</h1>
+                
+                <p class="docs-description">Solutions to common Ten-Four issues.</p>
+                
+            </div>
+
+            <div class="content">
+                <p>Having trouble with Ten-Four? This guide covers the most common issues and their solutions.</p>
+<h2 id="bot-doesnt-respond-to-commands">Bot Doesn&rsquo;t Respond to Commands</h2>
+<h3 id="check-if-the-bot-is-online">Check if the bot is online</h3>
+<p>Look for the bot in your server&rsquo;s member list. If it shows as offline (gray dot), the bot may be experiencing downtime.</p>
+<h3 id="verify-permissions">Verify permissions</h3>
+<p>Make sure the bot has these permissions in your server:</p>
+<ul>
+<li>View Channels</li>
+<li>Send Messages</li>
+<li>Use Application Commands</li>
+</ul>
+<h3 id="wait-for-command-propagation">Wait for command propagation</h3>
+<p>Discord can take up to an hour to propagate slash commands to all servers. If you just added the bot, wait and try again.</p>
+<h3 id="try-in-a-different-channel">Try in a different channel</h3>
+<p>Some channels may have permission overrides that prevent the bot from responding. Try the command in a different channel.</p>
+<h2 id="missing-permissions-errors">&ldquo;Missing Permissions&rdquo; Errors</h2>
+<h3 id="re-invite-with-correct-permissions">Re-invite with correct permissions</h3>
+<p>The bot needs specific permissions to function. Contact us for a fresh invite link with all required permissions.</p>
+<h3 id="check-role-hierarchy">Check role hierarchy</h3>
+<p>The bot&rsquo;s role must be <strong>higher</strong> in the role list than any roles it needs to interact with. Go to Server Settings → Roles and drag the bot&rsquo;s role higher.</p>
+<h3 id="check-channel-overrides">Check channel overrides</h3>
+<p>Individual channels can override server permissions. Check the channel&rsquo;s permission settings to ensure the bot isn&rsquo;t blocked.</p>
+<h2 id="tickets-not-being-created">Tickets Not Being Created</h2>
+<h3 id="check-panel-channel-permissions">Check panel channel permissions</h3>
+<p>The bot needs these permissions in the panel channel:</p>
+<ul>
+<li>View Channel</li>
+<li>Send Messages</li>
+<li>Embed Links</li>
+</ul>
+<h3 id="verify-setup-completed">Verify setup completed</h3>
+<p>Run <code>/ping</code> to check if the bot is responding. If it is, run <code>/setup_ten_four</code> to reconfigure.</p>
+<h3 id="check-for-error-messages">Check for error messages</h3>
+<p>The bot may be posting error messages that explain the issue. Check your server&rsquo;s system messages channel.</p>
+<h2 id="transcripts-not-generating">Transcripts Not Generating</h2>
+<h3 id="check-log-channel-permissions">Check log channel permissions</h3>
+<p>The bot needs these permissions in your log channel:</p>
+<ul>
+<li>View Channel</li>
+<li>Send Messages</li>
+<li>Attach Files</li>
+<li>Embed Links</li>
+</ul>
+<h3 id="verify-log-channel-exists">Verify log channel exists</h3>
+<p>If your log channel was deleted, transcripts have nowhere to go. Run setup again to select a new log channel.</p>
+<h3 id="check-message-history-permission">Check message history permission</h3>
+<p>The bot needs &ldquo;Read Message History&rdquo; permission in ticket channels to generate transcripts.</p>
+<h2 id="commands-not-appearing">Commands Not Appearing</h2>
+<h3 id="wait-for-propagation">Wait for propagation</h3>
+<p>Slash commands can take up to an hour to appear after the bot joins. Wait and try again.</p>
+<h3 id="try-typing-the-command">Try typing the command</h3>
+<p>Start typing <code>/setup</code> in the message box. Discord should show matching commands as you type.</p>
+<h3 id="check-bot-permissions">Check bot permissions</h3>
+<p>The bot needs &ldquo;Use Application Commands&rdquo; permission. This is usually included by default, but verify in your server settings.</p>
+<h2 id="reminders-not-sending">Reminders Not Sending</h2>
+<h3 id="check-reminder-configuration">Check reminder configuration</h3>
+<p>Reminders may be disabled or set to a very long threshold. Run setup again to verify settings.</p>
+<h3 id="verify-bot-uptime">Verify bot uptime</h3>
+<p>If the bot was offline, it may have missed reminder checks. Reminders will resume when the bot is back online.</p>
+<h3 id="check-for-activity">Check for activity</h3>
+<p>Remember that any message in a ticket resets the inactivity timer. The ticket may be more active than you think.</p>
+<h2 id="getting-more-help">Getting More Help</h2>
+<p>If these solutions don&rsquo;t resolve your issue:</p>
+<ol>
+<li><strong>Check our FAQ</strong> at <a href="/faq/">/faq/</a> for more answers</li>
+<li><strong>Contact support</strong> through our <a href="https://calendly.com/nervous/intro">contact page</a></li>
+<li><strong>Provide details</strong> including:
+<ul>
+<li>What you were trying to do</li>
+<li>What happened instead</li>
+<li>Any error messages you saw</li>
+<li>Your server ID (for debugging)</li>
+</ul>
+</li>
+</ol>
+
+            </div>
+
+            
+            <div class="docs-pagination">
+                
+                
+                <a href="https://www.nervous.net/docs/ten-four/reminders/" class="docs-next">
+                    <span>Next &rarr;</span>
+                    <strong>Inactivity Reminders</strong>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="section-divider white-to-yellow"></div>
+
+
+        </main>
+
+        <footer class="footer">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+            <img src="https://www.nervous.net/images/logo-wordmark.webp" alt="Nervous" class="logo-wordmark" />
+        </a>
+        <ul class="footer-nav">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro">Contact</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<script src="https://www.nervous.net/js/main.js"></script>
+
+    </body>
+</html>

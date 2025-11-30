@@ -1,0 +1,52 @@
+{{ define "main" }}
+<section class="section docs-section">
+    <div class="container docs-container">
+        <!-- Sidebar -->
+        <aside class="docs-sidebar">
+            <div class="docs-sidebar-header">
+                <h3>{{ .Title }}</h3>
+            </div>
+            <nav class="docs-nav">
+                {{ range .Pages.ByWeight }}
+                <a href="{{ .Permalink }}" class="docs-nav-item">{{ .Title }}</a>
+                {{ end }}
+            </nav>
+            <div class="docs-back">
+                <a href="/bots/{{ .Params.botSlug }}/">&larr; Back to {{ .Params.botName }}</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="docs-content">
+            <div class="docs-header">
+                <h1>{{ .Title }}</h1>
+                {{ with .Params.description }}
+                <p class="docs-description">{{ . }}</p>
+                {{ end }}
+            </div>
+
+            <div class="content">
+                {{ .Content }}
+            </div>
+
+            {{ if .Pages }}
+            <div class="docs-pages-list">
+                <h2>Documentation</h2>
+                <ul>
+                {{ range .Pages.ByWeight }}
+                    <li>
+                        <a href="{{ .Permalink }}">
+                            <strong>{{ .Title }}</strong>
+                            {{ with .Params.description }}<br><span>{{ . }}</span>{{ end }}
+                        </a>
+                    </li>
+                {{ end }}
+                </ul>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ partial "section-divider.html" "white-to-yellow" }}
+{{ end }}

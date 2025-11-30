@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Multiple Categories | Nervous</title>
+<meta name="description" content="Route different ticket types to different support teams.">
+<link rel="canonical" href="https://www.nervous.net/docs/ten-four/categories/">
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.nervous.net/docs/ten-four/categories/">
+<meta property="og:title" content="Multiple Categories | Nervous">
+<meta property="og:description" content="Route different ticket types to different support teams.">
+<meta property="og:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.nervous.net/docs/ten-four/categories/">
+<meta name="twitter:title" content="Multiple Categories | Nervous">
+<meta name="twitter:description" content="Route different ticket types to different support teams.">
+<meta name="twitter:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet" />
+
+
+<link rel="icon" type="image/png" href="https://www.nervous.net/images/favicon.png" />
+<link rel="apple-touch-icon" href="https://www.nervous.net/images/webclip.png" />
+
+<link rel="stylesheet" href="https://www.nervous.net/css/style.css" />
+
+
+
+    </head>
+    <body>
+        <nav class="navbar">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+        <ul class="nav-menu">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro" class="btn">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+        <main>
+            
+
+<section class="section docs-section">
+    <div class="container docs-container">
+        
+        <aside class="docs-sidebar">
+            <div class="docs-sidebar-header">
+                <h3>Ten-Four Documentation</h3>
+            </div>
+            <nav class="docs-nav">
+                
+                <a href="https://www.nervous.net/docs/ten-four/getting-started/" class="docs-nav-item">Getting Started</a>
+                
+                <a href="https://www.nervous.net/docs/ten-four/commands/" class="docs-nav-item">Commands</a>
+                
+                <a href="https://www.nervous.net/docs/ten-four/categories/" class="docs-nav-item active">Multiple Categories</a>
+                
+                <a href="https://www.nervous.net/docs/ten-four/transcripts/" class="docs-nav-item">Transcripts</a>
+                
+                <a href="https://www.nervous.net/docs/ten-four/reminders/" class="docs-nav-item">Inactivity Reminders</a>
+                
+                <a href="https://www.nervous.net/docs/ten-four/troubleshooting/" class="docs-nav-item">Troubleshooting</a>
+                
+            </nav>
+            <div class="docs-back">
+                <a href="/bots/ten-four/">&larr; Back to Ten-Four Ticketing</a>
+            </div>
+        </aside>
+
+        
+        <div class="docs-content">
+            <div class="docs-header">
+                <h1>Multiple Categories</h1>
+                
+                <p class="docs-description">Route different ticket types to different support teams.</p>
+                
+            </div>
+
+            <div class="content">
+                <p>Ten-Four supports multiple ticket categories, allowing you to route different types of requests to different teams.</p>
+<h2 id="how-categories-work">How Categories Work</h2>
+<p>Instead of a single &ldquo;Create Ticket&rdquo; button, your panel can show multiple buttons:</p>
+<ul>
+<li>🛠️ <strong>Technical Support</strong> → Routes to your dev team</li>
+<li>💳 <strong>Billing Questions</strong> → Routes to your billing team</li>
+<li>💬 <strong>General Questions</strong> → Routes to community managers</li>
+</ul>
+<p>Each category can have its own:</p>
+<ul>
+<li><strong>Name and emoji</strong> for the button</li>
+<li><strong>Support role</strong> who can see tickets in that category</li>
+<li><strong>Description</strong> to help users choose the right category</li>
+</ul>
+<h2 id="setting-up-categories">Setting Up Categories</h2>
+<p>During the setup wizard, you can add multiple categories:</p>
+<ol>
+<li>Run <code>/setup_ten_four</code></li>
+<li>Complete the initial setup (panel, default role, log channel)</li>
+<li>Click &ldquo;Add Category&rdquo; to create additional categories</li>
+<li>For each category, select:
+<ul>
+<li>Category name</li>
+<li>Emoji (appears on the button)</li>
+<li>Support role for that category</li>
+</ul>
+</li>
+</ol>
+<h2 id="category-permissions">Category Permissions</h2>
+<p>When a user creates a ticket in a specific category:</p>
+<ul>
+<li>Only the support role for <strong>that category</strong> can see the ticket</li>
+<li>The ticket creator can always see their ticket</li>
+<li>Users with multiple support roles can see tickets from all their categories</li>
+</ul>
+<h2 id="example-setup">Example Setup</h2>
+<p>A gaming community might set up:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Category</th>
+          <th>Emoji</th>
+          <th>Support Role</th>
+          <th>Use Case</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Bug Reports</td>
+          <td>🐛</td>
+          <td>@QA Team</td>
+          <td>Game bugs and glitches</td>
+      </tr>
+      <tr>
+          <td>Account Issues</td>
+          <td>👤</td>
+          <td>@Support</td>
+          <td>Login problems, bans</td>
+      </tr>
+      <tr>
+          <td>Billing</td>
+          <td>💳</td>
+          <td>@Billing</td>
+          <td>Purchase issues, refunds</td>
+      </tr>
+      <tr>
+          <td>General</td>
+          <td>💬</td>
+          <td>@Moderators</td>
+          <td>Everything else</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="keep-it-simple">Keep it Simple</h3>
+<p>Don&rsquo;t create too many categories. 3-5 is usually ideal. Too many options can confuse users.</p>
+<h3 id="use-clear-names">Use Clear Names</h3>
+<p>Category names should be obvious. Users should immediately know which to pick.</p>
+<h3 id="match-your-team-structure">Match Your Team Structure</h3>
+<p>Categories work best when they align with your actual team structure. If you have specialized teams, create categories for them.</p>
+<h3 id="have-a-catch-all">Have a Catch-All</h3>
+<p>Include a &ldquo;General&rdquo; or &ldquo;Other&rdquo; category for requests that don&rsquo;t fit elsewhere.</p>
+
+            </div>
+
+            
+            <div class="docs-pagination">
+                
+                <a href="https://www.nervous.net/docs/ten-four/transcripts/" class="docs-prev">
+                    <span>&larr; Previous</span>
+                    <strong>Transcripts</strong>
+                </a>
+                
+                
+                <a href="https://www.nervous.net/docs/ten-four/commands/" class="docs-next">
+                    <span>Next &rarr;</span>
+                    <strong>Commands</strong>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="section-divider white-to-yellow"></div>
+
+
+        </main>
+
+        <footer class="footer">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+            <img src="https://www.nervous.net/images/logo-wordmark.webp" alt="Nervous" class="logo-wordmark" />
+        </a>
+        <ul class="footer-nav">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro">Contact</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<script src="https://www.nervous.net/js/main.js"></script>
+
+    </body>
+</html>
