@@ -114,17 +114,11 @@ img {
 }
 
 .navbar .logo {
-  margin-right: 30px;
+  margin-right: 20px;
 }
 
 .navbar .logo img {
-  height: 60px;
-  width: auto;
-}
-
-.navbar .logo-wordmark {
-  display: block;
-  height: 18px;
+  height: 40px;
   width: auto;
 }
 

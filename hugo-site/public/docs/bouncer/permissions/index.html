@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Permissions | Nervous</title>
+<meta name="description" content="Permission requirements and role hierarchy for Bouncer.">
+<link rel="canonical" href="https://www.nervous.net/docs/bouncer/permissions/">
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.nervous.net/docs/bouncer/permissions/">
+<meta property="og:title" content="Permissions | Nervous">
+<meta property="og:description" content="Permission requirements and role hierarchy for Bouncer.">
+<meta property="og:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.nervous.net/docs/bouncer/permissions/">
+<meta name="twitter:title" content="Permissions | Nervous">
+<meta name="twitter:description" content="Permission requirements and role hierarchy for Bouncer.">
+<meta name="twitter:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet" />
+
+
+<link rel="icon" type="image/png" href="https://www.nervous.net/images/favicon.png" />
+<link rel="apple-touch-icon" href="https://www.nervous.net/images/webclip.png" />
+
+<link rel="stylesheet" href="https://www.nervous.net/css/style.css" />
+
+
+
+    </head>
+    <body>
+        <nav class="navbar">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+        <ul class="nav-menu">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro" class="btn">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+        <main>
+            
+
+<section class="section docs-section">
+    <div class="container docs-container">
+        
+        <aside class="docs-sidebar">
+            <div class="docs-sidebar-header">
+                <h3>Bouncer documentation</h3>
+            </div>
+            <nav class="docs-nav">
+                
+                <a href="https://www.nervous.net/docs/bouncer/getting-started/" class="docs-nav-item">Getting Started</a>
+                
+                <a href="https://www.nervous.net/docs/bouncer/commands/" class="docs-nav-item">Commands</a>
+                
+                <a href="https://www.nervous.net/docs/bouncer/permissions/" class="docs-nav-item active">Permissions</a>
+                
+                <a href="https://www.nervous.net/docs/bouncer/troubleshooting/" class="docs-nav-item">Troubleshooting</a>
+                
+            </nav>
+            <div class="docs-back">
+                <a href="/bots/bouncer/">&larr; Back to Bouncer</a>
+            </div>
+        </aside>
+
+        
+        <div class="docs-content">
+            <div class="docs-header">
+                <h1>Permissions</h1>
+                
+                <p class="docs-description">Permission requirements and role hierarchy for Bouncer.</p>
+                
+            </div>
+
+            <div class="content">
+                <p>This guide explains the Discord permissions required to use Bouncer commands and how to set up roles for your moderation team.</p>
+<h2 id="quick-reference">Quick Reference</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Permission</th>
+          <th>Commands</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Moderate Members</strong></td>
+          <td><code>/timeout</code>, <code>/untimeout</code>, <code>/timeouts-list</code>, <code>/quarantine</code>, <code>/unquarantine</code>, <code>/quarantine-list</code>, <code>/warn</code>, <code>/modhistory</code>, <code>/watchlist</code></td>
+      </tr>
+      <tr>
+          <td><strong>Manage Messages</strong></td>
+          <td><code>/wipe</code></td>
+      </tr>
+      <tr>
+          <td><strong>Ban Members</strong></td>
+          <td><code>/preban</code></td>
+      </tr>
+      <tr>
+          <td><strong>Manage Roles</strong></td>
+          <td><code>/bulkrole</code></td>
+      </tr>
+      <tr>
+          <td><strong>Manage Server</strong></td>
+          <td><code>/config</code>, <code>/rules</code>, <code>/reverse</code>, <code>/leaveralert</code>, <code>/modreport</code></td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="role-hierarchy">Role Hierarchy</h2>
+<p>Bouncer enforces Discord&rsquo;s role hierarchy for all moderation actions.</p>
+<h3 id="who-can-moderate-whom">Who Can Moderate Whom</h3>
+<ol>
+<li><strong>Server Owner</strong> - Can moderate anyone</li>
+<li><strong>Administrator</strong> - Can moderate anyone except the owner</li>
+<li><strong>Moderator</strong> - Can moderate users with roles lower than their highest role</li>
+</ol>
+<h3 id="example-setup">Example Setup</h3>
+<pre tabindex="0"><code>Server Owner         → Cannot be moderated
+Administrator        → Can moderate everyone below
+Senior Moderator     → Can moderate users below this role
+Bouncer Bot          → Place here or higher
+Junior Moderator     → Can moderate regular members
+Quarantined          → Place below bot
+Members              → Can be moderated
+@everyone            → Base level
+</code></pre><p><strong>Important:</strong> The bot&rsquo;s role must be positioned <strong>above</strong> any roles it needs to manage.</p>
+<hr>
+<h2 id="recommended-role-configurations">Recommended Role Configurations</h2>
+<h3 id="single-moderator-role">Single Moderator Role</h3>
+<p>For smaller servers, create one role with all permissions:</p>
+<p><strong>Role: Moderator</strong></p>
+<ul>
+<li>Moderate Members</li>
+<li>Manage Messages</li>
+<li>Ban Members</li>
+<li>Manage Roles</li>
+<li>Manage Server</li>
+</ul>
+<p>This gives full access to all Bouncer commands.</p>
+<h3 id="tiered-moderation-team">Tiered Moderation Team</h3>
+<p>For larger servers, split permissions across roles:</p>
+<p><strong>Junior Moderator</strong></p>
+<ul>
+<li>Moderate Members</li>
+</ul>
+<p><em>Can:</em> Timeout users, warn users, quarantine users, view history</p>
+<p><strong>Senior Moderator</strong></p>
+<ul>
+<li>Moderate Members</li>
+<li>Manage Messages</li>
+<li>Ban Members</li>
+</ul>
+<p><em>Additional:</em> Wipe messages, preban users</p>
+<p><strong>Admin</strong></p>
+<ul>
+<li>Moderate Members</li>
+<li>Manage Messages</li>
+<li>Ban Members</li>
+<li>Manage Roles</li>
+<li>Manage Server</li>
+</ul>
+<p><em>Additional:</em> Configure bot, manage rules, bulk role operations, reverse actions</p>
+<hr>
+<h2 id="setting-up-the-quarantine-role">Setting Up the Quarantine Role</h2>
+<ol>
+<li>Create a role called &ldquo;Quarantined&rdquo;</li>
+<li>Position it <strong>below</strong> the bot&rsquo;s role</li>
+<li>Configure channel permissions:
+<ul>
+<li>Deny &ldquo;View Channel&rdquo; for most channels</li>
+<li>Allow &ldquo;View Channel&rdquo; only for a quarantine/appeals channel</li>
+</ul>
+</li>
+<li>Run <code>/config quarantine-role role:@Quarantined</code></li>
+</ol>
+<hr>
+<h2 id="common-permission-errors">Common Permission Errors</h2>
+<h3 id="i-cannot-moderate-this-user">&ldquo;I cannot moderate this user&rdquo;</h3>
+<p><strong>Causes:</strong></p>
+<ul>
+<li>Target user has a role equal to or higher than the bot</li>
+<li>Target is the server owner</li>
+</ul>
+<p><strong>Solution:</strong> Move the bot&rsquo;s role higher in Server Settings → Roles.</p>
+<h3 id="you-cannot-moderate-this-user">&ldquo;You cannot moderate this user&rdquo;</h3>
+<p><strong>Causes:</strong></p>
+<ul>
+<li>Your role is not high enough to moderate the target</li>
+<li>You lack the required Discord permission</li>
+</ul>
+<p><strong>Solution:</strong> Get a higher role or the required permission from your server admin.</p>
+<h3 id="bot-cant-assign-roles">Bot Can&rsquo;t Assign Roles</h3>
+<p><strong>Causes:</strong></p>
+<ul>
+<li>Bot role is too low in hierarchy</li>
+<li>Target role is above bot&rsquo;s role</li>
+</ul>
+<p><strong>Solution:</strong></p>
+<ol>
+<li>Go to Server Settings → Roles</li>
+<li>Drag the bot&rsquo;s role above the roles it needs to manage</li>
+<li>Ensure quarantine role is below the bot&rsquo;s role</li>
+</ol>
+<h3 id="commands-not-appearing">Commands Not Appearing</h3>
+<p>Commands only appear to users with the required permission. If you don&rsquo;t see a command:</p>
+<ol>
+<li>Verify you have the correct Discord permission</li>
+<li>Try restarting Discord</li>
+<li>Wait up to an hour for command propagation (for new bot installs)</li>
+</ol>
+
+            </div>
+
+            
+            <div class="docs-pagination">
+                
+                <a href="https://www.nervous.net/docs/bouncer/commands/" class="docs-prev">
+                    <span>&larr; Previous</span>
+                    <strong>Commands</strong>
+                </a>
+                
+                
+                <a href="https://www.nervous.net/docs/bouncer/troubleshooting/" class="docs-next">
+                    <span>Next &rarr;</span>
+                    <strong>Troubleshooting</strong>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="section-divider white-to-yellow"></div>
+
+
+        </main>
+
+        <footer class="footer">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+            <img src="https://www.nervous.net/images/logo-wordmark.webp" alt="Nervous" class="logo-wordmark" />
+        </a>
+        <ul class="footer-nav">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro">Contact</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<script src="https://www.nervous.net/js/main.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Troubleshooting | Nervous</title>
+<meta name="description" content="Solutions to common Bouncer issues.">
+<link rel="canonical" href="https://www.nervous.net/docs/bouncer/troubleshooting/">
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.nervous.net/docs/bouncer/troubleshooting/">
+<meta property="og:title" content="Troubleshooting | Nervous">
+<meta property="og:description" content="Solutions to common Bouncer issues.">
+<meta property="og:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.nervous.net/docs/bouncer/troubleshooting/">
+<meta name="twitter:title" content="Troubleshooting | Nervous">
+<meta name="twitter:description" content="Solutions to common Bouncer issues.">
+<meta name="twitter:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet" />
+
+
+<link rel="icon" type="image/png" href="https://www.nervous.net/images/favicon.png" />
+<link rel="apple-touch-icon" href="https://www.nervous.net/images/webclip.png" />
+
+<link rel="stylesheet" href="https://www.nervous.net/css/style.css" />
+
+
+
+    </head>
+    <body>
+        <nav class="navbar">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+        <ul class="nav-menu">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro" class="btn">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+        <main>
+            
+
+<section class="section docs-section">
+    <div class="container docs-container">
+        
+        <aside class="docs-sidebar">
+            <div class="docs-sidebar-header">
+                <h3>Bouncer documentation</h3>
+            </div>
+            <nav class="docs-nav">
+                
+                <a href="https://www.nervous.net/docs/bouncer/getting-started/" class="docs-nav-item">Getting Started</a>
+                
+                <a href="https://www.nervous.net/docs/bouncer/commands/" class="docs-nav-item">Commands</a>
+                
+                <a href="https://www.nervous.net/docs/bouncer/permissions/" class="docs-nav-item">Permissions</a>
+                
+                <a href="https://www.nervous.net/docs/bouncer/troubleshooting/" class="docs-nav-item active">Troubleshooting</a>
+                
+            </nav>
+            <div class="docs-back">
+                <a href="/bots/bouncer/">&larr; Back to Bouncer</a>
+            </div>
+        </aside>
+
+        
+        <div class="docs-content">
+            <div class="docs-header">
+                <h1>Troubleshooting</h1>
+                
+                <p class="docs-description">Solutions to common Bouncer issues.</p>
+                
+            </div>
+
+            <div class="content">
+                <p>Having trouble with Bouncer? This guide covers the most common issues and their solutions.</p>
+<h2 id="bot-doesnt-respond-to-commands">Bot Doesn&rsquo;t Respond to Commands</h2>
+<h3 id="check-if-the-bot-is-online">Check if the bot is online</h3>
+<p>Look for the bot in your server&rsquo;s member list. If it shows as offline (gray dot), the bot may be experiencing downtime.</p>
+<h3 id="verify-permissions">Verify permissions</h3>
+<p>Make sure the bot has these permissions in your server:</p>
+<ul>
+<li>View Channels</li>
+<li>Send Messages</li>
+<li>Use Application Commands</li>
+</ul>
+<h3 id="wait-for-command-propagation">Wait for command propagation</h3>
+<p>Discord can take up to an hour to propagate slash commands to all servers. If you just added the bot, wait and try again.</p>
+<h3 id="try-in-a-different-channel">Try in a different channel</h3>
+<p>Some channels may have permission overrides that prevent the bot from responding.</p>
+<hr>
+<h2 id="missing-permissions-errors">&ldquo;Missing Permissions&rdquo; Errors</h2>
+<h3 id="check-role-hierarchy">Check role hierarchy</h3>
+<p>The bot&rsquo;s role must be <strong>higher</strong> in the role list than any roles it needs to interact with. Go to Server Settings → Roles and drag the bot&rsquo;s role higher.</p>
+<h3 id="check-channel-overrides">Check channel overrides</h3>
+<p>Individual channels can override server permissions. Check the channel&rsquo;s permission settings to ensure the bot isn&rsquo;t blocked.</p>
+<h3 id="re-invite-with-correct-permissions">Re-invite with correct permissions</h3>
+<p>If permissions are missing, contact us for a fresh invite link with all required permissions.</p>
+<hr>
+<h2 id="cannot-timeout-or-quarantine-users">Cannot Timeout or Quarantine Users</h2>
+<h3 id="target-has-higher-role">Target has higher role</h3>
+<p>You can only moderate users whose highest role is below your highest role.</p>
+<h3 id="bot-role-too-low">Bot role too low</h3>
+<p>Move the bot&rsquo;s role above the target user&rsquo;s highest role in Server Settings → Roles.</p>
+<h3 id="target-is-server-owner">Target is server owner</h3>
+<p>The server owner cannot be moderated by anyone, including bots.</p>
+<hr>
+<h2 id="quarantine-not-working">Quarantine Not Working</h2>
+<h3 id="quarantine-role-not-configured">Quarantine role not configured</h3>
+<p>Run <code>/config view</code> to check if a quarantine role is set. If not:</p>
+<pre tabindex="0"><code>/config quarantine-role role:@Quarantined
+</code></pre><h3 id="quarantine-role-too-high">Quarantine role too high</h3>
+<p>The quarantine role must be positioned below the bot&rsquo;s role in the hierarchy.</p>
+<h3 id="roles-not-being-restored">Roles not being restored</h3>
+<p>If original roles aren&rsquo;t restored after unquarantine, check that:</p>
+<ul>
+<li>The bot&rsquo;s role is above the roles being restored</li>
+<li>The roles still exist (weren&rsquo;t deleted)</li>
+</ul>
+<hr>
+<h2 id="logs-not-being-posted">Logs Not Being Posted</h2>
+<h3 id="log-channel-not-configured">Log channel not configured</h3>
+<p>Run <code>/config view</code> to verify a log channel is set. If not:</p>
+<pre tabindex="0"><code>/config log-channel channel:#mod-logs
+</code></pre><h3 id="log-channel-permissions">Log channel permissions</h3>
+<p>The bot needs these permissions in your log channel:</p>
+<ul>
+<li>View Channel</li>
+<li>Send Messages</li>
+<li>Embed Links</li>
+</ul>
+<h3 id="log-channel-deleted">Log channel deleted</h3>
+<p>If your log channel was deleted, logs have nowhere to go. Configure a new log channel.</p>
+<hr>
+<h2 id="commands-not-appearing">Commands Not Appearing</h2>
+<h3 id="missing-permission">Missing permission</h3>
+<p>Commands only appear to users who have the required Discord permission. Check that you have the correct permission for the command you&rsquo;re trying to use.</p>
+<h3 id="wait-for-propagation">Wait for propagation</h3>
+<p>Slash commands can take up to an hour to appear after the bot joins.</p>
+<h3 id="try-typing-the-command">Try typing the command</h3>
+<p>Start typing <code>/timeout</code> in the message box. Discord should show matching commands as you type.</p>
+<hr>
+<h2 id="message-wipe-issues">Message Wipe Issues</h2>
+<h3 id="messages-older-than-14-days">Messages older than 14 days</h3>
+<p>Discord only allows deleting messages less than 14 days old. Older messages cannot be bulk deleted.</p>
+<h3 id="missing-permissions">Missing permissions</h3>
+<p>The bot needs &ldquo;Manage Messages&rdquo; permission in the channel you&rsquo;re trying to wipe.</p>
+<h3 id="channel-permission-overrides">Channel permission overrides</h3>
+<p>Check that the channel doesn&rsquo;t have permission overrides blocking the bot.</p>
+<hr>
+<h2 id="bulk-role-operations-failing">Bulk Role Operations Failing</h2>
+<h3 id="bot-role-too-low-1">Bot role too low</h3>
+<p>The bot can only manage roles that are lower than its highest role. Move the bot&rsquo;s role higher in the hierarchy.</p>
+<h3 id="missing-manage-roles-permission">Missing Manage Roles permission</h3>
+<p>Verify the bot has the &ldquo;Manage Roles&rdquo; permission.</p>
+<h3 id="rollback-expired">Rollback expired</h3>
+<p>Bulk role rollbacks are only available for 24 hours after the operation.</p>
+<hr>
+<h2 id="getting-more-help">Getting More Help</h2>
+<p>If these solutions don&rsquo;t resolve your issue:</p>
+<ol>
+<li><strong>Check our FAQ</strong> at <a href="/faq/">/faq/</a> for more answers</li>
+<li><strong>Contact support</strong> through our <a href="https://calendly.com/nervous/intro">contact page</a></li>
+<li><strong>Provide details</strong> including:
+<ul>
+<li>What you were trying to do</li>
+<li>What happened instead</li>
+<li>Any error messages you saw</li>
+<li>Your server ID (for debugging)</li>
+</ul>
+</li>
+</ol>
+
+            </div>
+
+            
+            <div class="docs-pagination">
+                
+                <a href="https://www.nervous.net/docs/bouncer/permissions/" class="docs-prev">
+                    <span>&larr; Previous</span>
+                    <strong>Permissions</strong>
+                </a>
+                
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="section-divider white-to-yellow"></div>
+
+
+        </main>
+
+        <footer class="footer">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+            <img src="https://www.nervous.net/images/logo-wordmark.webp" alt="Nervous" class="logo-wordmark" />
+        </a>
+        <ul class="footer-nav">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro">Contact</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<script src="https://www.nervous.net/js/main.js"></script>
+
+    </body>
+</html>

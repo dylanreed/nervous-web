@@ -1,0 +1,792 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Commands | Nervous</title>
+<meta name="description" content="Complete reference for Bouncer slash commands.">
+<link rel="canonical" href="https://www.nervous.net/docs/bouncer/commands/">
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.nervous.net/docs/bouncer/commands/">
+<meta property="og:title" content="Commands | Nervous">
+<meta property="og:description" content="Complete reference for Bouncer slash commands.">
+<meta property="og:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.nervous.net/docs/bouncer/commands/">
+<meta name="twitter:title" content="Commands | Nervous">
+<meta name="twitter:description" content="Complete reference for Bouncer slash commands.">
+<meta name="twitter:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet" />
+
+
+<link rel="icon" type="image/png" href="https://www.nervous.net/images/favicon.png" />
+<link rel="apple-touch-icon" href="https://www.nervous.net/images/webclip.png" />
+
+<link rel="stylesheet" href="https://www.nervous.net/css/style.css" />
+
+
+
+    </head>
+    <body>
+        <nav class="navbar">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+        <ul class="nav-menu">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro" class="btn">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+        <main>
+            
+
+<section class="section docs-section">
+    <div class="container docs-container">
+        
+        <aside class="docs-sidebar">
+            <div class="docs-sidebar-header">
+                <h3>Bouncer documentation</h3>
+            </div>
+            <nav class="docs-nav">
+                
+                <a href="https://www.nervous.net/docs/bouncer/getting-started/" class="docs-nav-item">Getting Started</a>
+                
+                <a href="https://www.nervous.net/docs/bouncer/commands/" class="docs-nav-item active">Commands</a>
+                
+                <a href="https://www.nervous.net/docs/bouncer/permissions/" class="docs-nav-item">Permissions</a>
+                
+                <a href="https://www.nervous.net/docs/bouncer/troubleshooting/" class="docs-nav-item">Troubleshooting</a>
+                
+            </nav>
+            <div class="docs-back">
+                <a href="/bots/bouncer/">&larr; Back to Bouncer</a>
+            </div>
+        </aside>
+
+        
+        <div class="docs-content">
+            <div class="docs-header">
+                <h1>Commands</h1>
+                
+                <p class="docs-description">Complete reference for Bouncer slash commands.</p>
+                
+            </div>
+
+            <div class="content">
+                <p>Bouncer uses Discord slash commands for all moderation actions. All commands start with <code>/</code>.</p>
+<h2 id="slash-commands-overview">Slash Commands Overview</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Command</th>
+          <th>Description</th>
+          <th>Permission</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>/timeout</code></td>
+          <td>Temporarily restrict a user</td>
+          <td>Moderate Members</td>
+      </tr>
+      <tr>
+          <td><code>/untimeout</code></td>
+          <td>Remove a timeout</td>
+          <td>Moderate Members</td>
+      </tr>
+      <tr>
+          <td><code>/timeouts-list</code></td>
+          <td>View active timeouts</td>
+          <td>Moderate Members</td>
+      </tr>
+      <tr>
+          <td><code>/quarantine</code></td>
+          <td>Isolate a user</td>
+          <td>Moderate Members</td>
+      </tr>
+      <tr>
+          <td><code>/unquarantine</code></td>
+          <td>Release from quarantine</td>
+          <td>Moderate Members</td>
+      </tr>
+      <tr>
+          <td><code>/quarantine-list</code></td>
+          <td>View quarantined users</td>
+          <td>Moderate Members</td>
+      </tr>
+      <tr>
+          <td><code>/warn</code></td>
+          <td>Issue a warning</td>
+          <td>Moderate Members</td>
+      </tr>
+      <tr>
+          <td><code>/reverse</code></td>
+          <td>Reverse a moderation action</td>
+          <td>Manage Server</td>
+      </tr>
+      <tr>
+          <td><code>/modhistory</code></td>
+          <td>View user&rsquo;s moderation history</td>
+          <td>Moderate Members</td>
+      </tr>
+      <tr>
+          <td><code>/config</code></td>
+          <td>Configure bot settings</td>
+          <td>Manage Server</td>
+      </tr>
+      <tr>
+          <td><code>/wipe</code></td>
+          <td>Delete user&rsquo;s messages</td>
+          <td>Manage Messages</td>
+      </tr>
+      <tr>
+          <td><code>/rules</code></td>
+          <td>Manage server rules</td>
+          <td>Manage Server</td>
+      </tr>
+      <tr>
+          <td><code>/preban</code></td>
+          <td>Ban a user before they join</td>
+          <td>Ban Members</td>
+      </tr>
+      <tr>
+          <td><code>/watchlist</code></td>
+          <td>Monitor suspicious users</td>
+          <td>Moderate Members</td>
+      </tr>
+      <tr>
+          <td><code>/leaveralert</code></td>
+          <td>Alert when watched users leave</td>
+          <td>Manage Server</td>
+      </tr>
+      <tr>
+          <td><code>/bulkrole</code></td>
+          <td>Mass role operations</td>
+          <td>Manage Roles</td>
+      </tr>
+      <tr>
+          <td><code>/modreport</code></td>
+          <td>Generate activity reports</td>
+          <td>Manage Server</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="timeout-commands">Timeout Commands</h2>
+<h3 id="timeout">/timeout</h3>
+<p>Temporarily restrict a user from sending messages or joining voice channels.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Required</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>user</code></td>
+          <td>Yes</td>
+          <td>The user to timeout</td>
+      </tr>
+      <tr>
+          <td><code>duration</code></td>
+          <td>Yes</td>
+          <td>How long (e.g., <code>30m</code>, <code>2h</code>, <code>7d</code>, <code>indefinite</code>)</td>
+      </tr>
+      <tr>
+          <td><code>reason</code></td>
+          <td>No</td>
+          <td>Reason for the timeout</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Examples:</strong></p>
+<pre tabindex="0"><code>/timeout user:@JohnDoe duration:30m reason:Spamming in general
+/timeout user:@JaneDoe duration:7d reason:Repeated rule violations
+/timeout user:@Troll duration:indefinite reason:Pending investigation
+</code></pre><h3 id="untimeout">/untimeout</h3>
+<p>Remove an active timeout from a user.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Required</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>user</code></td>
+          <td>Yes</td>
+          <td>The user to untimeout</td>
+      </tr>
+      <tr>
+          <td><code>reason</code></td>
+          <td>No</td>
+          <td>Reason for removing the timeout</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="timeouts-list">/timeouts-list</h3>
+<p>View all currently active timeouts in the server. No options required.</p>
+<hr>
+<h2 id="quarantine-commands">Quarantine Commands</h2>
+<p>Quarantine removes all roles from a user and assigns a quarantine role, isolating them while preserving their original roles for restoration.</p>
+<h3 id="quarantine">/quarantine</h3>
+<p>Place a user in quarantine.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Required</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>user</code></td>
+          <td>Yes</td>
+          <td>The user to quarantine</td>
+      </tr>
+      <tr>
+          <td><code>duration</code></td>
+          <td>No</td>
+          <td>How long (e.g., <code>1h</code>, <code>24h</code>, <code>indefinite</code>)</td>
+      </tr>
+      <tr>
+          <td><code>reason</code></td>
+          <td>No</td>
+          <td>Reason for quarantine</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>How it works:</strong></p>
+<ol>
+<li>All user roles are stored</li>
+<li>All roles are removed from the user</li>
+<li>Quarantine role is assigned</li>
+<li>When released, original roles are restored</li>
+</ol>
+<h3 id="unquarantine">/unquarantine</h3>
+<p>Release a user from quarantine and restore their original roles.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Required</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>user</code></td>
+          <td>Yes</td>
+          <td>The user to release</td>
+      </tr>
+      <tr>
+          <td><code>reason</code></td>
+          <td>No</td>
+          <td>Reason for release</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="quarantine-list">/quarantine-list</h3>
+<p>View all currently quarantined users. No options required.</p>
+<hr>
+<h2 id="warning-commands">Warning Commands</h2>
+<h3 id="warn">/warn</h3>
+<p>Issue a warning to a user. Can reference server rules for consistency.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Required</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>user</code></td>
+          <td>Yes</td>
+          <td>The user to warn</td>
+      </tr>
+      <tr>
+          <td><code>rule</code></td>
+          <td>No</td>
+          <td>Rule number violated</td>
+      </tr>
+      <tr>
+          <td><code>reason</code></td>
+          <td>No</td>
+          <td>Additional explanation</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Examples:</strong></p>
+<pre tabindex="0"><code>/warn user:@JohnDoe reason:Please keep discussions civil
+/warn user:@JaneDoe rule:3 reason:This is your second warning
+</code></pre><h3 id="reverse">/reverse</h3>
+<p>Reverse a previous moderation action.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Required</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>reason</code></td>
+          <td>Yes</td>
+          <td>Reason for reversing</td>
+      </tr>
+      <tr>
+          <td><code>id</code></td>
+          <td>No</td>
+          <td>Specific action ID to reverse</td>
+      </tr>
+      <tr>
+          <td><code>user</code></td>
+          <td>No</td>
+          <td>Reverse last action for this user</td>
+      </tr>
+  </tbody>
+</table>
+<p>Reversed actions remain in history but are marked as reversed.</p>
+<hr>
+<h2 id="history--reports">History &amp; Reports</h2>
+<h3 id="modhistory">/modhistory</h3>
+<p>View the complete moderation history for a user.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Required</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>user</code></td>
+          <td>Yes</td>
+          <td>The user to look up</td>
+      </tr>
+      <tr>
+          <td><code>page</code></td>
+          <td>No</td>
+          <td>Page number (10 items per page)</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="modreport">/modreport</h3>
+<p>Generate moderation activity reports.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Required</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>period</code></td>
+          <td>Yes</td>
+          <td>Time period (e.g., <code>7d</code>, <code>30d</code>, <code>90d</code>)</td>
+      </tr>
+      <tr>
+          <td><code>format</code></td>
+          <td>No</td>
+          <td>Output: <code>embed</code>, <code>csv</code>, or <code>text</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Report includes:</strong></p>
+<ul>
+<li>Total moderation actions</li>
+<li>Actions by type</li>
+<li>Top 5 moderators by action count</li>
+<li>Most moderated users</li>
+<li>Rule violation statistics</li>
+</ul>
+<hr>
+<h2 id="configuration">Configuration</h2>
+<h3 id="config-log-channel">/config log-channel</h3>
+<p>Set the channel for moderation logs.</p>
+<pre tabindex="0"><code>/config log-channel channel:#mod-logs
+</code></pre><h3 id="config-quarantine-role">/config quarantine-role</h3>
+<p>Set the role assigned to quarantined users.</p>
+<pre tabindex="0"><code>/config quarantine-role role:@Quarantined
+</code></pre><h3 id="config-view">/config view</h3>
+<p>View current server configuration.</p>
+<hr>
+<h2 id="message-management">Message Management</h2>
+<h3 id="wipe">/wipe</h3>
+<p>Delete messages from a user with optional date filtering.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Required</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>user</code></td>
+          <td>Yes</td>
+          <td>User whose messages to delete</td>
+      </tr>
+      <tr>
+          <td><code>channel</code></td>
+          <td>No</td>
+          <td>Channel to delete from (defaults to current)</td>
+      </tr>
+      <tr>
+          <td><code>from</code></td>
+          <td>No</td>
+          <td>Start date (YYYY-MM-DD)</td>
+      </tr>
+      <tr>
+          <td><code>to</code></td>
+          <td>No</td>
+          <td>End date (YYYY-MM-DD)</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Note:</strong> Discord only allows deleting messages less than 14 days old.</p>
+<hr>
+<h2 id="server-rules">Server Rules</h2>
+<h3 id="rules-add">/rules add</h3>
+<p>Add a server rule.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Required</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>number</code></td>
+          <td>Yes</td>
+          <td>Rule number (1-99)</td>
+      </tr>
+      <tr>
+          <td><code>text</code></td>
+          <td>Yes</td>
+          <td>Rule description</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="rules-remove">/rules remove</h3>
+<p>Remove a server rule by number.</p>
+<h3 id="rules-list">/rules list</h3>
+<p>Display all configured server rules.</p>
+<hr>
+<h2 id="preemptive-moderation">Preemptive Moderation</h2>
+<h3 id="preban">/preban</h3>
+<p>Ban a user by ID before they join the server.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Required</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>user_id</code></td>
+          <td>Yes</td>
+          <td>Discord user ID (18-digit number)</td>
+      </tr>
+      <tr>
+          <td><code>reason</code></td>
+          <td>No</td>
+          <td>Reason for the preban</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="watchlist-add">/watchlist add</h3>
+<p>Add a user to the watchlist for monitoring.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Required</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>user</code></td>
+          <td>Yes</td>
+          <td>User to watch</td>
+      </tr>
+      <tr>
+          <td><code>reason</code></td>
+          <td>No</td>
+          <td>Why they&rsquo;re being watched</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="watchlist-remove">/watchlist remove</h3>
+<p>Remove a user from the watchlist.</p>
+<h3 id="watchlist-view">/watchlist view</h3>
+<p>View all users currently on the watchlist.</p>
+<h3 id="leaveralert">/leaveralert</h3>
+<p>Configure alerts when watched users leave the server.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Required</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>channel</code></td>
+          <td>Yes</td>
+          <td>Channel for leaver alerts</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="bulk-role-management">Bulk Role Management</h2>
+<h3 id="bulkrole-add">/bulkrole add</h3>
+<p>Add a role to multiple users based on criteria.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Required</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>role</code></td>
+          <td>Yes</td>
+          <td>Role to add</td>
+      </tr>
+      <tr>
+          <td><code>target</code></td>
+          <td>No</td>
+          <td>Users with this role (filter)</td>
+      </tr>
+      <tr>
+          <td><code>joined_after</code></td>
+          <td>No</td>
+          <td>Users who joined after date</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="bulkrole-remove">/bulkrole remove</h3>
+<p>Remove a role from multiple users.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Required</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>role</code></td>
+          <td>Yes</td>
+          <td>Role to remove</td>
+      </tr>
+      <tr>
+          <td><code>target</code></td>
+          <td>No</td>
+          <td>Only from users with this role</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="bulkrole-rollback">/bulkrole rollback</h3>
+<p>Undo a bulk role operation (available for 24 hours).</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Required</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>operation_id</code></td>
+          <td>Yes</td>
+          <td>The operation ID to rollback</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="bulkrole-history">/bulkrole history</h3>
+<p>View recent bulk role operations from the last 7 days.</p>
+<hr>
+<h2 id="duration-formats">Duration Formats</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Format</th>
+          <th>Duration</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>30s</code></td>
+          <td>30 seconds</td>
+      </tr>
+      <tr>
+          <td><code>30m</code></td>
+          <td>30 minutes</td>
+      </tr>
+      <tr>
+          <td><code>2h</code></td>
+          <td>2 hours</td>
+      </tr>
+      <tr>
+          <td><code>1d</code></td>
+          <td>1 day</td>
+      </tr>
+      <tr>
+          <td><code>7d</code></td>
+          <td>7 days</td>
+      </tr>
+      <tr>
+          <td><code>2w</code></td>
+          <td>2 weeks</td>
+      </tr>
+      <tr>
+          <td><code>indefinite</code></td>
+          <td>No expiration</td>
+      </tr>
+  </tbody>
+</table>
+<p>Discord&rsquo;s native timeout maximum is 28 days. Longer durations are managed by the bot&rsquo;s scheduler.</p>
+
+            </div>
+
+            
+            <div class="docs-pagination">
+                
+                <a href="https://www.nervous.net/docs/bouncer/getting-started/" class="docs-prev">
+                    <span>&larr; Previous</span>
+                    <strong>Getting Started</strong>
+                </a>
+                
+                
+                <a href="https://www.nervous.net/docs/bouncer/permissions/" class="docs-next">
+                    <span>Next &rarr;</span>
+                    <strong>Permissions</strong>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="section-divider white-to-yellow"></div>
+
+
+        </main>
+
+        <footer class="footer">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+            <img src="https://www.nervous.net/images/logo-wordmark.webp" alt="Nervous" class="logo-wordmark" />
+        </a>
+        <ul class="footer-nav">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro">Contact</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<script src="https://www.nervous.net/js/main.js"></script>
+
+    </body>
+</html>

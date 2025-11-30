@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Getting Started | Nervous</title>
+<meta name="description" content="Set up Bouncer moderation bot in your Discord server.">
+<link rel="canonical" href="https://www.nervous.net/docs/bouncer/getting-started/">
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.nervous.net/docs/bouncer/getting-started/">
+<meta property="og:title" content="Getting Started | Nervous">
+<meta property="og:description" content="Set up Bouncer moderation bot in your Discord server.">
+<meta property="og:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.nervous.net/docs/bouncer/getting-started/">
+<meta name="twitter:title" content="Getting Started | Nervous">
+<meta name="twitter:description" content="Set up Bouncer moderation bot in your Discord server.">
+<meta name="twitter:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet" />
+
+
+<link rel="icon" type="image/png" href="https://www.nervous.net/images/favicon.png" />
+<link rel="apple-touch-icon" href="https://www.nervous.net/images/webclip.png" />
+
+<link rel="stylesheet" href="https://www.nervous.net/css/style.css" />
+
+
+
+    </head>
+    <body>
+        <nav class="navbar">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+        <ul class="nav-menu">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro" class="btn">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+        <main>
+            
+
+<section class="section docs-section">
+    <div class="container docs-container">
+        
+        <aside class="docs-sidebar">
+            <div class="docs-sidebar-header">
+                <h3>Bouncer documentation</h3>
+            </div>
+            <nav class="docs-nav">
+                
+                <a href="https://www.nervous.net/docs/bouncer/getting-started/" class="docs-nav-item active">Getting Started</a>
+                
+                <a href="https://www.nervous.net/docs/bouncer/commands/" class="docs-nav-item">Commands</a>
+                
+                <a href="https://www.nervous.net/docs/bouncer/permissions/" class="docs-nav-item">Permissions</a>
+                
+                <a href="https://www.nervous.net/docs/bouncer/troubleshooting/" class="docs-nav-item">Troubleshooting</a>
+                
+            </nav>
+            <div class="docs-back">
+                <a href="/bots/bouncer/">&larr; Back to Bouncer</a>
+            </div>
+        </aside>
+
+        
+        <div class="docs-content">
+            <div class="docs-header">
+                <h1>Getting Started</h1>
+                
+                <p class="docs-description">Set up Bouncer moderation bot in your Discord server.</p>
+                
+            </div>
+
+            <div class="content">
+                <p>Getting Bouncer running in your server takes just a few minutes. After inviting the bot, you&rsquo;ll configure logging and optional features using slash commands.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before starting, make sure you have:</p>
+<ul>
+<li><strong>Administrator permissions</strong> in your Discord server</li>
+<li>A <strong>channel for moderation logs</strong> (private, staff-only)</li>
+<li>A <strong>quarantine role</strong> if you want to use the quarantine feature</li>
+</ul>
+<h2 id="step-1-invite-the-bot">Step 1: Invite the Bot</h2>
+<p>Contact us to get Bouncer added to your server. We&rsquo;ll provide an invite link with the correct permissions pre-configured.</p>
+<h2 id="step-2-set-up-mod-logging">Step 2: Set Up Mod Logging</h2>
+<p>Create a private channel for moderation logs, then configure the bot:</p>
+<pre tabindex="0"><code>/config log-channel #mod-logs
+</code></pre><p>All moderation actions will now be logged to this channel with full details.</p>
+<h2 id="step-3-set-up-quarantine-role-optional">Step 3: Set Up Quarantine Role (Optional)</h2>
+<p>If you want to use the quarantine feature to isolate users during investigations:</p>
+<ol>
+<li>Create a role called &ldquo;Quarantined&rdquo; (or similar)</li>
+<li>Remove all channel permissions for this role</li>
+<li>Optionally create a quarantine channel only this role can see</li>
+<li>Configure the bot:</li>
+</ol>
+<pre tabindex="0"><code>/config quarantine-role @Quarantined
+</code></pre><p><strong>Important:</strong> The quarantine role must be positioned below Bouncer&rsquo;s role in your server&rsquo;s role hierarchy.</p>
+<h2 id="step-4-create-server-rules-optional">Step 4: Create Server Rules (Optional)</h2>
+<p>Define rules that can be referenced when issuing warnings:</p>
+<pre tabindex="0"><code>/rules add number:1 text:Be respectful to all members
+/rules add number:2 text:No spam or self-promotion
+/rules add number:3 text:Keep discussions in appropriate channels
+</code></pre><p>When warning users, you can reference these rules for consistency:</p>
+<pre tabindex="0"><code>/warn user:@someone rule:1
+</code></pre><h2 id="step-5-verify-setup">Step 5: Verify Setup</h2>
+<p>View your current configuration:</p>
+<pre tabindex="0"><code>/config view
+</code></pre><p>This shows your log channel, quarantine role, and other settings.</p>
+<h2 id="quick-test">Quick Test</h2>
+<p>Verify everything is working:</p>
+<ol>
+<li>Run <code>/config view</code> to confirm settings</li>
+<li>Try <code>/timeout user:@yourself duration:1m reason:Testing</code> (then <code>/untimeout</code>)</li>
+<li>Check your log channel for the logged actions</li>
+</ol>
+<h2 id="next-steps">Next Steps</h2>
+<ul>
+<li>Learn about all <a href="/docs/bouncer/commands/">Commands</a> available to your team</li>
+<li>Review the <a href="/docs/bouncer/permissions/">Permissions</a> guide for role setup</li>
+<li>Check <a href="/docs/bouncer/troubleshooting/">Troubleshooting</a> if you encounter issues</li>
+</ul>
+
+            </div>
+
+            
+            <div class="docs-pagination">
+                
+                
+                <a href="https://www.nervous.net/docs/bouncer/commands/" class="docs-next">
+                    <span>Next &rarr;</span>
+                    <strong>Commands</strong>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="section-divider white-to-yellow"></div>
+
+
+        </main>
+
+        <footer class="footer">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+            <img src="https://www.nervous.net/images/logo-wordmark.webp" alt="Nervous" class="logo-wordmark" />
+        </a>
+        <ul class="footer-nav">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro">Contact</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<script src="https://www.nervous.net/js/main.js"></script>
+
+    </body>
+</html>
