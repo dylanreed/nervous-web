@@ -108,13 +108,12 @@ img {
 
 .navbar .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 15px 20px;
 }
 
 .navbar .logo {
-  margin-left: -10px;
   margin-right: 30px;
 }
 
