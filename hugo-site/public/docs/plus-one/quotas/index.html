@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Quota Modes | Nervous</title>
+<meta name="description" content="Configure how invite quotas work for your community.">
+<link rel="canonical" href="https://www.nervous.net/docs/plus-one/quotas/">
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.nervous.net/docs/plus-one/quotas/">
+<meta property="og:title" content="Quota Modes | Nervous">
+<meta property="og:description" content="Configure how invite quotas work for your community.">
+<meta property="og:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.nervous.net/docs/plus-one/quotas/">
+<meta name="twitter:title" content="Quota Modes | Nervous">
+<meta name="twitter:description" content="Configure how invite quotas work for your community.">
+<meta name="twitter:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet" />
+
+
+<link rel="icon" type="image/png" href="https://www.nervous.net/images/favicon.png" />
+<link rel="apple-touch-icon" href="https://www.nervous.net/images/webclip.png" />
+
+<link rel="stylesheet" href="https://www.nervous.net/css/style.css" />
+
+
+
+    </head>
+    <body>
+        <nav class="navbar">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+        <ul class="nav-menu">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro" class="btn">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+        <main>
+            
+
+<section class="section docs-section">
+    <div class="container docs-container">
+        
+        <aside class="docs-sidebar">
+            <div class="docs-sidebar-header">
+                <h3>&#43;1 documentation</h3>
+            </div>
+            <nav class="docs-nav">
+                
+                <a href="https://www.nervous.net/docs/plus-one/getting-started/" class="docs-nav-item">Getting Started</a>
+                
+                <a href="https://www.nervous.net/docs/plus-one/commands/" class="docs-nav-item">Commands</a>
+                
+                <a href="https://www.nervous.net/docs/plus-one/quotas/" class="docs-nav-item active">Quota Modes</a>
+                
+                <a href="https://www.nervous.net/docs/plus-one/trials/" class="docs-nav-item">Trial Invites</a>
+                
+                <a href="https://www.nervous.net/docs/plus-one/troubleshooting/" class="docs-nav-item">Troubleshooting</a>
+                
+            </nav>
+            <div class="docs-back">
+                <a href="/bots/plus-one/">&larr; Back to &#43;1</a>
+            </div>
+        </aside>
+
+        
+        <div class="docs-content">
+            <div class="docs-header">
+                <h1>Quota Modes</h1>
+                
+                <p class="docs-description">Configure how invite quotas work for your community.</p>
+                
+            </div>
+
+            <div class="content">
+                <p>Plus One offers four quota modes to match different community needs. Choose the mode that fits how you want to manage invite distribution.</p>
+<h2 id="quota-modes-overview">Quota Modes Overview</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Mode</th>
+          <th>Description</th>
+          <th>Best For</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Fixed</strong></td>
+          <td>Everyone gets the same number</td>
+          <td>Simple communities</td>
+      </tr>
+      <tr>
+          <td><strong>Tiered</strong></td>
+          <td>Quota based on Discord roles</td>
+          <td>Hierarchical communities</td>
+      </tr>
+      <tr>
+          <td><strong>Replenishing</strong></td>
+          <td>Quota restores over time</td>
+          <td>Ongoing access</td>
+      </tr>
+      <tr>
+          <td><strong>Earned</strong></td>
+          <td>Admins manually grant invites</td>
+          <td>Reward-based systems</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="fixed-mode">Fixed Mode</h2>
+<p>Everyone with invite privileges gets the same quota.</p>
+<h3 id="setup">Setup</h3>
+<pre tabindex="0"><code>/plusone config quota-mode mode:fixed
+/plusone config quota-fixed amount:3
+</code></pre><h3 id="how-it-works">How It Works</h3>
+<ul>
+<li>All privileged users get 3 invites (or whatever amount you set)</li>
+<li>Once used, invites don&rsquo;t come back</li>
+<li>Admins can grant additional invites manually</li>
+</ul>
+<h3 id="best-for">Best For</h3>
+<ul>
+<li>Small, close-knit communities</li>
+<li>Simple &ldquo;bring a friend&rdquo; systems</li>
+<li>Communities where everyone is equal</li>
+</ul>
+<hr>
+<h2 id="tiered-mode">Tiered Mode</h2>
+<p>Quota based on the user&rsquo;s Discord roles. Higher roles can get more invites.</p>
+<h3 id="setup-1">Setup</h3>
+<pre tabindex="0"><code>/plusone config quota-mode mode:tiered
+/plusone config quota-tier role:@Founder amount:20 priority:10
+/plusone config quota-tier role:@Moderator amount:10 priority:5
+/plusone config quota-tier role:@Member amount:3 priority:1
+</code></pre><h3 id="how-it-works-1">How It Works</h3>
+<ul>
+<li>Each role has a quota amount and priority</li>
+<li>Users get the quota from their highest-priority role</li>
+<li>If a user has multiple roles, priority determines which quota applies</li>
+</ul>
+<h3 id="priority-example">Priority Example</h3>
+<p>A user with both @Moderator (priority 5) and @Member (priority 1) gets 10 invites (the higher priority role).</p>
+<h3 id="best-for-1">Best For</h3>
+<ul>
+<li>Communities with established hierarchies</li>
+<li>Rewarding trusted members with more invites</li>
+<li>Different membership tiers</li>
+</ul>
+<hr>
+<h2 id="replenishing-mode">Replenishing Mode</h2>
+<p>Quota automatically restores over time.</p>
+<h3 id="setup-2">Setup</h3>
+<pre tabindex="0"><code>/plusone config quota-mode mode:replenishing
+/plusone config quota-fixed amount:5
+/plusone config quota-replenish amount:1 days:30
+</code></pre><h3 id="how-it-works-2">How It Works</h3>
+<ul>
+<li>Users start with the fixed quota (5 invites)</li>
+<li>Every 30 days, they regain 1 invite</li>
+<li>Quota never exceeds the maximum (5)</li>
+</ul>
+<h3 id="configuration">Configuration</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Setting</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>quota-fixed</code></td>
+          <td>Maximum quota cap</td>
+      </tr>
+      <tr>
+          <td><code>quota-replenish amount</code></td>
+          <td>Invites restored per period</td>
+      </tr>
+      <tr>
+          <td><code>quota-replenish days</code></td>
+          <td>Days between restorations</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="best-for-2">Best For</h3>
+<ul>
+<li>Ongoing community growth</li>
+<li>Preventing invite hoarding</li>
+<li>Sustainable, steady expansion</li>
+</ul>
+<hr>
+<h2 id="earned-mode">Earned Mode</h2>
+<p>Admins manually grant invites to specific users.</p>
+<h3 id="setup-3">Setup</h3>
+<pre tabindex="0"><code>/plusone config quota-mode mode:earned
+</code></pre><h3 id="granting-invites">Granting Invites</h3>
+<pre tabindex="0"><code>/plusone grant user:@someone amount:5
+</code></pre><h3 id="how-it-works-3">How It Works</h3>
+<ul>
+<li>Users start with 0 invites</li>
+<li>Admins grant invites as rewards or recognition</li>
+<li>Quota accumulates (doesn&rsquo;t reset)</li>
+</ul>
+<h3 id="best-for-3">Best For</h3>
+<ul>
+<li>Reward systems for active members</li>
+<li>Contest prizes</li>
+<li>Exclusive communities with vetted inviters</li>
+</ul>
+<hr>
+<h2 id="checking-configuration">Checking Configuration</h2>
+<p>View your current quota settings:</p>
+<pre tabindex="0"><code>/plusone status
+</code></pre><p>Shows:</p>
+<ul>
+<li>Current quota mode</li>
+<li>Default quota amount</li>
+<li>Replenish rate (if applicable)</li>
+<li>All configured tiers</li>
+</ul>
+<hr>
+<h2 id="changing-modes">Changing Modes</h2>
+<p>You can switch modes at any time:</p>
+<pre tabindex="0"><code>/plusone config quota-mode mode:tiered
+</code></pre><p><strong>Note:</strong> Existing quotas may be affected when switching modes. Users keep invites they&rsquo;ve already created, but their available quota recalculates based on the new mode.</p>
+<hr>
+<h2 id="tips">Tips</h2>
+<h3 id="start-simple">Start Simple</h3>
+<p>Begin with fixed mode while you learn how your community uses invites. You can always switch to a more complex mode later.</p>
+<h3 id="monitor-usage">Monitor Usage</h3>
+<p>Use <code>/plusone audit</code> to see how invites are being used. This helps you tune quota amounts.</p>
+<h3 id="combine-with-trials">Combine with Trials</h3>
+<p>Any quota mode works with trial invites. Consider using trials to vet new members before they get full access.</p>
+
+            </div>
+
+            
+            <div class="docs-pagination">
+                
+                <a href="https://www.nervous.net/docs/plus-one/commands/" class="docs-prev">
+                    <span>&larr; Previous</span>
+                    <strong>Commands</strong>
+                </a>
+                
+                
+                <a href="https://www.nervous.net/docs/plus-one/trials/" class="docs-next">
+                    <span>Next &rarr;</span>
+                    <strong>Trial Invites</strong>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="section-divider white-to-yellow"></div>
+
+
+        </main>
+
+        <footer class="footer">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+            <img src="https://www.nervous.net/images/logo-wordmark.webp" alt="Nervous" class="logo-wordmark" />
+        </a>
+        <ul class="footer-nav">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro">Contact</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<script src="https://www.nervous.net/js/main.js"></script>
+
+    </body>
+</html>

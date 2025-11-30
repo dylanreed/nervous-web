@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Troubleshooting | Nervous</title>
+<meta name="description" content="Solutions to common Plus One issues.">
+<link rel="canonical" href="https://www.nervous.net/docs/plus-one/troubleshooting/">
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.nervous.net/docs/plus-one/troubleshooting/">
+<meta property="og:title" content="Troubleshooting | Nervous">
+<meta property="og:description" content="Solutions to common Plus One issues.">
+<meta property="og:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.nervous.net/docs/plus-one/troubleshooting/">
+<meta name="twitter:title" content="Troubleshooting | Nervous">
+<meta name="twitter:description" content="Solutions to common Plus One issues.">
+<meta name="twitter:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet" />
+
+
+<link rel="icon" type="image/png" href="https://www.nervous.net/images/favicon.png" />
+<link rel="apple-touch-icon" href="https://www.nervous.net/images/webclip.png" />
+
+<link rel="stylesheet" href="https://www.nervous.net/css/style.css" />
+
+
+
+    </head>
+    <body>
+        <nav class="navbar">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+        <ul class="nav-menu">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro" class="btn">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+        <main>
+            
+
+<section class="section docs-section">
+    <div class="container docs-container">
+        
+        <aside class="docs-sidebar">
+            <div class="docs-sidebar-header">
+                <h3>&#43;1 documentation</h3>
+            </div>
+            <nav class="docs-nav">
+                
+                <a href="https://www.nervous.net/docs/plus-one/getting-started/" class="docs-nav-item">Getting Started</a>
+                
+                <a href="https://www.nervous.net/docs/plus-one/commands/" class="docs-nav-item">Commands</a>
+                
+                <a href="https://www.nervous.net/docs/plus-one/quotas/" class="docs-nav-item">Quota Modes</a>
+                
+                <a href="https://www.nervous.net/docs/plus-one/trials/" class="docs-nav-item">Trial Invites</a>
+                
+                <a href="https://www.nervous.net/docs/plus-one/troubleshooting/" class="docs-nav-item active">Troubleshooting</a>
+                
+            </nav>
+            <div class="docs-back">
+                <a href="/bots/plus-one/">&larr; Back to &#43;1</a>
+            </div>
+        </aside>
+
+        
+        <div class="docs-content">
+            <div class="docs-header">
+                <h1>Troubleshooting</h1>
+                
+                <p class="docs-description">Solutions to common Plus One issues.</p>
+                
+            </div>
+
+            <div class="content">
+                <p>Having trouble with Plus One? This guide covers the most common issues and their solutions.</p>
+<h2 id="bot-doesnt-respond-to-commands">Bot Doesn&rsquo;t Respond to Commands</h2>
+<h3 id="check-if-the-bot-is-online">Check if the bot is online</h3>
+<p>Look for the bot in your server&rsquo;s member list. If it shows as offline, the bot may be experiencing downtime.</p>
+<h3 id="verify-permissions">Verify permissions</h3>
+<p>Make sure the bot has these permissions:</p>
+<ul>
+<li>View Channels</li>
+<li>Send Messages</li>
+<li>Use Application Commands</li>
+</ul>
+<h3 id="wait-for-command-propagation">Wait for command propagation</h3>
+<p>Discord can take up to an hour to propagate slash commands after the bot joins.</p>
+<hr>
+<h2 id="you-dont-have-permission-to-create-invites">&ldquo;You don&rsquo;t have permission to create invites&rdquo;</h2>
+<h3 id="no-privilege-rules-configured">No privilege rules configured</h3>
+<p>If you haven&rsquo;t set up any privilege rules, only users with Manage Server permission can create invites by default.</p>
+<p><strong>Solution:</strong> Add privilege rules:</p>
+<pre tabindex="0"><code>/plusone config privilege-add type:role value:&lt;role-id&gt;
+</code></pre><h3 id="missing-required-rolepermission">Missing required role/permission</h3>
+<p>Check that you have one of the roles or permissions configured in the privilege rules.</p>
+<p><strong>Check your configuration:</strong></p>
+<pre tabindex="0"><code>/plusone status
+</code></pre><hr>
+<h2 id="youve-used-all-your-invites">&ldquo;You&rsquo;ve used all your invites&rdquo;</h2>
+<h3 id="quota-exhausted">Quota exhausted</h3>
+<p>You&rsquo;ve used all the invites available to you.</p>
+<p><strong>Options:</strong></p>
+<ul>
+<li>Wait for quota to replenish (if using replenishing mode)</li>
+<li>Ask an admin to grant more invites</li>
+<li>Revoke unused invites to get quota back</li>
+</ul>
+<h3 id="check-remaining-quota">Check remaining quota</h3>
+<pre tabindex="0"><code>/invite list
+</code></pre><h3 id="revoke-unused-invites">Revoke unused invites</h3>
+<p>If you have pending (unused) invites, you can revoke them:</p>
+<pre tabindex="0"><code>/invite revoke code:abc123
+</code></pre><hr>
+<h2 id="invite-link-not-working">Invite Link Not Working</h2>
+<h3 id="invite-expired">Invite expired</h3>
+<p>Plus One invites expire after 7 days if unused. Create a new invite.</p>
+<h3 id="invite-already-used">Invite already used</h3>
+<p>Each invite is single-use. Once someone joins with it, the invite becomes invalid.</p>
+<h3 id="check-invite-status">Check invite status</h3>
+<pre tabindex="0"><code>/invite list
+</code></pre><p>This shows which invites are pending, used, or expired.</p>
+<hr>
+<h2 id="trial-role-issues">Trial Role Issues</h2>
+<h3 id="trial-role-not-being-assigned">Trial role not being assigned</h3>
+<ol>
+<li><strong>Check role hierarchy:</strong> The bot&rsquo;s role must be above the trial role</li>
+<li><strong>Verify permissions:</strong> Bot needs Manage Roles permission</li>
+<li><strong>Confirm trials are enabled:</strong> Run <code>/plusone status</code></li>
+</ol>
+<h3 id="trial-role-not-being-removed">Trial role not being removed</h3>
+<ol>
+<li>The bot must remain in the server</li>
+<li>Check bot has Manage Roles permission</li>
+<li>Role removal runs on a schedule - wait a few minutes</li>
+</ol>
+<h3 id="cannot-create-trial-invites">&ldquo;Cannot create trial invites&rdquo;</h3>
+<ol>
+<li>Trials must be enabled: <code>/plusone status</code></li>
+<li>You need invite privileges</li>
+<li>You need remaining quota</li>
+</ol>
+<hr>
+<h2 id="quota-not-updating">Quota Not Updating</h2>
+<h3 id="tiered-mode-not-applying">Tiered mode not applying</h3>
+<p>If you&rsquo;re using tiered mode and quotas seem wrong:</p>
+<ol>
+<li>Check tier priorities - higher priority wins</li>
+<li>Verify the user has the expected role</li>
+<li>Run <code>/plusone status</code> to see tier configuration</li>
+</ol>
+<h3 id="replenishing-not-working">Replenishing not working</h3>
+<p>Quota replenishes on a schedule, not instantly. Check:</p>
+<ol>
+<li>The replenish configuration: <code>/plusone status</code></li>
+<li>That enough time has passed since last replenish</li>
+<li>That you&rsquo;re not already at max quota</li>
+</ol>
+<hr>
+<h2 id="commands-not-appearing">Commands Not Appearing</h2>
+<h3 id="missing-permission">Missing permission</h3>
+<p>Admin commands (<code>/plusone config</code>, etc.) only appear for users with Manage Server permission.</p>
+<h3 id="user-commands-not-showing">User commands not showing</h3>
+<p><code>/invite</code> commands only appear for users with invite privileges. Check that privilege rules are configured.</p>
+<h3 id="wait-for-propagation">Wait for propagation</h3>
+<p>Slash commands can take up to an hour to appear after configuration changes.</p>
+<hr>
+<h2 id="invite-tracking-issues">Invite Tracking Issues</h2>
+<h3 id="cant-see-who-used-an-invite">Can&rsquo;t see who used an invite</h3>
+<p>Run the audit command:</p>
+<pre tabindex="0"><code>/plusone audit
+</code></pre><p>Or filter by user:</p>
+<pre tabindex="0"><code>/plusone audit user:@someone
+</code></pre><h3 id="new-member-not-tracked">New member not tracked</h3>
+<p>The bot tracks invites it creates. If someone joins via a different invite (not created by Plus One), it won&rsquo;t be tracked.</p>
+<hr>
+<h2 id="permission-errors">Permission Errors</h2>
+<h3 id="failed-to-create-invite">&ldquo;Failed to create invite&rdquo;</h3>
+<p>The bot needs Create Instant Invite permission in the channel where invites are generated.</p>
+<h3 id="cannot-manage-trial-role">&ldquo;Cannot manage trial role&rdquo;</h3>
+<ol>
+<li>Move the bot&rsquo;s role above the trial role</li>
+<li>Verify bot has Manage Roles permission</li>
+</ol>
+<hr>
+<h2 id="getting-more-help">Getting More Help</h2>
+<p>If these solutions don&rsquo;t resolve your issue:</p>
+<ol>
+<li><strong>Check our FAQ</strong> at <a href="/faq/">/faq/</a> for more answers</li>
+<li><strong>Contact support</strong> through our <a href="https://calendly.com/nervous/intro">contact page</a></li>
+<li><strong>Provide details</strong> including:
+<ul>
+<li>What you were trying to do</li>
+<li>What happened instead</li>
+<li>Any error messages</li>
+<li>Your server ID</li>
+</ul>
+</li>
+</ol>
+
+            </div>
+
+            
+            <div class="docs-pagination">
+                
+                <a href="https://www.nervous.net/docs/plus-one/trials/" class="docs-prev">
+                    <span>&larr; Previous</span>
+                    <strong>Trial Invites</strong>
+                </a>
+                
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="section-divider white-to-yellow"></div>
+
+
+        </main>
+
+        <footer class="footer">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+            <img src="https://www.nervous.net/images/logo-wordmark.webp" alt="Nervous" class="logo-wordmark" />
+        </a>
+        <ul class="footer-nav">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro">Contact</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<script src="https://www.nervous.net/js/main.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Trial Invites | Nervous</title>
+<meta name="description" content="Grant temporary access to new members with trial invites.">
+<link rel="canonical" href="https://www.nervous.net/docs/plus-one/trials/">
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.nervous.net/docs/plus-one/trials/">
+<meta property="og:title" content="Trial Invites | Nervous">
+<meta property="og:description" content="Grant temporary access to new members with trial invites.">
+<meta property="og:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.nervous.net/docs/plus-one/trials/">
+<meta name="twitter:title" content="Trial Invites | Nervous">
+<meta name="twitter:description" content="Grant temporary access to new members with trial invites.">
+<meta name="twitter:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet" />
+
+
+<link rel="icon" type="image/png" href="https://www.nervous.net/images/favicon.png" />
+<link rel="apple-touch-icon" href="https://www.nervous.net/images/webclip.png" />
+
+<link rel="stylesheet" href="https://www.nervous.net/css/style.css" />
+
+
+
+    </head>
+    <body>
+        <nav class="navbar">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+        <ul class="nav-menu">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro" class="btn">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+        <main>
+            
+
+<section class="section docs-section">
+    <div class="container docs-container">
+        
+        <aside class="docs-sidebar">
+            <div class="docs-sidebar-header">
+                <h3>&#43;1 documentation</h3>
+            </div>
+            <nav class="docs-nav">
+                
+                <a href="https://www.nervous.net/docs/plus-one/getting-started/" class="docs-nav-item">Getting Started</a>
+                
+                <a href="https://www.nervous.net/docs/plus-one/commands/" class="docs-nav-item">Commands</a>
+                
+                <a href="https://www.nervous.net/docs/plus-one/quotas/" class="docs-nav-item">Quota Modes</a>
+                
+                <a href="https://www.nervous.net/docs/plus-one/trials/" class="docs-nav-item active">Trial Invites</a>
+                
+                <a href="https://www.nervous.net/docs/plus-one/troubleshooting/" class="docs-nav-item">Troubleshooting</a>
+                
+            </nav>
+            <div class="docs-back">
+                <a href="/bots/plus-one/">&larr; Back to &#43;1</a>
+            </div>
+        </aside>
+
+        
+        <div class="docs-content">
+            <div class="docs-header">
+                <h1>Trial Invites</h1>
+                
+                <p class="docs-description">Grant temporary access to new members with trial invites.</p>
+                
+            </div>
+
+            <div class="content">
+                <p>Trial invites let you give new members a probationary period before they get full access. When someone joins via a trial invite, they receive a temporary role that automatically expires.</p>
+<h2 id="how-trials-work">How Trials Work</h2>
+<ol>
+<li>User creates a trial invite: <code>/invite create trial:true</code></li>
+<li>New member joins using the invite</li>
+<li>New member receives the trial role</li>
+<li>After the trial period, the role is automatically removed</li>
+<li>The member stays in the server (just without the trial role)</li>
+</ol>
+<hr>
+<h2 id="setting-up-trials">Setting Up Trials</h2>
+<h3 id="step-1-create-a-trial-role">Step 1: Create a Trial Role</h3>
+<p>Create a Discord role for trial members. This role should have limited permissions compared to full members.</p>
+<p><strong>Example permissions for trial role:</strong></p>
+<ul>
+<li>View basic channels</li>
+<li>Send messages in limited channels</li>
+<li>No access to member-only areas</li>
+</ul>
+<h3 id="step-2-configure-trial-settings">Step 2: Configure Trial Settings</h3>
+<pre tabindex="0"><code>/plusone config trial days:14 role:@Trial
+</code></pre><table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>days</code></td>
+          <td>How long the trial lasts</td>
+      </tr>
+      <tr>
+          <td><code>role</code></td>
+          <td>The role to grant during trial</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="step-3-position-the-role">Step 3: Position the Role</h3>
+<p>The bot&rsquo;s role must be <strong>above</strong> the trial role in your server&rsquo;s role hierarchy:</p>
+<pre tabindex="0"><code>Bot Role        ← Must be here or higher
+Trial Role      ← The role granted to trial members
+@everyone
+</code></pre><hr>
+<h2 id="creating-trial-invites">Creating Trial Invites</h2>
+<p>Users with invite privileges can create trial invites:</p>
+<pre tabindex="0"><code>/invite create trial:true
+</code></pre><p>The invite works like a normal invite, but the person who joins gets the trial role.</p>
+<hr>
+<h2 id="what-happens-when-trial-ends">What Happens When Trial Ends</h2>
+<p>When the trial period expires:</p>
+<ol>
+<li>The trial role is automatically removed</li>
+<li>The member stays in the server</li>
+<li>They lose access to trial-only channels</li>
+</ol>
+<p><strong>What you might do next:</strong></p>
+<ul>
+<li>Manually grant them a full member role</li>
+<li>Let them apply through your normal process</li>
+<li>Remove them if they weren&rsquo;t active</li>
+</ul>
+<hr>
+<h2 id="disabling-trials">Disabling Trials</h2>
+<p>To turn off trial invites:</p>
+<pre tabindex="0"><code>/plusone config trial days:0
+</code></pre><p>Existing trial members keep their role until it expires. New trial invites can&rsquo;t be created.</p>
+<hr>
+<h2 id="trial-duration-examples">Trial Duration Examples</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Duration</th>
+          <th>Use Case</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>7 days</td>
+          <td>Quick vibe check</td>
+      </tr>
+      <tr>
+          <td>14 days</td>
+          <td>Standard probation</td>
+      </tr>
+      <tr>
+          <td>30 days</td>
+          <td>Extended evaluation</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="tips">Tips</h2>
+<h3 id="combine-with-verification">Combine with Verification</h3>
+<p>Use trials alongside your existing verification process. Trial members can prove themselves before getting full access.</p>
+<h3 id="channel-strategy">Channel Strategy</h3>
+<p>Create channels specifically for trial members:</p>
+<ul>
+<li>A welcome channel explaining the trial</li>
+<li>Limited chat access to basic areas</li>
+<li>No access to sensitive or member-only content</li>
+</ul>
+<h3 id="tracking-trials">Tracking Trials</h3>
+<p>Use <code>/plusone audit</code> to see which trial invites have been used and by whom.</p>
+<h3 id="conversion-path">Conversion Path</h3>
+<p>Make it clear to trial members how they can become full members. Consider:</p>
+<ul>
+<li>Instructions in the trial welcome channel</li>
+<li>A way to request full membership</li>
+<li>Automatic promotion if they&rsquo;re active</li>
+</ul>
+<hr>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="trial-role-not-being-assigned">Trial role not being assigned</h3>
+<ol>
+<li>Check the bot&rsquo;s role is above the trial role</li>
+<li>Verify the bot has Manage Roles permission</li>
+<li>Confirm trial is enabled: <code>/plusone status</code></li>
+</ol>
+<h3 id="trial-role-not-being-removed">Trial role not being removed</h3>
+<ol>
+<li>The bot must stay in the server</li>
+<li>Check the bot has Manage Roles permission</li>
+<li>Trial removals run on a schedule - give it a few minutes</li>
+</ol>
+<h3 id="cant-create-trial-invites">Can&rsquo;t create trial invites</h3>
+<ol>
+<li>Check trials are enabled: <code>/plusone status</code></li>
+<li>Verify you have invite privileges</li>
+<li>Ensure you have remaining quota</li>
+</ol>
+
+            </div>
+
+            
+            <div class="docs-pagination">
+                
+                <a href="https://www.nervous.net/docs/plus-one/quotas/" class="docs-prev">
+                    <span>&larr; Previous</span>
+                    <strong>Quota Modes</strong>
+                </a>
+                
+                
+                <a href="https://www.nervous.net/docs/plus-one/troubleshooting/" class="docs-next">
+                    <span>Next &rarr;</span>
+                    <strong>Troubleshooting</strong>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="section-divider white-to-yellow"></div>
+
+
+        </main>
+
+        <footer class="footer">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+            <img src="https://www.nervous.net/images/logo-wordmark.webp" alt="Nervous" class="logo-wordmark" />
+        </a>
+        <ul class="footer-nav">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro">Contact</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<script src="https://www.nervous.net/js/main.js"></script>
+
+    </body>
+</html>

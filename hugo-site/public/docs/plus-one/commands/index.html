@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Commands | Nervous</title>
+<meta name="description" content="Complete reference for Plus One slash commands.">
+<link rel="canonical" href="https://www.nervous.net/docs/plus-one/commands/">
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.nervous.net/docs/plus-one/commands/">
+<meta property="og:title" content="Commands | Nervous">
+<meta property="og:description" content="Complete reference for Plus One slash commands.">
+<meta property="og:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.nervous.net/docs/plus-one/commands/">
+<meta name="twitter:title" content="Commands | Nervous">
+<meta name="twitter:description" content="Complete reference for Plus One slash commands.">
+<meta name="twitter:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet" />
+
+
+<link rel="icon" type="image/png" href="https://www.nervous.net/images/favicon.png" />
+<link rel="apple-touch-icon" href="https://www.nervous.net/images/webclip.png" />
+
+<link rel="stylesheet" href="https://www.nervous.net/css/style.css" />
+
+
+
+    </head>
+    <body>
+        <nav class="navbar">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+        <ul class="nav-menu">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro" class="btn">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+        <main>
+            
+
+<section class="section docs-section">
+    <div class="container docs-container">
+        
+        <aside class="docs-sidebar">
+            <div class="docs-sidebar-header">
+                <h3>&#43;1 documentation</h3>
+            </div>
+            <nav class="docs-nav">
+                
+                <a href="https://www.nervous.net/docs/plus-one/getting-started/" class="docs-nav-item">Getting Started</a>
+                
+                <a href="https://www.nervous.net/docs/plus-one/commands/" class="docs-nav-item active">Commands</a>
+                
+                <a href="https://www.nervous.net/docs/plus-one/quotas/" class="docs-nav-item">Quota Modes</a>
+                
+                <a href="https://www.nervous.net/docs/plus-one/trials/" class="docs-nav-item">Trial Invites</a>
+                
+                <a href="https://www.nervous.net/docs/plus-one/troubleshooting/" class="docs-nav-item">Troubleshooting</a>
+                
+            </nav>
+            <div class="docs-back">
+                <a href="/bots/plus-one/">&larr; Back to &#43;1</a>
+            </div>
+        </aside>
+
+        
+        <div class="docs-content">
+            <div class="docs-header">
+                <h1>Commands</h1>
+                
+                <p class="docs-description">Complete reference for Plus One slash commands.</p>
+                
+            </div>
+
+            <div class="content">
+                <p>Plus One uses Discord slash commands. All commands start with <code>/</code>.</p>
+<h2 id="user-commands">User Commands</h2>
+<p>These commands are available to users with invite privileges.</p>
+<h3 id="invite-create">/invite create</h3>
+<p>Create a new single-use invite link.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Required</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>trial</code></td>
+          <td>No</td>
+          <td>If true, creates a trial invite</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Examples:</strong></p>
+<pre tabindex="0"><code>/invite create
+/invite create trial:true
+</code></pre><p>The invite link expires after 7 days if unused. Trial invites grant the configured trial role, which is automatically removed after the trial period ends.</p>
+<hr>
+<h3 id="invite-list">/invite list</h3>
+<p>View your invite history and remaining quota.</p>
+<p><strong>Shows:</strong></p>
+<ul>
+<li>Current quota status</li>
+<li>Pending invites (created but not yet used)</li>
+<li>Used invites count</li>
+<li>Expired invites count</li>
+</ul>
+<hr>
+<h3 id="invite-revoke">/invite revoke</h3>
+<p>Delete an unused invite and restore your quota.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Required</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>code</code></td>
+          <td>Yes</td>
+          <td>The invite code to revoke</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Example:</strong></p>
+<pre tabindex="0"><code>/invite revoke code:abc123
+</code></pre><p>Only works on invites you created that haven&rsquo;t been used yet.</p>
+<hr>
+<h2 id="admin-commands">Admin Commands</h2>
+<p>These commands require <strong>Manage Server</strong> permission.</p>
+<h3 id="plusone-config-quota-mode">/plusone config quota-mode</h3>
+<p>Set how invite quotas are calculated.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Required</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>mode</code></td>
+          <td>Yes</td>
+          <td><code>fixed</code>, <code>tiered</code>, <code>replenishing</code>, or <code>earned</code></td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Example:</strong></p>
+<pre tabindex="0"><code>/plusone config quota-mode mode:tiered
+</code></pre><p>See <a href="/docs/plus-one/quotas/">Quota Modes</a> for details on each mode.</p>
+<hr>
+<h3 id="plusone-config-quota-fixed">/plusone config quota-fixed</h3>
+<p>Set the default invite quota (used in fixed mode and as fallback).</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Required</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>amount</code></td>
+          <td>Yes</td>
+          <td>Number of invites (0-100)</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Example:</strong></p>
+<pre tabindex="0"><code>/plusone config quota-fixed amount:5
+</code></pre><hr>
+<h3 id="plusone-config-quota-tier">/plusone config quota-tier</h3>
+<p>Add or update a role-based quota tier.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Required</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>role</code></td>
+          <td>Yes</td>
+          <td>The role to configure</td>
+      </tr>
+      <tr>
+          <td><code>amount</code></td>
+          <td>Yes</td>
+          <td>Number of invites for this role</td>
+      </tr>
+      <tr>
+          <td><code>priority</code></td>
+          <td>No</td>
+          <td>Higher priority wins if user has multiple roles</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Example:</strong></p>
+<pre tabindex="0"><code>/plusone config quota-tier role:@Moderator amount:10 priority:5
+/plusone config quota-tier role:@Member amount:3 priority:1
+</code></pre><hr>
+<h3 id="plusone-config-quota-replenish">/plusone config quota-replenish</h3>
+<p>Configure automatic quota restoration (for replenishing mode).</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Required</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>amount</code></td>
+          <td>Yes</td>
+          <td>Invites to restore per period</td>
+      </tr>
+      <tr>
+          <td><code>days</code></td>
+          <td>Yes</td>
+          <td>Days between restorations</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Example:</strong></p>
+<pre tabindex="0"><code>/plusone config quota-replenish amount:1 days:30
+</code></pre><p>Grants 1 invite every 30 days, up to the default quota maximum.</p>
+<hr>
+<h3 id="plusone-config-trial">/plusone config trial</h3>
+<p>Configure trial invites.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Required</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>days</code></td>
+          <td>Yes</td>
+          <td>Trial duration (use 0 to disable)</td>
+      </tr>
+      <tr>
+          <td><code>role</code></td>
+          <td>Yes*</td>
+          <td>Role to grant during trial (*required when enabling)</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Examples:</strong></p>
+<pre tabindex="0"><code>/plusone config trial days:14 role:@Trial
+/plusone config trial days:0
+</code></pre><p>When trial expires, the role is removed but the user stays in the server.</p>
+<hr>
+<h3 id="plusone-config-privilege-add">/plusone config privilege-add</h3>
+<p>Define who can create invites.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Required</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>type</code></td>
+          <td>Yes</td>
+          <td><code>role</code>, <code>permission</code>, or <code>user</code></td>
+      </tr>
+      <tr>
+          <td><code>value</code></td>
+          <td>Yes</td>
+          <td>Role ID, permission name, or user ID</td>
+      </tr>
+      <tr>
+          <td><code>quota</code></td>
+          <td>No</td>
+          <td>Override quota for this rule</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Valid permission values:</strong></p>
+<ul>
+<li><code>ADMINISTRATOR</code></li>
+<li><code>MANAGE_GUILD</code></li>
+<li><code>MANAGE_ROLES</code></li>
+<li><code>KICK_MEMBERS</code></li>
+<li><code>BAN_MEMBERS</code></li>
+<li><code>MODERATE_MEMBERS</code></li>
+</ul>
+<p><strong>Examples:</strong></p>
+<pre tabindex="0"><code>/plusone config privilege-add type:role value:123456789
+/plusone config privilege-add type:permission value:MODERATE_MEMBERS
+/plusone config privilege-add type:user value:987654321 quota:50
+</code></pre><hr>
+<h3 id="plusone-config-privilege-remove">/plusone config privilege-remove</h3>
+<p>Remove a privilege rule.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Required</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>rule_id</code></td>
+          <td>Yes</td>
+          <td>The rule ID (shown in <code>/plusone status</code>)</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h3 id="plusone-grant">/plusone grant</h3>
+<p>Manually grant invite quota to a user (earned mode only).</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Required</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>user</code></td>
+          <td>Yes</td>
+          <td>User to grant quota to</td>
+      </tr>
+      <tr>
+          <td><code>amount</code></td>
+          <td>Yes</td>
+          <td>Number of invites to grant</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Example:</strong></p>
+<pre tabindex="0"><code>/plusone grant user:@someone amount:5
+</code></pre><hr>
+<h3 id="plusone-status">/plusone status</h3>
+<p>Display current bot configuration.</p>
+<p><strong>Shows:</strong></p>
+<ul>
+<li>Quota mode and default quota</li>
+<li>Replenish rate (if applicable)</li>
+<li>Trial invite settings</li>
+<li>Quota tiers</li>
+<li>Privilege rules</li>
+</ul>
+<hr>
+<h3 id="plusone-audit">/plusone audit</h3>
+<p>View invite usage history.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Required</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>user</code></td>
+          <td>No</td>
+          <td>Filter by invite creator</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Example:</strong></p>
+<pre tabindex="0"><code>/plusone audit
+/plusone audit user:@someone
+</code></pre><p>Shows total invites created, used, pending, and expired.</p>
+<hr>
+<h2 id="permission-summary">Permission Summary</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Command</th>
+          <th>Who Can Use</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>/invite create</code></td>
+          <td>Users with invite privileges</td>
+      </tr>
+      <tr>
+          <td><code>/invite list</code></td>
+          <td>Users with invite privileges</td>
+      </tr>
+      <tr>
+          <td><code>/invite revoke</code></td>
+          <td>Users with invite privileges</td>
+      </tr>
+      <tr>
+          <td><code>/plusone config *</code></td>
+          <td>Manage Server permission</td>
+      </tr>
+      <tr>
+          <td><code>/plusone grant</code></td>
+          <td>Manage Server permission</td>
+      </tr>
+      <tr>
+          <td><code>/plusone status</code></td>
+          <td>Manage Server permission</td>
+      </tr>
+      <tr>
+          <td><code>/plusone audit</code></td>
+          <td>Manage Server permission</td>
+      </tr>
+  </tbody>
+</table>
+
+            </div>
+
+            
+            <div class="docs-pagination">
+                
+                <a href="https://www.nervous.net/docs/plus-one/getting-started/" class="docs-prev">
+                    <span>&larr; Previous</span>
+                    <strong>Getting Started</strong>
+                </a>
+                
+                
+                <a href="https://www.nervous.net/docs/plus-one/quotas/" class="docs-next">
+                    <span>Next &rarr;</span>
+                    <strong>Quota Modes</strong>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="section-divider white-to-yellow"></div>
+
+
+        </main>
+
+        <footer class="footer">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+            <img src="https://www.nervous.net/images/logo-wordmark.webp" alt="Nervous" class="logo-wordmark" />
+        </a>
+        <ul class="footer-nav">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro">Contact</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<script src="https://www.nervous.net/js/main.js"></script>
+
+    </body>
+</html>
