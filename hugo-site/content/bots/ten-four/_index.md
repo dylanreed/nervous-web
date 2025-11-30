@@ -26,7 +26,7 @@ useCases:
   - "Brand communities — customer service, feedback collection"
 
 problem:
-  intro: "Managing support requests in Discord is chaotic:"
+  intro: "You've tried other ticketing bots. Web dashboards that require you to leave Discord just to change a setting. Reaction-based menus that feel like 2018. 15-minute setup processes that make you question if support tickets are even worth it."
   points:
     - "Support questions get lost in busy channels"
     - "No way to track who's handling which request"
