@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Getting Started | Nervous</title>
+<meta name="description" content="Set up Plus One invite management in your Discord server.">
+<link rel="canonical" href="https://www.nervous.net/docs/plus-one/getting-started/">
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.nervous.net/docs/plus-one/getting-started/">
+<meta property="og:title" content="Getting Started | Nervous">
+<meta property="og:description" content="Set up Plus One invite management in your Discord server.">
+<meta property="og:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.nervous.net/docs/plus-one/getting-started/">
+<meta name="twitter:title" content="Getting Started | Nervous">
+<meta name="twitter:description" content="Set up Plus One invite management in your Discord server.">
+<meta name="twitter:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet" />
+
+
+<link rel="icon" type="image/png" href="https://www.nervous.net/images/favicon.png" />
+<link rel="apple-touch-icon" href="https://www.nervous.net/images/webclip.png" />
+
+<link rel="stylesheet" href="https://www.nervous.net/css/style.css" />
+
+
+
+    </head>
+    <body>
+        <nav class="navbar">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+        <ul class="nav-menu">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro" class="btn">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+        <main>
+            
+
+<section class="section docs-section">
+    <div class="container docs-container">
+        
+        <aside class="docs-sidebar">
+            <div class="docs-sidebar-header">
+                <h3>Plus One documentation</h3>
+            </div>
+            <nav class="docs-nav">
+                
+                <a href="https://www.nervous.net/docs/plus-one/getting-started/" class="docs-nav-item active">Getting Started</a>
+                
+            </nav>
+            <div class="docs-back">
+                <a href="/bots/plus-one/">&larr; Back to Plus One</a>
+            </div>
+        </aside>
+
+        
+        <div class="docs-content">
+            <div class="docs-header">
+                <h1>Getting Started</h1>
+                
+                <p class="docs-description">Set up Plus One invite management in your Discord server.</p>
+                
+            </div>
+
+            <div class="content">
+                <p>Plus One gives you control over how members invite others to your private community. Setup takes just a few minutes.</p>
+<h2 id="what-plus-one-does">What Plus One Does</h2>
+<ul>
+<li><strong>Controlled Invites</strong> - Privileged users generate single-use invite links</li>
+<li><strong>Flexible Quotas</strong> - Set how many invites each member gets</li>
+<li><strong>Trial Access</strong> - Optionally grant temporary roles to new invitees</li>
+<li><strong>Full Tracking</strong> - See who invited whom</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before starting, make sure you have:</p>
+<ul>
+<li><strong>Administrator permissions</strong> in your Discord server</li>
+<li>A plan for who should be able to create invites</li>
+</ul>
+<hr>
+<h2 id="step-1-invite-the-bot">Step 1: Invite the Bot</h2>
+<p>Contact us to get Plus One added to your server. We&rsquo;ll provide an invite link with the correct permissions pre-configured.</p>
+<hr>
+<h2 id="step-2-configure-who-can-invite">Step 2: Configure Who Can Invite</h2>
+<p>Set which users can create invite links. You can base this on roles, permissions, or specific users.</p>
+<p><strong>By role:</strong></p>
+<pre tabindex="0"><code>/plusone config privilege-add type:role value:123456789
+</code></pre><p>(Replace with your role ID)</p>
+<p><strong>By permission:</strong></p>
+<pre tabindex="0"><code>/plusone config privilege-add type:permission value:MODERATE_MEMBERS
+</code></pre><p><strong>By specific user:</strong></p>
+<pre tabindex="0"><code>/plusone config privilege-add type:user value:987654321
+</code></pre><p>If you don&rsquo;t configure any rules, users with Manage Server permission can create invites by default.</p>
+<hr>
+<h2 id="step-3-set-invite-quotas">Step 3: Set Invite Quotas</h2>
+<p>Choose how invite quotas work for your community:</p>
+<p><strong>Fixed quota (same for everyone):</strong></p>
+<pre tabindex="0"><code>/plusone config quota-mode mode:fixed
+/plusone config quota-fixed amount:3
+</code></pre><p><strong>Role-based tiers:</strong></p>
+<pre tabindex="0"><code>/plusone config quota-mode mode:tiered
+/plusone config quota-tier role:@Moderator amount:10 priority:5
+/plusone config quota-tier role:@Member amount:3 priority:1
+</code></pre><p>See <a href="/docs/plus-one/quotas/">Quota Modes</a> for all options.</p>
+<hr>
+<h2 id="step-4-enable-trials-optional">Step 4: Enable Trials (Optional)</h2>
+<p>Grant new invitees a temporary role that expires after a set period:</p>
+<pre tabindex="0"><code>/plusone config trial days:14 role:@Trial
+</code></pre><p>See <a href="/docs/plus-one/trials/">Trial Invites</a> for details.</p>
+<hr>
+<h2 id="step-5-verify-setup">Step 5: Verify Setup</h2>
+<p>Check your configuration:</p>
+<pre tabindex="0"><code>/plusone status
+</code></pre><p>This shows your quota mode, trial settings, privilege rules, and more.</p>
+<hr>
+<h2 id="quick-test">Quick Test</h2>
+<ol>
+<li>Run <code>/invite list</code> to see your quota</li>
+<li>Run <code>/invite create</code> to generate an invite link</li>
+<li>The invite expires after 7 days if unused</li>
+<li>Run <code>/invite list</code> again to see your pending invite</li>
+</ol>
+<hr>
+<h2 id="for-your-members">For Your Members</h2>
+<p>Members with invite privileges can:</p>
+<ol>
+<li><strong>Check quota:</strong> <code>/invite list</code></li>
+<li><strong>Create invite:</strong> <code>/invite create</code></li>
+<li><strong>Revoke unused invite:</strong> <code>/invite revoke code:abc123</code></li>
+</ol>
+<hr>
+<h2 id="next-steps">Next Steps</h2>
+<ul>
+<li>Learn about <a href="/docs/plus-one/quotas/">Quota Modes</a> to find the right fit</li>
+<li>Set up <a href="/docs/plus-one/trials/">Trial Invites</a> for probationary access</li>
+<li>Review all <a href="/docs/plus-one/commands/">Commands</a> available</li>
+</ul>
+
+            </div>
+
+            
+            <div class="docs-pagination">
+                
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="section-divider white-to-yellow"></div>
+
+
+        </main>
+
+        <footer class="footer">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+            <img src="https://www.nervous.net/images/logo-wordmark.webp" alt="Nervous" class="logo-wordmark" />
+        </a>
+        <ul class="footer-nav">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro">Contact</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<script src="https://www.nervous.net/js/main.js"></script>
+
+    </body>
+</html>

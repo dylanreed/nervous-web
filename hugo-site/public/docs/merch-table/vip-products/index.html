@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VIP Products | Nervous</title>
+<meta name="description" content="Create exclusive products visible only to specific Discord roles.">
+<link rel="canonical" href="https://www.nervous.net/docs/merch-table/vip-products/">
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.nervous.net/docs/merch-table/vip-products/">
+<meta property="og:title" content="VIP Products | Nervous">
+<meta property="og:description" content="Create exclusive products visible only to specific Discord roles.">
+<meta property="og:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.nervous.net/docs/merch-table/vip-products/">
+<meta name="twitter:title" content="VIP Products | Nervous">
+<meta name="twitter:description" content="Create exclusive products visible only to specific Discord roles.">
+<meta name="twitter:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet" />
+
+
+<link rel="icon" type="image/png" href="https://www.nervous.net/images/favicon.png" />
+<link rel="apple-touch-icon" href="https://www.nervous.net/images/webclip.png" />
+
+<link rel="stylesheet" href="https://www.nervous.net/css/style.css" />
+
+
+
+    </head>
+    <body>
+        <nav class="navbar">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+        <ul class="nav-menu">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro" class="btn">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+        <main>
+            
+
+<section class="section docs-section">
+    <div class="container docs-container">
+        
+        <aside class="docs-sidebar">
+            <div class="docs-sidebar-header">
+                <h3>Merch Table documentation</h3>
+            </div>
+            <nav class="docs-nav">
+                
+                <a href="https://www.nervous.net/docs/merch-table/getting-started/" class="docs-nav-item">Getting Started</a>
+                
+                <a href="https://www.nervous.net/docs/merch-table/commands/" class="docs-nav-item">Commands</a>
+                
+                <a href="https://www.nervous.net/docs/merch-table/discounts/" class="docs-nav-item">Role-Based Discounts</a>
+                
+                <a href="https://www.nervous.net/docs/merch-table/vip-products/" class="docs-nav-item active">VIP Products</a>
+                
+                <a href="https://www.nervous.net/docs/merch-table/troubleshooting/" class="docs-nav-item">Troubleshooting</a>
+                
+            </nav>
+            <div class="docs-back">
+                <a href="/bots/merch-table/">&larr; Back to Merch Table</a>
+            </div>
+        </aside>
+
+        
+        <div class="docs-content">
+            <div class="docs-header">
+                <h1>VIP Products</h1>
+                
+                <p class="docs-description">Create exclusive products visible only to specific Discord roles.</p>
+                
+            </div>
+
+            <div class="content">
+                <p>Merch Table lets you restrict product visibility based on Discord roles. Create VIP-only products, early access items, or exclusive merch that only certain community members can see and purchase.</p>
+<h2 id="how-it-works">How It Works</h2>
+<ol>
+<li>You mark products as VIP and select which roles can access them</li>
+<li>Products are added to a &ldquo;VIP Exclusives&rdquo; collection</li>
+<li>Customers access the VIP section via a special URL</li>
+<li>Only customers with the required Discord roles can view and purchase</li>
+</ol>
+<hr>
+<h2 id="setting-up-vip-products">Setting Up VIP Products</h2>
+<h3 id="step-1-configure-the-app-proxy">Step 1: Configure the App Proxy</h3>
+<p>This is a one-time setup in the Shopify Partner Dashboard:</p>
+<ol>
+<li>Go to <a href="https://partners.shopify.com">partners.shopify.com</a></li>
+<li>Open your app&rsquo;s settings</li>
+<li>Add an App Proxy with these settings:
+<ul>
+<li><strong>Subpath prefix:</strong> <code>apps</code></li>
+<li><strong>Subpath:</strong> <code>merch-table</code></li>
+<li><strong>Proxy URL:</strong> <code>https://discord-shopify-web.fly.dev/proxy</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="step-2-configure-vip-settings">Step 2: Configure VIP Settings</h3>
+<ol>
+<li>Go to the <strong>Product Visibility</strong> tab in your Shopify app</li>
+<li>Fill in your settings:
+<ul>
+<li><strong>Discord Invite URL</strong> - For customers who need to join your Discord</li>
+<li><strong>Page Title</strong> - e.g., &ldquo;VIP Exclusives&rdquo;</li>
+<li><strong>Description</strong> - Explain what the VIP section offers</li>
+</ul>
+</li>
+<li>Click <strong>Save Settings</strong></li>
+</ol>
+<h3 id="step-3-add-vip-products">Step 3: Add VIP Products</h3>
+<ol>
+<li>Click <strong>+ Add Product</strong></li>
+<li>Select a product from your catalog</li>
+<li>Choose which Discord roles can see this product</li>
+<li>The product is automatically added to a &ldquo;VIP Exclusives&rdquo; collection</li>
+</ol>
+<h3 id="step-4-link-to-your-vip-section">Step 4: Link to Your VIP Section</h3>
+<p>Add the VIP page to your store&rsquo;s navigation:</p>
+<pre tabindex="0"><code>https://yourstore.com/apps/merch-table/vip
+</code></pre><hr>
+<h2 id="customer-experience">Customer Experience</h2>
+<h3 id="linked-customers">Linked Customers</h3>
+<p>Customers with linked accounts and the required roles:</p>
+<ol>
+<li>Visit the VIP page</li>
+<li>See all products they have access to</li>
+<li>Add items to cart and checkout normally</li>
+</ol>
+<h3 id="unlinked-customers">Unlinked Customers</h3>
+<p>Customers without linked accounts see:</p>
+<ol>
+<li>A message explaining the VIP section</li>
+<li>Instructions to link their Discord account</li>
+<li>A link to your Discord server</li>
+</ol>
+<hr>
+<h2 id="cart-validation-optional">Cart Validation (Optional)</h2>
+<p>Prevent customers from purchasing VIP products they shouldn&rsquo;t have access to:</p>
+<h3 id="enable-cart-validation">Enable Cart Validation</h3>
+<ol>
+<li>In Shopify admin, go to <strong>Online Store → Themes → Customize</strong></li>
+<li>Click <strong>App embeds</strong> in the left sidebar</li>
+<li>Find &ldquo;Cart Validation&rdquo; and toggle it <strong>ON</strong></li>
+<li>Click <strong>Save</strong></li>
+</ol>
+<h3 id="what-it-does">What It Does</h3>
+<p>If a customer without the required Discord role tries to add a VIP product to their cart, they&rsquo;ll see a friendly error message explaining they need the specific role to purchase.</p>
+<p>This prevents workarounds like sharing direct product links.</p>
+<hr>
+<h2 id="managing-vip-products">Managing VIP Products</h2>
+<h3 id="view-vip-products">View VIP Products</h3>
+<p>The <strong>Product Visibility</strong> tab shows all VIP products and their required roles.</p>
+<h3 id="change-role-requirements">Change Role Requirements</h3>
+<p>Click on any product to modify which roles can access it.</p>
+<h3 id="remove-vip-status">Remove VIP Status</h3>
+<p>Click the remove icon to make a product visible to everyone again.</p>
+<hr>
+<h2 id="tips">Tips</h2>
+<h3 id="exclusive-drops">Exclusive Drops</h3>
+<p>Use VIP products for:</p>
+<ul>
+<li>Early access to new releases</li>
+<li>Limited edition items</li>
+<li>Member-only merchandise</li>
+<li>Subscriber rewards</li>
+</ul>
+<h3 id="multiple-tiers">Multiple Tiers</h3>
+<p>Create different access levels:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Product Type</th>
+          <th>Required Role</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Early Access</td>
+          <td><code>discord_member</code></td>
+      </tr>
+      <tr>
+          <td>Exclusive Merch</td>
+          <td><code>discord_vip</code></td>
+      </tr>
+      <tr>
+          <td>Ultra Limited</td>
+          <td><code>discord_founder</code></td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="promotion">Promotion</h3>
+<p>Announce VIP products in your Discord to drive engagement and reward loyal members.</p>
+
+            </div>
+
+            
+            <div class="docs-pagination">
+                
+                <a href="https://www.nervous.net/docs/merch-table/discounts/" class="docs-prev">
+                    <span>&larr; Previous</span>
+                    <strong>Role-Based Discounts</strong>
+                </a>
+                
+                
+                <a href="https://www.nervous.net/docs/merch-table/troubleshooting/" class="docs-next">
+                    <span>Next &rarr;</span>
+                    <strong>Troubleshooting</strong>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="section-divider white-to-yellow"></div>
+
+
+        </main>
+
+        <footer class="footer">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+            <img src="https://www.nervous.net/images/logo-wordmark.webp" alt="Nervous" class="logo-wordmark" />
+        </a>
+        <ul class="footer-nav">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro">Contact</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<script src="https://www.nervous.net/js/main.js"></script>
+
+    </body>
+</html>

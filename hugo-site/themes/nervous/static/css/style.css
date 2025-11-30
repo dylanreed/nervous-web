@@ -403,7 +403,9 @@ img {
 }
 
 .carousel-card img {
-  max-height: 90px;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
   margin-bottom: 12px;
 }
 
@@ -426,8 +428,8 @@ img {
 .carousel-btn {
   background: transparent;
   border: none;
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
   cursor: pointer;
   transition: transform 0.2s, opacity 0.2s;
   display: flex;
@@ -1265,7 +1267,9 @@ pre code {
   }
 
   .carousel-card img {
-    max-height: 65px;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
     margin-bottom: 8px;
   }
 
@@ -1278,8 +1282,8 @@ pre code {
   }
 
   .carousel-btn {
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
   }
 
   /* Docs tables - mobile */

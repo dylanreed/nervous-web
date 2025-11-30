@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Troubleshooting | Nervous</title>
+<meta name="description" content="Solutions to common Merch Table issues.">
+<link rel="canonical" href="https://www.nervous.net/docs/merch-table/troubleshooting/">
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.nervous.net/docs/merch-table/troubleshooting/">
+<meta property="og:title" content="Troubleshooting | Nervous">
+<meta property="og:description" content="Solutions to common Merch Table issues.">
+<meta property="og:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.nervous.net/docs/merch-table/troubleshooting/">
+<meta name="twitter:title" content="Troubleshooting | Nervous">
+<meta name="twitter:description" content="Solutions to common Merch Table issues.">
+<meta name="twitter:image" content="https://www.nervous.net/images/og-home.jpg">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet" />
+
+
+<link rel="icon" type="image/png" href="https://www.nervous.net/images/favicon.png" />
+<link rel="apple-touch-icon" href="https://www.nervous.net/images/webclip.png" />
+
+<link rel="stylesheet" href="https://www.nervous.net/css/style.css" />
+
+
+
+    </head>
+    <body>
+        <nav class="navbar">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            &#9776;
+        </button>
+        <ul class="nav-menu">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro" class="btn">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+        <main>
+            
+
+<section class="section docs-section">
+    <div class="container docs-container">
+        
+        <aside class="docs-sidebar">
+            <div class="docs-sidebar-header">
+                <h3>Merch Table documentation</h3>
+            </div>
+            <nav class="docs-nav">
+                
+                <a href="https://www.nervous.net/docs/merch-table/getting-started/" class="docs-nav-item">Getting Started</a>
+                
+                <a href="https://www.nervous.net/docs/merch-table/commands/" class="docs-nav-item">Commands</a>
+                
+                <a href="https://www.nervous.net/docs/merch-table/discounts/" class="docs-nav-item">Role-Based Discounts</a>
+                
+                <a href="https://www.nervous.net/docs/merch-table/vip-products/" class="docs-nav-item">VIP Products</a>
+                
+                <a href="https://www.nervous.net/docs/merch-table/troubleshooting/" class="docs-nav-item active">Troubleshooting</a>
+                
+            </nav>
+            <div class="docs-back">
+                <a href="/bots/merch-table/">&larr; Back to Merch Table</a>
+            </div>
+        </aside>
+
+        
+        <div class="docs-content">
+            <div class="docs-header">
+                <h1>Troubleshooting</h1>
+                
+                <p class="docs-description">Solutions to common Merch Table issues.</p>
+                
+            </div>
+
+            <div class="content">
+                <p>Having trouble with Merch Table? This guide covers the most common issues and their solutions.</p>
+<h2 id="bot-not-responding-to-commands">Bot Not Responding to Commands</h2>
+<h3 id="check-if-the-bot-is-online">Check if the bot is online</h3>
+<p>Look for the bot in your server&rsquo;s member list. If it shows as offline, the bot may be experiencing downtime.</p>
+<h3 id="verify-the-server-is-connected">Verify the server is connected</h3>
+<p>Run <code>/shopify_info</code> to check if your Discord server is connected to your Shopify store. If not connected, you&rsquo;ll need to run <code>/connect</code> with your connection code.</p>
+<h3 id="check-bot-permissions">Check bot permissions</h3>
+<p>The bot needs these permissions:</p>
+<ul>
+<li>View Channels</li>
+<li>Send Messages</li>
+<li>Use Application Commands</li>
+</ul>
+<hr>
+<h2 id="connection-issues">Connection Issues</h2>
+<h3 id="connection-code-not-working">Connection code not working</h3>
+<p>Connection codes expire after 10 minutes. Get a fresh code from your Shopify app dashboard.</p>
+<h3 id="dashboard-doesnt-show-connected">Dashboard doesn&rsquo;t show &ldquo;Connected&rdquo;</h3>
+<ol>
+<li>Verify you entered the correct connection code</li>
+<li>Wait a few seconds and refresh the dashboard</li>
+<li>Try disconnecting and reconnecting</li>
+</ol>
+<hr>
+<h2 id="roles-not-syncing">Roles Not Syncing</h2>
+<h3 id="role-not-appearing-as-a-shopify-tag">Role not appearing as a Shopify tag</h3>
+<ol>
+<li>Check that the role is toggled <strong>ON</strong> in the Discord Roles tab</li>
+<li>Have the customer run <code>/shopify_status</code> to trigger a sync</li>
+<li>Verify the customer&rsquo;s account is linked</li>
+</ol>
+<h3 id="customer-doesnt-have-the-tag">Customer doesn&rsquo;t have the tag</h3>
+<ol>
+<li>Confirm they completed the <code>/link_shopify</code> process</li>
+<li>Check they verified their email</li>
+<li>Ensure they logged into Shopify to complete linking</li>
+</ol>
+<h3 id="role-was-removed-but-tag-remains">Role was removed but tag remains</h3>
+<p>Role removal syncs automatically, but can take a few minutes. If the tag persists, have the customer run <code>/shopify_status</code> to force a sync.</p>
+<hr>
+<h2 id="account-linking-problems">Account Linking Problems</h2>
+<h3 id="email-not-found-error">&ldquo;Email not found&rdquo; error</h3>
+<p>The customer&rsquo;s email must match an existing Shopify customer account. They need to:</p>
+<ol>
+<li>Create a Shopify account with the same email</li>
+<li>Or use the email already on their Shopify account</li>
+</ol>
+<h3 id="verification-email-not-received">Verification email not received</h3>
+<ol>
+<li>Check spam/junk folders</li>
+<li>Verify they entered the correct email address</li>
+<li>Try the linking process again</li>
+</ol>
+<h3 id="link-expired">Link expired</h3>
+<p>Verification links expire after 10 minutes. Have the customer run <code>/link_shopify</code> again to get a fresh link.</p>
+<hr>
+<h2 id="discount-issues">Discount Issues</h2>
+<h3 id="discount-not-applying-at-checkout">Discount not applying at checkout</h3>
+<ol>
+<li>Verify the customer&rsquo;s account is linked</li>
+<li>Check they have the required Discord role</li>
+<li>Confirm the role is enabled in the Discord Roles tab</li>
+<li>Have them run <code>/shopify_status</code> to verify their tags</li>
+</ol>
+<h3 id="wrong-discount-amount">Wrong discount amount</h3>
+<p>Check the discount configuration in the Discounts tab to verify the amount is set correctly.</p>
+<hr>
+<h2 id="vip-page-problems">VIP Page Problems</h2>
+<h3 id="vip-page-not-loading">VIP page not loading</h3>
+<ol>
+<li>Verify App Proxy is configured correctly in Partner Dashboard</li>
+<li>Check the proxy URL is exactly: <code>https://discord-shopify-web.fly.dev/proxy</code></li>
+<li>Confirm the subpath settings are correct</li>
+</ol>
+<h3 id="vip-page-shows-access-denied">VIP page shows &ldquo;access denied&rdquo;</h3>
+<p>The customer either:</p>
+<ul>
+<li>Hasn&rsquo;t linked their Discord account</li>
+<li>Doesn&rsquo;t have the required Discord role</li>
+<li>Has a role that isn&rsquo;t synced (check Discord Roles tab)</li>
+</ul>
+<h3 id="products-not-appearing-on-vip-page">Products not appearing on VIP page</h3>
+<ol>
+<li>Verify the product was added in the Product Visibility tab</li>
+<li>Check the customer has the required role</li>
+<li>Confirm the role is toggled ON in Discord Roles</li>
+</ol>
+<hr>
+<h2 id="cart-validation-issues">Cart Validation Issues</h2>
+<h3 id="validation-not-blocking-purchases">Validation not blocking purchases</h3>
+<ol>
+<li>Verify Cart Validation is enabled in Theme Customizer</li>
+<li>Check it&rsquo;s toggled ON in App embeds</li>
+<li>Save and refresh your store</li>
+</ol>
+<h3 id="customers-seeing-errors-incorrectly">Customers seeing errors incorrectly</h3>
+<p>If customers with valid roles see errors:</p>
+<ol>
+<li>Have them run <code>/shopify_status</code> to refresh their tags</li>
+<li>Check the product&rsquo;s role requirements</li>
+</ol>
+<hr>
+<h2 id="getting-more-help">Getting More Help</h2>
+<p>If these solutions don&rsquo;t resolve your issue:</p>
+<ol>
+<li><strong>Check our FAQ</strong> at <a href="/faq/">/faq/</a> for more answers</li>
+<li><strong>Contact support</strong> through our <a href="https://calendly.com/nervous/intro">contact page</a></li>
+<li><strong>Provide details</strong> including:
+<ul>
+<li>What you were trying to do</li>
+<li>What happened instead</li>
+<li>Any error messages</li>
+<li>Your Discord server ID and Shopify store URL</li>
+</ul>
+</li>
+</ol>
+
+            </div>
+
+            
+            <div class="docs-pagination">
+                
+                <a href="https://www.nervous.net/docs/merch-table/vip-products/" class="docs-prev">
+                    <span>&larr; Previous</span>
+                    <strong>VIP Products</strong>
+                </a>
+                
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="section-divider white-to-yellow"></div>
+
+
+        </main>
+
+        <footer class="footer">
+    <div class="container">
+        <a href="https://www.nervous.net/" class="logo">
+            <img src="https://www.nervous.net/images/256x256.webp" alt="Nervous logo" />
+            <img src="https://www.nervous.net/images/logo-wordmark.webp" alt="Nervous" class="logo-wordmark" />
+        </a>
+        <ul class="footer-nav">
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/work/">Our Work</a>
+            </li>
+            
+            <li>
+                <a href="/bots/">Bots</a>
+            </li>
+            
+            <li>
+                <a href="/blog/">Blog</a>
+            </li>
+            
+            <li>
+                <a href="/podcast/">Podcast</a>
+            </li>
+            
+            <li>
+                <a href="/about/">About</a>
+            </li>
+            
+            <li>
+                <a href="/faq/">FAQ</a>
+            </li>
+            
+            <li>
+                <a href="https://calendly.com/nervous/intro">Contact</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<script src="https://www.nervous.net/js/main.js"></script>
+
+    </body>
+</html>

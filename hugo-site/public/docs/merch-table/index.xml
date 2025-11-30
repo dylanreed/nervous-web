@@ -28,5 +28,19 @@
       <guid>https://www.nervous.net/docs/merch-table/discounts/</guid>
       <description>&lt;p&gt;Merch Table lets you create automatic discounts that apply to customers based on their Discord roles. VIP members, subscribers, and other role holders get discounts automatically at checkout.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-it-works&#34;&gt;How It Works&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Discord roles sync as customer tags (e.g., &lt;code&gt;discord_vip&lt;/code&gt;)&lt;/li&gt;&#xA;&lt;li&gt;You create discounts targeting specific tags&lt;/li&gt;&#xA;&lt;li&gt;Customers with matching tags see discounts applied automatically&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;setting-up-discounts&#34;&gt;Setting Up Discounts&lt;/h2&gt;&#xA;&lt;h3 id=&#34;step-1-ensure-roles-are-syncing&#34;&gt;Step 1: Ensure Roles Are Syncing&lt;/h3&gt;&#xA;&lt;p&gt;Before creating discounts, verify the Discord roles you want to target are enabled:&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>VIP Products</title>
+      <link>https://www.nervous.net/docs/merch-table/vip-products/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.nervous.net/docs/merch-table/vip-products/</guid>
+      <description>&lt;p&gt;Merch Table lets you restrict product visibility based on Discord roles. Create VIP-only products, early access items, or exclusive merch that only certain community members can see and purchase.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-it-works&#34;&gt;How It Works&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;You mark products as VIP and select which roles can access them&lt;/li&gt;&#xA;&lt;li&gt;Products are added to a &amp;ldquo;VIP Exclusives&amp;rdquo; collection&lt;/li&gt;&#xA;&lt;li&gt;Customers access the VIP section via a special URL&lt;/li&gt;&#xA;&lt;li&gt;Only customers with the required Discord roles can view and purchase&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;setting-up-vip-products&#34;&gt;Setting Up VIP Products&lt;/h2&gt;&#xA;&lt;h3 id=&#34;step-1-configure-the-app-proxy&#34;&gt;Step 1: Configure the App Proxy&lt;/h3&gt;&#xA;&lt;p&gt;This is a one-time setup in the Shopify Partner Dashboard:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Troubleshooting</title>
+      <link>https://www.nervous.net/docs/merch-table/troubleshooting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.nervous.net/docs/merch-table/troubleshooting/</guid>
+      <description>&lt;p&gt;Having trouble with Merch Table? This guide covers the most common issues and their solutions.&lt;/p&gt;&#xA;&lt;h2 id=&#34;bot-not-responding-to-commands&#34;&gt;Bot Not Responding to Commands&lt;/h2&gt;&#xA;&lt;h3 id=&#34;check-if-the-bot-is-online&#34;&gt;Check if the bot is online&lt;/h3&gt;&#xA;&lt;p&gt;Look for the bot in your server&amp;rsquo;s member list. If it shows as offline, the bot may be experiencing downtime.&lt;/p&gt;&#xA;&lt;h3 id=&#34;verify-the-server-is-connected&#34;&gt;Verify the server is connected&lt;/h3&gt;&#xA;&lt;p&gt;Run &lt;code&gt;/shopify_info&lt;/code&gt; to check if your Discord server is connected to your Shopify store. If not connected, you&amp;rsquo;ll need to run &lt;code&gt;/connect&lt;/code&gt; with your connection code.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

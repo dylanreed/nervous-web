@@ -31,6 +31,13 @@
     </item>
     <item>
       <title>Getting Started</title>
+      <link>https://www.nervous.net/docs/plus-one/getting-started/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.nervous.net/docs/plus-one/getting-started/</guid>
+      <description>&lt;p&gt;Plus One gives you control over how members invite others to your private community. Setup takes just a few minutes.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-plus-one-does&#34;&gt;What Plus One Does&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Controlled Invites&lt;/strong&gt; - Privileged users generate single-use invite links&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Flexible Quotas&lt;/strong&gt; - Set how many invites each member gets&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Trial Access&lt;/strong&gt; - Optionally grant temporary roles to new invitees&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Full Tracking&lt;/strong&gt; - See who invited whom&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;&#xA;&lt;p&gt;Before starting, make sure you have:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Administrator permissions&lt;/strong&gt; in your Discord server&lt;/li&gt;&#xA;&lt;li&gt;A plan for who should be able to create invites&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;step-1-invite-the-bot&#34;&gt;Step 1: Invite the Bot&lt;/h2&gt;&#xA;&lt;p&gt;Contact us to get Plus One added to your server. We&amp;rsquo;ll provide an invite link with the correct permissions pre-configured.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Getting Started</title>
       <link>https://www.nervous.net/docs/ten-four/getting-started/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://www.nervous.net/docs/ten-four/getting-started/</guid>
@@ -142,6 +149,13 @@
       <description>&lt;p&gt;Having trouble with Bouncer? This guide covers the most common issues and their solutions.&lt;/p&gt;&#xA;&lt;h2 id=&#34;bot-doesnt-respond-to-commands&#34;&gt;Bot Doesn&amp;rsquo;t Respond to Commands&lt;/h2&gt;&#xA;&lt;h3 id=&#34;check-if-the-bot-is-online&#34;&gt;Check if the bot is online&lt;/h3&gt;&#xA;&lt;p&gt;Look for the bot in your server&amp;rsquo;s member list. If it shows as offline (gray dot), the bot may be experiencing downtime.&lt;/p&gt;&#xA;&lt;h3 id=&#34;verify-permissions&#34;&gt;Verify permissions&lt;/h3&gt;&#xA;&lt;p&gt;Make sure the bot has these permissions in your server:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;View Channels&lt;/li&gt;&#xA;&lt;li&gt;Send Messages&lt;/li&gt;&#xA;&lt;li&gt;Use Application Commands&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;wait-for-command-propagation&#34;&gt;Wait for command propagation&lt;/h3&gt;&#xA;&lt;p&gt;Discord can take up to an hour to propagate slash commands to all servers. If you just added the bot, wait and try again.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>VIP Products</title>
+      <link>https://www.nervous.net/docs/merch-table/vip-products/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.nervous.net/docs/merch-table/vip-products/</guid>
+      <description>&lt;p&gt;Merch Table lets you restrict product visibility based on Discord roles. Create VIP-only products, early access items, or exclusive merch that only certain community members can see and purchase.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-it-works&#34;&gt;How It Works&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;You mark products as VIP and select which roles can access them&lt;/li&gt;&#xA;&lt;li&gt;Products are added to a &amp;ldquo;VIP Exclusives&amp;rdquo; collection&lt;/li&gt;&#xA;&lt;li&gt;Customers access the VIP section via a special URL&lt;/li&gt;&#xA;&lt;li&gt;Only customers with the required Discord roles can view and purchase&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;setting-up-vip-products&#34;&gt;Setting Up VIP Products&lt;/h2&gt;&#xA;&lt;h3 id=&#34;step-1-configure-the-app-proxy&#34;&gt;Step 1: Configure the App Proxy&lt;/h3&gt;&#xA;&lt;p&gt;This is a one-time setup in the Shopify Partner Dashboard:&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Inactivity Reminders</title>
       <link>https://www.nervous.net/docs/ten-four/reminders/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -154,6 +168,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://www.nervous.net/faq/roadie/</guid>
       <description></description>
+    </item>
+    <item>
+      <title>Troubleshooting</title>
+      <link>https://www.nervous.net/docs/merch-table/troubleshooting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.nervous.net/docs/merch-table/troubleshooting/</guid>
+      <description>&lt;p&gt;Having trouble with Merch Table? This guide covers the most common issues and their solutions.&lt;/p&gt;&#xA;&lt;h2 id=&#34;bot-not-responding-to-commands&#34;&gt;Bot Not Responding to Commands&lt;/h2&gt;&#xA;&lt;h3 id=&#34;check-if-the-bot-is-online&#34;&gt;Check if the bot is online&lt;/h3&gt;&#xA;&lt;p&gt;Look for the bot in your server&amp;rsquo;s member list. If it shows as offline, the bot may be experiencing downtime.&lt;/p&gt;&#xA;&lt;h3 id=&#34;verify-the-server-is-connected&#34;&gt;Verify the server is connected&lt;/h3&gt;&#xA;&lt;p&gt;Run &lt;code&gt;/shopify_info&lt;/code&gt; to check if your Discord server is connected to your Shopify store. If not connected, you&amp;rsquo;ll need to run &lt;code&gt;/connect&lt;/code&gt; with your connection code.&lt;/p&gt;</description>
     </item>
     <item>
       <title>bouncer</title>
