@@ -219,6 +219,266 @@
                     </div>
                 </div>
                 
+            </div>
+        </div>
+        
+        <div class="faq-section">
+            <button class="faq-header" aria-expanded="false">
+                <h2>merch table</h2>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What is merch table?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>merch table connects your Discord server to your Shopify store, letting you offer exclusive products to members based on their Discord roles.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>How do members link their accounts?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Members use the <code>/link_shopify</code> command in Discord. They'll receive a unique link to connect their Shopify customer account to their Discord profile.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What happens when someone loses a role?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>merch table automatically syncs role changes. When a member loses a role, their Shopify customer tags update and they lose access to role-restricted products.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Can someone buy a restricted product if they remove it from their cart after losing a role?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No. merch table validates cart contents at checkout. Even if a product was added while they had the role, the purchase will be blocked if they no longer qualify.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="faq-section">
+            <button class="faq-header" aria-expanded="false">
+                <h2>anxious analytics</h2>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What makes anxious analytics different from other Discord analytics?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Most analytics tools count messages and generate word clouds. anxious analytics uses GPT-4 for real sentiment analysis and the Wilson Confidence Index to measure conversation quality—the same algorithm Reddit and Amazon use for rankings.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Is my community data stored?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>anxious analytics uses on-demand data processing rather than persistent storage, making it GDPR-compliant. We're also working toward private LLM infrastructure to eliminate third-party data sharing entirely.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>How large of a server can it handle?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>anxious analytics handles real-time tracking across servers with 400K+ members. It's built for scale.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What&#39;s the Wilson Confidence Index?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>It's a statistical method that measures quality while accounting for sample size. This filters out low-quality interactions like emoji spam and surfaces genuinely valuable discussions.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="faq-section">
+            <button class="faq-header" aria-expanded="false">
+                <h2>roadie</h2>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>How does the QR code onboarding work?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Display the QR code at your event—on screens, posters, badges, or handouts. When attendees scan it, they're taken directly to join your Discord server with no typing required.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What roles can be automatically assigned?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Any role you want! Common examples include event-specific roles ("Summer Tour 2025"), status roles ("VIP", "Early Supporter"), or access roles that unlock exclusive channels.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Do we need to train event staff?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No. roadie is fully automated. Your staff just needs to display the QR code—the bot handles all user onboarding and role assignment automatically.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Can we use different QR codes for different events?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Each event can have its own QR code with its own automatic role assignment. This lets you track exactly who attended which events.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="faq-section">
+            <button class="faq-header" aria-expanded="false">
+                <h2>bouncer</h2>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What&#39;s the difference between timeout and quarantine?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Timeout restricts a user's ability to send messages for a set period. Quarantine removes all their roles and assigns a quarantine role, completely isolating them. When quarantine ends, their original roles are automatically restored.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Can I timeout someone for longer than Discord&#39;s 28-day limit?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! bouncer supports indefinite timeouts and any duration you need—30 minutes, 7 days, 60 days, or longer.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What if I make a bulk role change mistake?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>bouncer keeps a 24-hour rollback window for bulk role operations. Use <code>/bulkrole rollback</code> to undo changes, with full operation history available.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>How does the pre-ban feature work?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Use <code>/preban</code> with a user ID to ban known troublemakers before they even join your server. Great for dealing with raiders or users banned from partner servers.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="faq-section">
+            <button class="faq-header" aria-expanded="false">
+                <h2>&#43;1</h2>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>How do invite quotas work?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Each member gets a set number of invites they can create. You choose the quota mode: fixed (everyone gets X invites), tiered (based on roles), earned (based on activity), or replenishing (quotas reset over time).</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What are trial invites?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Trial invites give new members temporary access with an auto-expiring role. After the trial period, they either need to be approved for full membership or they lose access automatically.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Can I see who invited whom?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! +1 tracks every invite with full audit logs. You can see which member created each invite and who joined through it.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What happens if someone abuses their invite privileges?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can revoke individual members' invite privileges, adjust their quota, or see exactly who they've invited to take appropriate action.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="faq-section">
+            <button class="faq-header" aria-expanded="false">
+                <h2>10-4 ticketing</h2>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+                
                 <div class="faq-item">
                     <button class="faq-question" aria-expanded="false">
                         <span>What is 10-4 ticketing?</span>

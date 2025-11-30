@@ -1,5 +1,5 @@
 ---
-title: "General Questions"
+title: "general questions"
 weight: 1
 questions:
   - q: "What is Discord community management?"

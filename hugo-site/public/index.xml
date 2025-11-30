@@ -8,7 +8,7 @@
     <language>en-us</language>
     <atom:link href="https://www.nervous.net/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>General Questions</title>
+      <title>general questions</title>
       <link>https://www.nervous.net/faq/general/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://www.nervous.net/faq/general/</guid>
@@ -29,7 +29,7 @@
       <description>&lt;h2 id=&#34;what-is-its-purpose&#34;&gt;What is its purpose?&lt;/h2&gt;&#xA;&lt;p&gt;The community provides a constructive feedback source for their developer team, allowing them to interact with users on a more personal level to better assess consumer sentiment and needs surrounding the product. Free from the distraction of most social channels, community members are able to give more thoughtful, honest feedback, and connect with members of their development team in a smaller and more intimate setting.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-nervous-delivered&#34;&gt;What nervous delivered&lt;/h2&gt;&#xA;&lt;p&gt;nervous worked with their brand engagement team to create a private Discord server with gated enrollment and user verification systems. nervous served as a direct liaison between Discord and the client, helping the client understand server culture and how best to use the platform to accomplish their messaging and feedback gathering goals.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Bot Questions</title>
+      <title>bot questions</title>
       <link>https://www.nervous.net/faq/bots/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://www.nervous.net/faq/bots/</guid>
@@ -57,11 +57,25 @@
       <description>&lt;h2 id=&#34;what-is-its-purpose&#34;&gt;What is its purpose?&lt;/h2&gt;&#xA;&lt;p&gt;Create a membership-based fan club and online community that allowed the band to connect with fans, offer fun exclusives, and deliver demo tracks, merch discounts, and other insider info.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-nervous-delivered&#34;&gt;What nervous delivered&lt;/h2&gt;&#xA;&lt;p&gt;nervous created a Discord server that served as the home base for the first official fan club for the 30-year old band. nervous handled all server architecture and ongoing moderation and community management.&lt;/p&gt;&#xA;&lt;p&gt;We then worked with the creator of the bands iconic mascot to develop a unique collection of membership tokens that featured imagery from their entire discography and history.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>merch table</title>
+      <link>https://www.nervous.net/faq/merch-table/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.nervous.net/faq/merch-table/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Multiple Categories</title>
       <link>https://www.nervous.net/docs/ten-four/categories/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://www.nervous.net/docs/ten-four/categories/</guid>
       <description>&lt;p&gt;10-4 supports multiple ticket categories, allowing you to route different types of requests to different teams.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-categories-work&#34;&gt;How Categories Work&lt;/h2&gt;&#xA;&lt;p&gt;Instead of a single &amp;ldquo;Create Ticket&amp;rdquo; button, your panel can show multiple buttons:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;🛠️ &lt;strong&gt;Technical Support&lt;/strong&gt; → Routes to your dev team&lt;/li&gt;&#xA;&lt;li&gt;💳 &lt;strong&gt;Billing Questions&lt;/strong&gt; → Routes to your billing team&lt;/li&gt;&#xA;&lt;li&gt;💬 &lt;strong&gt;General Questions&lt;/strong&gt; → Routes to community managers&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Each category can have its own:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Name and emoji&lt;/strong&gt; for the button&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Support role&lt;/strong&gt; who can see tickets in that category&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Description&lt;/strong&gt; to help users choose the right category&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;setting-up-categories&#34;&gt;Setting Up Categories&lt;/h2&gt;&#xA;&lt;p&gt;During the setup wizard, you can add multiple categories:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>anxious analytics</title>
+      <link>https://www.nervous.net/faq/anxious-analytics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.nervous.net/faq/anxious-analytics/</guid>
+      <description></description>
     </item>
     <item>
       <title>Caribou Lodge</title>
@@ -85,11 +99,39 @@
       <description>&lt;p&gt;10-4 monitors ticket activity and sends reminders when tickets sit idle too long. This prevents support requests from falling through the cracks.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-it-works&#34;&gt;How It Works&lt;/h2&gt;&#xA;&lt;p&gt;The bot runs hourly checks on all open tickets:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Checks the last activity timestamp for each ticket&lt;/li&gt;&#xA;&lt;li&gt;Compares against your configured threshold&lt;/li&gt;&#xA;&lt;li&gt;Sends a reminder to tickets that exceed the threshold&lt;/li&gt;&#xA;&lt;li&gt;Tracks which tickets have been reminded to avoid duplicates&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;what-counts-as-activity&#34;&gt;What Counts as Activity&lt;/h2&gt;&#xA;&lt;p&gt;Activity is tracked when:&lt;/p&gt;</description>
     </item>
     <item>
+      <title>roadie</title>
+      <link>https://www.nervous.net/faq/roadie/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.nervous.net/faq/roadie/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>bouncer</title>
+      <link>https://www.nervous.net/faq/bouncer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.nervous.net/faq/bouncer/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Troubleshooting</title>
       <link>https://www.nervous.net/docs/ten-four/troubleshooting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://www.nervous.net/docs/ten-four/troubleshooting/</guid>
       <description>&lt;p&gt;Having trouble with 10-4? This guide covers the most common issues and their solutions.&lt;/p&gt;&#xA;&lt;h2 id=&#34;bot-doesnt-respond-to-commands&#34;&gt;Bot Doesn&amp;rsquo;t Respond to Commands&lt;/h2&gt;&#xA;&lt;h3 id=&#34;check-if-the-bot-is-online&#34;&gt;Check if the bot is online&lt;/h3&gt;&#xA;&lt;p&gt;Look for the bot in your server&amp;rsquo;s member list. If it shows as offline (gray dot), the bot may be experiencing downtime.&lt;/p&gt;&#xA;&lt;h3 id=&#34;verify-permissions&#34;&gt;Verify permissions&lt;/h3&gt;&#xA;&lt;p&gt;Make sure the bot has these permissions in your server:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;View Channels&lt;/li&gt;&#xA;&lt;li&gt;Send Messages&lt;/li&gt;&#xA;&lt;li&gt;Use Application Commands&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;wait-for-command-propagation&#34;&gt;Wait for command propagation&lt;/h3&gt;&#xA;&lt;p&gt;Discord can take up to an hour to propagate slash commands to all servers. If you just added the bot, wait and try again.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>&#43;1</title>
+      <link>https://www.nervous.net/faq/plus-one/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.nervous.net/faq/plus-one/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>10-4 ticketing</title>
+      <link>https://www.nervous.net/faq/ten-four/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.nervous.net/faq/ten-four/</guid>
+      <description></description>
     </item>
     <item>
       <title>About</title>

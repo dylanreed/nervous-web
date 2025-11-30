@@ -8,17 +8,59 @@
     <language>en-us</language>
     <atom:link href="https://www.nervous.net/faq/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>General Questions</title>
+      <title>general questions</title>
       <link>https://www.nervous.net/faq/general/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://www.nervous.net/faq/general/</guid>
       <description></description>
     </item>
     <item>
-      <title>Bot Questions</title>
+      <title>bot questions</title>
       <link>https://www.nervous.net/faq/bots/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://www.nervous.net/faq/bots/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>merch table</title>
+      <link>https://www.nervous.net/faq/merch-table/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.nervous.net/faq/merch-table/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>anxious analytics</title>
+      <link>https://www.nervous.net/faq/anxious-analytics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.nervous.net/faq/anxious-analytics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>roadie</title>
+      <link>https://www.nervous.net/faq/roadie/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.nervous.net/faq/roadie/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>bouncer</title>
+      <link>https://www.nervous.net/faq/bouncer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.nervous.net/faq/bouncer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>&#43;1</title>
+      <link>https://www.nervous.net/faq/plus-one/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.nervous.net/faq/plus-one/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>10-4 ticketing</title>
+      <link>https://www.nervous.net/faq/ten-four/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.nervous.net/faq/ten-four/</guid>
       <description></description>
     </item>
   </channel>
