@@ -119,7 +119,9 @@ img {
 }
 
 .navbar .logo-wordmark {
-  display: none;
+  display: block;
+  height: 40px;
+  width: auto;
 }
 
 .nav-menu {
