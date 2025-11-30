@@ -8,7 +8,7 @@ intro: "Merch Table lets you offer exclusive products to members based on their 
 image: "norris-builder.webp"
 imageAlt: "merch table illustration"
 price: "Starting at $xx.xx/month"
-ctaText: "Get merch table for Shopify"
+ctaText: "Get merch table"
 docsSlug: "merch-table"
 features:
   - "Role-based product access — restrict products to specific Discord roles"
