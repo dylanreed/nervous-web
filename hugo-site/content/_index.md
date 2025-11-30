@@ -60,7 +60,7 @@ bots:
       slug: "bouncer"
       tagline: "Enterprise-grade moderation"
       image: "norris-security.webp"
-    - name: "+1"
+    - name: "plus one"
       slug: "plus-one"
       tagline: "Controlled invite management"
       image: "plus-one.webp"

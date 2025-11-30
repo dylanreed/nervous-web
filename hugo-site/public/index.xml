@@ -219,7 +219,7 @@
       <description>&lt;p&gt;Having trouble with 10-4? This guide covers the most common issues and their solutions.&lt;/p&gt;&#xA;&lt;h2 id=&#34;bot-doesnt-respond-to-commands&#34;&gt;Bot Doesn&amp;rsquo;t Respond to Commands&lt;/h2&gt;&#xA;&lt;h3 id=&#34;check-if-the-bot-is-online&#34;&gt;Check if the bot is online&lt;/h3&gt;&#xA;&lt;p&gt;Look for the bot in your server&amp;rsquo;s member list. If it shows as offline (gray dot), the bot may be experiencing downtime.&lt;/p&gt;&#xA;&lt;h3 id=&#34;verify-permissions&#34;&gt;Verify permissions&lt;/h3&gt;&#xA;&lt;p&gt;Make sure the bot has these permissions in your server:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;View Channels&lt;/li&gt;&#xA;&lt;li&gt;Send Messages&lt;/li&gt;&#xA;&lt;li&gt;Use Application Commands&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;wait-for-command-propagation&#34;&gt;Wait for command propagation&lt;/h3&gt;&#xA;&lt;p&gt;Discord can take up to an hour to propagate slash commands to all servers. If you just added the bot, wait and try again.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>&#43;1</title>
+      <title>plus one</title>
       <link>https://www.nervous.net/faq/plus-one/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://www.nervous.net/faq/plus-one/</guid>
