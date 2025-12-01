@@ -153,4 +153,23 @@ bundles:
         image: "anxious-analytics.webp"
       - name: "roadie"
         image: "roadie-badge.webp"
+
+faq:
+  - question: "How does bundle pricing work?"
+    answer: "Bundle prices are calculated from each bot's Starter tier, then the bundle discount is applied. You can upgrade individual bots to Pro or Enterprise tiers for additional features—the bundle discount still applies to the base price."
+
+  - question: "Can I change which tier I'm on for each bot?"
+    answer: "Yes! Each bot in your bundle can be on a different tier. For example, you might want Bouncer on Enterprise for bulk operations, but keep 10-4 on Starter. The bundle discount applies to whatever combination you choose."
+
+  - question: "Can I add or remove bots from my bundle later?"
+    answer: "Absolutely. You can add bots to your bundle at any time and your discount will automatically upgrade if you cross into a new tier. If you remove a bot, your discount adjusts accordingly."
+
+  - question: "What if I only need 2 specific bots that aren't listed as a pair?"
+    answer: "Any two bots get the 10% pair discount—the named bundles are just our most popular combinations. Schedule a call and we'll set up whatever combination works for your community."
+
+  - question: "Do bundles include setup and support?"
+    answer: "Yes. All bundles include initial setup assistance and ongoing support. Enterprise tiers within bundles also include priority support with faster response times."
+
+  - question: "Is there a contract or commitment?"
+    answer: "Bundles are billed monthly with no long-term commitment. You can adjust your bundle, change tiers, or cancel anytime."
 ---

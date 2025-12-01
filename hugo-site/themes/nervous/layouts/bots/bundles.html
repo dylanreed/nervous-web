@@ -1,6 +1,6 @@
 {{ define "main" }}
 <!-- Header -->
-<section class="section">
+<section class="section section-page-title">
     <div class="container">
         <div class="section-header">
             <h1>Bot Bundles</h1>
@@ -59,8 +59,31 @@
 
 {{ partial "section-divider.html" "gray-to-white" }}
 
-<!-- Custom Bundle CTA -->
+<!-- FAQ Section -->
 <section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Bundle FAQs</h2>
+        </div>
+
+        {{ range .Params.faq }}
+        <div class="faq-section">
+            <button class="faq-header" aria-expanded="false">
+                <h3 style="margin: 0; font-size: 1.2rem;">{{ .question }}</h3>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+                <p>{{ .answer | safeHTML }}</p>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section>
+
+{{ partial "section-divider.html" "white-to-gray" }}
+
+<!-- Custom Bundle CTA -->
+<section class="section section-alt">
     <div class="container">
         <div class="section-header">
             <h2>Need a Custom Bundle?</h2>
