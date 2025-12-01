@@ -1000,17 +1000,23 @@ img {
   text-align: right;
 }
 
-.bundle-discount {
+.bundle-price {
   display: block;
   font-family: 'TT Travels', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 800;
   color: var(--blue);
 }
 
-.bundle-bots-count {
-  font-size: 0.9rem;
-  color: #666;
+.bundle-discount {
+  display: inline-block;
+  background: var(--blue);
+  color: var(--white);
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 5px;
 }
 
 .bundle-content {
