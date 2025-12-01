@@ -32,7 +32,7 @@
                     <li>{{ . }}</li>
                     {{ end }}
                 </ul>
-                <a href="{{ $.Site.Params.calendlyURL }}" class="btn">Get Started</a>
+                <a href="{{ with $tier.checkoutUrl }}{{ . }}{{ else }}{{ $.Site.Params.calendlyURL }}{{ end }}" class="btn">{{ with $tier.ctaText }}{{ . }}{{ else }}Get Started{{ end }}</a>
             </div>
             {{ end }}
         </div>

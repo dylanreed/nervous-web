@@ -8,6 +8,7 @@ tagline: "Turn event attendees into lifelong community members."
 tiers:
   - name: "Starter"
     price: "$15"
+    checkoutUrl: "https://buy.stripe.com/test_roadie_starter"
     features:
       - "Up to 3 events"
       - "Basic QR code generation"
@@ -16,6 +17,7 @@ tiers:
       - "14-day scan history"
   - name: "Pro"
     price: "$39"
+    checkoutUrl: "https://buy.stripe.com/test_roadie_pro"
     features:
       - "Everything in Starter"
       - "Unlimited events"
@@ -26,6 +28,7 @@ tiers:
       - "60-day scan history"
   - name: "Enterprise"
     price: "$149"
+    checkoutUrl: "https://buy.stripe.com/test_roadie_enterprise"
     features:
       - "Everything in Pro"
       - "Unlimited scans"

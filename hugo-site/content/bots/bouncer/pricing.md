@@ -8,6 +8,7 @@ tagline: "Because your community deserves better than chaos."
 tiers:
   - name: "Starter"
     price: "$5"
+    checkoutUrl: "https://buy.stripe.com/test_bouncer_starter"
     features:
       - "Warn, mute, kick, ban"
       - "Moderation logging"
@@ -16,6 +17,7 @@ tiers:
       - "Owner protection"
   - name: "Pro"
     price: "$10"
+    checkoutUrl: "https://buy.stripe.com/test_bouncer_pro"
     features:
       - "Everything in Starter"
       - "Extended timeouts (beyond 28 days)"
@@ -25,6 +27,7 @@ tiers:
       - "Mod reports & analytics"
   - name: "Enterprise"
     price: "$12"
+    checkoutUrl: "https://buy.stripe.com/test_bouncer_enterprise"
     features:
       - "Everything in Pro"
       - "Bulk role operations"

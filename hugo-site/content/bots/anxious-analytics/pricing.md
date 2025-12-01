@@ -8,6 +8,7 @@ tagline: "Because your community is more than a message count."
 tiers:
   - name: "Starter"
     price: "$19"
+    checkoutUrl: "https://buy.stripe.com/test_anxious_starter"
     features:
       - "Weekly email reports"
       - "Community Pulse (top topics)"
@@ -17,6 +18,7 @@ tiers:
       - "Up to 3 email recipients"
   - name: "Pro"
     price: "$49"
+    checkoutUrl: "https://buy.stripe.com/test_anxious_pro"
     features:
       - "Everything in Starter"
       - "Monthly summary reports"
@@ -27,6 +29,7 @@ tiers:
       - "Up to 10 email recipients"
   - name: "Enterprise"
     price: "$99"
+    checkoutUrl: "https://buy.stripe.com/test_anxious_enterprise"
     features:
       - "Everything in Pro"
       - "Event performance tracking"

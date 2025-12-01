@@ -8,6 +8,7 @@ tagline: "Turn your community into customers."
 tiers:
   - name: "Starter"
     price: "$29"
+    checkoutUrl: "https://buy.stripe.com/test_merchtable_starter"
     features:
       - "Role-based product visibility"
       - "Account linking (/link_shopify)"
@@ -16,6 +17,7 @@ tiers:
       - "Manual role sync"
   - name: "Pro"
     price: "$79"
+    checkoutUrl: "https://buy.stripe.com/test_merchtable_pro"
     features:
       - "Everything in Starter"
       - "Unlimited visibility rules"
@@ -25,6 +27,7 @@ tiers:
       - "Linked account management"
   - name: "Enterprise"
     price: "$149"
+    checkoutUrl: "https://buy.stripe.com/test_merchtable_enterprise"
     features:
       - "Everything in Pro"
       - "Unlimited products"

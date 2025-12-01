@@ -8,6 +8,7 @@ tagline: "Turn support chaos into organized conversations."
 tiers:
   - name: "Starter"
     price: "$6"
+    checkoutUrl: "https://buy.stripe.com/test_tenfour_starter"
     features:
       - "One-click ticket creation"
       - "Private ticket channels"
@@ -16,6 +17,7 @@ tiers:
       - "Basic ticket management"
   - name: "Pro"
     price: "$10"
+    checkoutUrl: "https://buy.stripe.com/test_tenfour_pro"
     features:
       - "Everything in Starter"
       - "Multi-category routing"
@@ -25,6 +27,7 @@ tiers:
       - "Add users to tickets"
   - name: "Enterprise"
     price: "$15"
+    checkoutUrl: "https://buy.stripe.com/test_tenfour_enterprise"
     features:
       - "Everything in Pro"
       - "Unlimited categories"

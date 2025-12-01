@@ -8,6 +8,7 @@ tagline: "Grow your community without losing control."
 tiers:
   - name: "Starter"
     price: "$8"
+    checkoutUrl: "https://buy.stripe.com/test_plusone_starter"
     features:
       - "Single-use invite generation"
       - "Fixed quota mode"
@@ -16,6 +17,7 @@ tiers:
       - "Who invited whom logs"
   - name: "Pro"
     price: "$15"
+    checkoutUrl: "https://buy.stripe.com/test_plusone_pro"
     features:
       - "Everything in Starter"
       - "All quota modes (fixed, tiered, replenishing, earned)"
@@ -25,6 +27,7 @@ tiers:
       - "Full audit logs"
   - name: "Enterprise"
     price: "$25"
+    checkoutUrl: "https://buy.stripe.com/test_plusone_enterprise"
     features:
       - "Everything in Pro"
       - "Unlimited quotas"
