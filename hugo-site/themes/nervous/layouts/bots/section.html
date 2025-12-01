@@ -223,6 +223,28 @@
 </section>
 {{ end }}
 
+{{ with .Params.faq }}
+{{ partial "section-divider.html" "gray-to-white" }}
+
+<!-- FAQ -->
+<section class="section">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        {{ range . }}
+        <div class="faq-section" style="margin-bottom: 15px;">
+            <button class="faq-header" aria-expanded="false">
+                <h3 style="margin: 0; font-size: 1.1rem; font-weight: 600; font-family: inherit;">{{ .q }}</h3>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-content">
+                <p>{{ .a | safeHTML }}</p>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}
+
 {{ partial "section-divider.html" "gray-to-yellow" }}
 {{ end }}
 {{ end }}
