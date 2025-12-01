@@ -22,7 +22,7 @@ theme = 'nervous'
     url = "/bots/"
     weight = 2
   [[menu.main]]
-    name = "Our Work"
+    name = "Work"
     url = "/work/"
     weight = 3
   [[menu.main]]
