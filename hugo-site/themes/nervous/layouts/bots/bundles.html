@@ -1,0 +1,77 @@
+{{ define "main" }}
+<!-- Header -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h1>Bot Bundles</h1>
+            <p>Save more when you bundle. Get the right tools for your community at a discount.</p>
+        </div>
+    </div>
+</section>
+
+{{ partial "section-divider.html" "white-to-gray" }}
+
+<!-- Bundle Cards -->
+<section class="section section-alt">
+    <div class="container">
+        {{ range .Params.bundles }}
+        <div class="bundle-card bundle-{{ .size }}">
+            <div class="bundle-header">
+                <div class="bundle-info">
+                    <h2>{{ .name }}</h2>
+                    <p class="bundle-tagline">{{ .tagline }}</p>
+                </div>
+                <div class="bundle-pricing">
+                    <span class="bundle-discount">{{ .discount }}</span>
+                    <span class="bundle-bots-count">{{ .botsCount }} bots</span>
+                </div>
+            </div>
+
+            <div class="bundle-content">
+                <div class="bundle-bots">
+                    <h3>Included Bots</h3>
+                    <div class="bundle-bot-list">
+                        {{ range .bots }}
+                        <div class="bundle-bot">
+                            <img src="{{ $.Site.BaseURL }}images/{{ .image }}" alt="{{ .name }}">
+                            <span>{{ .name }}</span>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+
+                <div class="bundle-details">
+                    <h3>Best For</h3>
+                    <p>{{ .bestFor }}</p>
+
+                    <h3>How It Works</h3>
+                    <p>{{ .description }}</p>
+                </div>
+            </div>
+
+            <div class="bundle-cta">
+                <a href="{{ $.Site.Params.calendlyURL }}" class="btn">Get This Bundle</a>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section>
+
+{{ partial "section-divider.html" "gray-to-white" }}
+
+<!-- Custom Bundle CTA -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Need a Custom Bundle?</h2>
+            <p>Don't see the perfect combination? We can create a custom bundle tailored to your community's needs.</p>
+            <div style="margin-top: 30px;">
+                <a href="{{ $.Site.Params.calendlyURL }}" class="btn">Talk to Us</a>
+                <a href="/bots/" class="btn btn-secondary">View All Bots</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ partial "section-divider.html" "white-to-yellow" }}
+{{ end }}
