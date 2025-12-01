@@ -8,7 +8,7 @@ intro: "Give your trusted members the power to invite others—with limits you c
 image: "plus-one.webp"
 imageAlt: "plus one illustration"
 imageStyle: "transform: scale(1.3);"
-price: "Starting at $xx.xx/month"
+price: "Starting at $5.99/month"
 ctaText: "Get plus one"
 docsSlug: "plus-one"
 features:
