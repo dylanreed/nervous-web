@@ -420,6 +420,7 @@ img {
 .carousel-card h3 {
   font-size: 1.1rem;
   margin: 0 0 6px 0;
+  text-transform: capitalize;
 }
 
 .carousel-card p {
@@ -1073,6 +1074,7 @@ img {
 .bundle-bot span {
   font-size: 0.75rem;
   color: #666;
+  text-transform: capitalize;
 }
 
 .bundle-details {
