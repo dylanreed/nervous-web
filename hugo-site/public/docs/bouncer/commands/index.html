@@ -140,24 +140,24 @@
           <td>Moderate Members</td>
       </tr>
       <tr>
-          <td><code>/timeouts-list</code></td>
+          <td><code>/timeouts list</code></td>
           <td>View active timeouts</td>
           <td>Moderate Members</td>
       </tr>
       <tr>
           <td><code>/quarantine</code></td>
           <td>Isolate a user</td>
-          <td>Moderate Members</td>
+          <td>Manage Roles</td>
       </tr>
       <tr>
           <td><code>/unquarantine</code></td>
           <td>Release from quarantine</td>
-          <td>Moderate Members</td>
+          <td>Manage Roles</td>
       </tr>
       <tr>
           <td><code>/quarantine-list</code></td>
           <td>View quarantined users</td>
-          <td>Moderate Members</td>
+          <td>Manage Roles</td>
       </tr>
       <tr>
           <td><code>/warn</code></td>
@@ -273,7 +273,7 @@
       </tr>
   </tbody>
 </table>
-<h3 id="timeouts-list">/timeouts-list</h3>
+<h3 id="timeouts-list">/timeouts list</h3>
 <p>View all currently active timeouts in the server. No options required.</p>
 <hr>
 <h2 id="quarantine-commands">Quarantine Commands</h2>
@@ -583,8 +583,8 @@
 <p>Remove a user from the watchlist.</p>
 <h3 id="watchlist-view">/watchlist view</h3>
 <p>View all users currently on the watchlist.</p>
-<h3 id="leaveralert">/leaveralert</h3>
-<p>Configure alerts when watched users leave the server.</p>
+<h3 id="leaveralert-enable">/leaveralert enable</h3>
+<p>Enable alerts when watched users leave the server.</p>
 <table>
   <thead>
       <tr>
@@ -601,6 +601,8 @@
       </tr>
   </tbody>
 </table>
+<h3 id="leaveralert-disable">/leaveralert disable</h3>
+<p>Disable leaver alerts. No options required.</p>
 <hr>
 <h2 id="bulk-role-management">Bulk Role Management</h2>
 <h3 id="bulkrole-add">/bulkrole add</h3>
@@ -684,10 +686,6 @@
       </tr>
   </thead>
   <tbody>
-      <tr>
-          <td><code>30s</code></td>
-          <td>30 seconds</td>
-      </tr>
       <tr>
           <td><code>30m</code></td>
           <td>30 minutes</td>

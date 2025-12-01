@@ -66,9 +66,8 @@ When customers link their accounts, these roles become Shopify customer tags (e.
 Your community members link their Discord to Shopify by:
 
 1. Running `/link_shopify` in your Discord server
-2. Entering their email address (must match their Shopify account)
-3. Clicking the verification link sent to their email
-4. Logging into Shopify to complete the link
+2. Entering their email address in the popup (must match their Shopify account)
+3. Clicking Submit to complete the link
 
 Their Discord roles are now synced as Shopify customer tags!
 

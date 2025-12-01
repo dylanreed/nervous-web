@@ -10,10 +10,10 @@ This guide explains the Discord permissions required to use Bouncer commands and
 
 | Permission | Commands |
 |------------|----------|
-| **Moderate Members** | `/timeout`, `/untimeout`, `/timeouts-list`, `/quarantine`, `/unquarantine`, `/quarantine-list`, `/warn`, `/modhistory`, `/watchlist` |
+| **Moderate Members** | `/timeout`, `/untimeout`, `/timeouts list`, `/warn`, `/modhistory`, `/watchlist` |
+| **Manage Roles** | `/quarantine`, `/unquarantine`, `/quarantine-list`, `/bulkrole` |
 | **Manage Messages** | `/wipe` |
 | **Ban Members** | `/preban` |
-| **Manage Roles** | `/bulkrole` |
 | **Manage Server** | `/config`, `/rules`, `/reverse`, `/leaveralert`, `/modreport` |
 
 ---

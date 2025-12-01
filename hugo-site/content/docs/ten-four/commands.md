@@ -12,6 +12,7 @@ description: "Complete reference for 10-4 slash commands and ticket actions."
 |---------|-------------|-------------|
 | `/setup_ten_four` | Launch the interactive setup wizard | Server Administrators |
 | `/ticket` | Manually create a ticket | Anyone |
+| `/stats` | View ticket statistics | Server Administrators |
 | `/ping` | Check if the bot is online | Anyone |
 
 ### /setup_ten_four
@@ -29,6 +30,17 @@ Creates a ticket without using the panel button. Useful for:
 - Testing ticket creation
 - Creating tickets on behalf of users
 - Situations where the panel isn't accessible
+
+### /stats
+
+View ticket statistics for your server. Shows:
+
+- Total tickets created
+- Currently open tickets
+- Closed tickets
+- Average resolution time
+
+Useful for tracking your team's performance and identifying trends.
 
 ### /ping
 

@@ -27,7 +27,7 @@ Once the bot is in your server, run the setup command:
 /setup_ten_four
 ```
 
-The bot will create a private setup channel and guide you through three steps:
+The bot will create a private setup channel and guide you through four steps:
 
 ### Select Panel Channel
 
@@ -40,6 +40,10 @@ Choose the role that your support team members have. Anyone with this role will 
 ### Select Log Channel
 
 Choose a private channel where ticket transcripts will be saved when tickets are closed. Only staff should have access to this channel.
+
+### Configure Reminder Time
+
+Choose how long a ticket can sit inactive before a reminder is sent. Options range from 6 to 72 hours, or you can disable reminders entirely.
 
 ## Step 3: Finish Setup
 

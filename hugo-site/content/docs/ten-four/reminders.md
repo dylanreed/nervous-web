@@ -44,6 +44,17 @@ During setup, you can configure:
 - **Reminder threshold** — How many hours of inactivity before a reminder is sent
 - **Support role to mention** — Who gets pinged in the reminder
 
+Available reminder thresholds:
+
+| Option | Use Case |
+|--------|----------|
+| Disabled | No automatic reminders |
+| 6 hours | Very active support teams |
+| 12 hours | Active communities |
+| 24 hours | Standard daily check-ins |
+| 48 hours | Moderate activity levels |
+| 72 hours | Low-volume or relaxed support |
+
 Common configurations:
 
 | Community Type | Threshold | Notes |

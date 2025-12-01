@@ -12,10 +12,10 @@ Bouncer uses Discord slash commands for all moderation actions. All commands sta
 |---------|-------------|------------|
 | `/timeout` | Temporarily restrict a user | Moderate Members |
 | `/untimeout` | Remove a timeout | Moderate Members |
-| `/timeouts-list` | View active timeouts | Moderate Members |
-| `/quarantine` | Isolate a user | Moderate Members |
-| `/unquarantine` | Release from quarantine | Moderate Members |
-| `/quarantine-list` | View quarantined users | Moderate Members |
+| `/timeouts list` | View active timeouts | Moderate Members |
+| `/quarantine` | Isolate a user | Manage Roles |
+| `/unquarantine` | Release from quarantine | Manage Roles |
+| `/quarantine-list` | View quarantined users | Manage Roles |
 | `/warn` | Issue a warning | Moderate Members |
 | `/reverse` | Reverse a moderation action | Manage Server |
 | `/modhistory` | View user's moderation history | Moderate Members |
@@ -58,7 +58,7 @@ Remove an active timeout from a user.
 | `user` | Yes | The user to untimeout |
 | `reason` | No | Reason for removing the timeout |
 
-### /timeouts-list
+### /timeouts list
 
 View all currently active timeouts in the server. No options required.
 
@@ -250,13 +250,17 @@ Remove a user from the watchlist.
 
 View all users currently on the watchlist.
 
-### /leaveralert
+### /leaveralert enable
 
-Configure alerts when watched users leave the server.
+Enable alerts when watched users leave the server.
 
 | Option | Required | Description |
 |--------|----------|-------------|
 | `channel` | Yes | Channel for leaver alerts |
+
+### /leaveralert disable
+
+Disable leaver alerts. No options required.
 
 ---
 
@@ -299,7 +303,6 @@ View recent bulk role operations from the last 7 days.
 
 | Format | Duration |
 |--------|----------|
-| `30s` | 30 seconds |
 | `30m` | 30 minutes |
 | `2h` | 2 hours |
 | `1d` | 1 day |

@@ -29,7 +29,7 @@ The bot needs these permissions:
 
 ### Connection code not working
 
-Connection codes expire after 10 minutes. Get a fresh code from your Shopify app dashboard.
+Connection codes are single-use. If yours isn't working, use the "Regenerate Code" option in your Shopify app dashboard to get a fresh one.
 
 ### Dashboard doesn't show "Connected"
 
@@ -67,15 +67,11 @@ The customer's email must match an existing Shopify customer account. They need 
 1. Create a Shopify account with the same email
 2. Or use the email already on their Shopify account
 
-### Verification email not received
+If no matching customer exists, a new Shopify customer account will be created automatically.
 
-1. Check spam/junk folders
-2. Verify they entered the correct email address
-3. Try the linking process again
+### Rate limited
 
-### Link expired
-
-Verification links expire after 10 minutes. Have the customer run `/link_shopify` again to get a fresh link.
+You can only attempt to link once every 5 minutes. Wait and try again.
 
 ---
 

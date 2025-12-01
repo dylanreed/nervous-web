@@ -16,11 +16,14 @@ Link your Discord account to your Shopify customer account.
 
 **Process:**
 1. Run `/link_shopify`
-2. Enter your email address (must match your Shopify account)
-3. Click the verification link sent to your email
-4. Log into Shopify to complete the link
+2. A popup appears asking for your email
+3. Enter your email address (must match your Shopify account)
+4. Click Submit
+5. Your account is linked immediately
 
 Once linked, your Discord roles sync automatically as Shopify customer tags.
+
+**Note:** You can only attempt to link once every 5 minutes.
 
 ---
 
@@ -41,7 +44,7 @@ Check your current link status and synced roles.
 **Shows:**
 - Whether your account is linked
 - Which Discord roles are synced to Shopify
-- Your Shopify customer email (if linked)
+- Your current Shopify customer tags
 
 Use this to verify your roles synced correctly after linking.
 

@@ -169,6 +169,10 @@ Or filter by user:
 
 The bot tracks invites it creates. If someone joins via a different invite (not created by Plus One), it won't be tracked.
 
+### User left the server
+
+When a user leaves the server, their unused (pending) invites are automatically expired. This is normal cleanup behavior - the invites can no longer be used and don't count against anyone's quota.
+
 ---
 
 ## Permission Errors

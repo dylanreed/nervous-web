@@ -7,7 +7,7 @@ subtitle: "Enterprise-grade Discord moderation with complete audit trails."
 intro: "Enterprise-grade Discord moderation with complete audit trails. Features timeouts (including beyond Discord's 28-day limit), intelligent quarantine with automatic role restoration, rule-linked warnings, bulk role management with 24-hour rollback, pre-ban protection, and comprehensive moderation reports with CSV export. Built for communities that need accountability, consistency, and control."
 image: "norris-security.webp"
 imageAlt: "bouncer illustration"
-price: "Starting at $xx.xx/month"
+price: "$14.99/month"
 ctaText: "Get bouncer"
 docsSlug: "bouncer"
 features:
