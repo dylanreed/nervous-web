@@ -249,6 +249,10 @@ img {
   padding: 40px 0;
 }
 
+.section-page-title .section-header {
+  margin-bottom: 0;
+}
+
 .section-alt {
   background: var(--bg-alt);
 }
