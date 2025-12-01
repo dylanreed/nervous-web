@@ -18,12 +18,12 @@ theme = 'nervous'
     url = "/"
     weight = 1
   [[menu.main]]
-    name = "Our Work"
-    url = "/work/"
-    weight = 2
-  [[menu.main]]
     name = "Bots"
     url = "/bots/"
+    weight = 2
+  [[menu.main]]
+    name = "Our Work"
+    url = "/work/"
     weight = 3
   [[menu.main]]
     name = "Blog"
