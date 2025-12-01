@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on Nervous</title>
+    <title>Home on nervous</title>
     <link>https://www.nervous.net/</link>
-    <description>Recent content in Home on Nervous</description>
+    <description>Recent content in Home on nervous</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 30 Nov 2025 00:00:00 +0000</lastBuildDate>
@@ -254,13 +254,6 @@
       <description></description>
     </item>
     <item>
-      <title>About</title>
-      <link>https://www.nervous.net/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.nervous.net/about/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Bot Bundles</title>
       <link>https://www.nervous.net/bots/bundles/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -286,6 +279,13 @@
       <link>https://www.nervous.net/bots/plus-one/pricing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://www.nervous.net/bots/plus-one/pricing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>The nervous Team</title>
+      <link>https://www.nervous.net/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.nervous.net/about/</guid>
       <description></description>
     </item>
   </channel>

@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "The nervous Team"
 layout: "about"
 type: "page"
 description: "Meet nervous: Community building experts specializing in Discord. We're passionate about connecting brands with their audiences."

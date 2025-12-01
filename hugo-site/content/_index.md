@@ -1,6 +1,6 @@
 ---
 title: "Home"
-description: "Build thriving brand communities on Discord. Nervous offers strategy, activation, and moderation services. Trusted by Google Gemini. Book a free consultation."
+description: "Build thriving brand communities on Discord. nervous offers strategy, activation, and moderation services. Trusted by Google Gemini. Book a free consultation."
 
 hero:
   title: "Activate your community"

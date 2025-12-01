@@ -1,6 +1,6 @@
 baseURL = 'https://www.nervous.net/'
 languageCode = 'en-us'
-title = 'Nervous'
+title = 'nervous'
 theme = 'nervous'
 
 [params]
