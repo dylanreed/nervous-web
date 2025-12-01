@@ -7,7 +7,7 @@ bundles:
     size: "pair"
     botsCount: "2"
     discount: "5% off"
-    price: "Starting at $10.45/month"
+    price: "Starting at $21.83/month"
     bestFor: "Gaming communities with active support needs and occasional bad actors"
     description: "User submits complaint via 10-4 ticket about harassment. Moderator reviews, takes action with Bouncer. Full audit trail preserved. Satisfaction rating collected after resolution."
     bots:
@@ -21,7 +21,7 @@ bundles:
     size: "pair"
     botsCount: "2"
     discount: "5% off"
-    price: "Starting at $12.35/month"
+    price: "Starting at $21.83/month"
     bestFor: "Private communities where members vouch for new members"
     description: "Plus One controls who can invite and how many. New members tracked to their inviter. If problems arise, Bouncer handles discipline with full audit trail showing who invited them and what happened."
     bots:
@@ -35,7 +35,7 @@ bundles:
     size: "triple"
     botsCount: "3"
     discount: "10% off"
-    price: "Starting at $27/month"
+    price: "Starting at $37.77/month"
     bestFor: "Large communities prioritizing member wellbeing"
     description: "Anxious Analytics identifies members at risk. Moderator checklists prompt wellness check-ins. 10-4 provides private support channels. Bouncer handles any harassment. Full documentation for compliance and safety."
     bots:
@@ -51,7 +51,7 @@ bundles:
     size: "triple"
     botsCount: "3"
     discount: "10% off"
-    price: "Starting at $37.80/month"
+    price: "Starting at $47.67/month"
     bestFor: "Premium communities with controlled access and commerce"
     description: "Plus One lets VIPs invite 1-2 friends per quarter. Bouncer maintains community standards. Merch Table gates limited-edition products. Behavior affects both invite privileges and shopping access."
     bots:
@@ -67,7 +67,7 @@ bundles:
     size: "triple"
     botsCount: "3"
     discount: "10% off"
-    price: "Starting at $50.40/month"
+    price: "Starting at $51.27/month"
     bestFor: "Creators wanting to find and reward their biggest fans"
     description: "Fans earn invites by engaging. Top referrers unlock exclusive merch. Anxious Analytics identifies most engaged members. Cross-reference engagement, referrals, and purchases to find superfans."
     bots:
@@ -83,7 +83,7 @@ bundles:
     size: "triple"
     botsCount: "3"
     discount: "10% off"
-    price: "Starting at $35.10/month"
+    price: "Starting at $44.07/month"
     bestFor: "Event organizers prioritizing attendee safety"
     description: "Roadie onboards attendees at events. Anxious Analytics monitors post-event discussions for issues. Bouncer handles any reported incidents. Safe space maintained year-round."
     bots:
@@ -99,7 +99,7 @@ bundles:
     size: "quad"
     botsCount: "4"
     discount: "15% off"
-    price: "Starting at $50.15/month"
+    price: "Starting at $61.17/month"
     bestFor: "E-commerce businesses with support needs and community"
     description: "Merch Table syncs subscriber status from Shopify. 10-4 handles subscription support. Anxious Analytics predicts churn risk from sentiment. Bouncer maintains positive community vibe. At-risk subscribers flagged for retention."
     bots:
@@ -117,7 +117,7 @@ bundles:
     size: "five"
     botsCount: "5"
     discount: "20% off"
-    price: "Starting at $53.60/month"
+    price: "Starting at $63.96/month"
     bestFor: "Online-only communities with commerce and support"
     description: "Plus One controls growth with trials. Bouncer maintains standards. 10-4 handles support. Merch Table syncs license tiers. Anxious Analytics monitors health and predicts churn. Complete digital community operations."
     bots:
@@ -137,7 +137,7 @@ bundles:
     size: "full"
     botsCount: "6"
     discount: "25% off"
-    price: "Starting at $61.50/month"
+    price: "Starting at $71.21/month"
     bestFor: "Enterprise brands building comprehensive community strategy"
     description: "Acquire members through events and referrals. Engage with health monitoring. Monetize with role-gated commerce. Support with ticketing. Protect with moderation. Optimize with analytics. The full lifecycle."
     bots:

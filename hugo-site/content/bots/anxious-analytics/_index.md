@@ -6,7 +6,7 @@ tagline: "Because your community is more than a message count."
 subtitle: "Community intelligence that actually matters."
 image: "anxious-analytics.webp"
 imageAlt: "anxious analytics illustration"
-price: "Starting at $6.99/month"
+price: "Starting at $18.99/month"
 ctaText: "Schedule a Demo"
 features:
   - "GPT-4 sentiment analysis for real insights"
