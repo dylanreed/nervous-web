@@ -1,0 +1,95 @@
+{{ define "main" }}
+<!-- Header -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h1>{{ .Params.botTitle }} Pricing</h1>
+            <p class="bot-tagline">{{ .Params.tagline }}</p>
+        </div>
+    </div>
+</section>
+
+{{ partial "section-divider.html" "white-to-gray" }}
+
+<!-- Pricing Cards -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="pricing-cards">
+            {{ range $index, $tier := .Params.tiers }}
+            <div class="pricing-card{{ if eq $tier.name "Enterprise" }} pricing-card-enterprise{{ else if eq $tier.name "Pro" }} pricing-card-pro{{ else }} pricing-card-starter{{ end }}">
+                <div class="pricing-card-header">
+                    <div class="pricing-card-icon{{ if eq $tier.name "Enterprise" }} pricing-icon-enterprise{{ else if eq $tier.name "Pro" }} pricing-icon-pro{{ end }}">
+                        <img src="{{ $.Site.BaseURL }}images/{{ $.Params.image }}" alt="{{ $.Params.botTitle }}">
+                    </div>
+                    <h2 class="pricing-tier-name">{{ $tier.name }}</h2>
+                    <div class="pricing-price">
+                        <span class="pricing-amount">{{ $tier.price }}</span>
+                        <span class="pricing-period">/month</span>
+                    </div>
+                </div>
+                <ul class="pricing-features">
+                    {{ range $tier.features }}
+                    <li>{{ . }}</li>
+                    {{ end }}
+                </ul>
+                <a href="{{ $.Site.Params.calendlyURL }}" class="btn{{ if eq $tier.name "Enterprise" }}{{ else if eq $tier.name "Pro" }}{{ else }} btn-secondary{{ end }}">Get Started</a>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ partial "section-divider.html" "gray-to-white" }}
+
+<!-- Feature Comparison -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Compare Plans</h2>
+            <p>See exactly what's included in each tier</p>
+        </div>
+
+        <div class="pricing-comparison-wrapper">
+            <table class="pricing-comparison">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Starter</th>
+                        <th>Pro</th>
+                        <th>Enterprise</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{ range .Params.comparison }}
+                    <tr>
+                        <td>{{ .feature }}</td>
+                        <td>{{ if .starter }}<span class="check">✓</span>{{ else }}<span class="dash">—</span>{{ end }}</td>
+                        <td>{{ if .pro }}<span class="check">✓</span>{{ else }}<span class="dash">—</span>{{ end }}</td>
+                        <td>{{ if .enterprise }}<span class="check">✓</span>{{ else }}<span class="dash">—</span>{{ end }}</td>
+                    </tr>
+                    {{ end }}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+{{ partial "section-divider.html" "white-to-gray" }}
+
+<!-- CTA -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="section-header">
+            <h2>Ready to get started?</h2>
+            <p>Schedule a call and we'll help you pick the right plan for your community.</p>
+            <div style="margin-top: 30px;">
+                <a href="{{ $.Site.Params.calendlyURL }}" class="btn">Schedule a Call</a>
+                <a href="/bots/{{ .Params.bot }}/" class="btn btn-secondary">Learn More</a>
+                <a href="/bots/" class="btn btn-secondary">All Bots</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ partial "section-divider.html" "gray-to-yellow" }}
+{{ end }}
