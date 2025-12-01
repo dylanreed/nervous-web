@@ -953,7 +953,7 @@ img {
 }
 
 .bundle-five {
-  border-color: #8b5cf6;
+  border-color: var(--yellow);
 }
 
 .bundle-full {
