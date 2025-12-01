@@ -981,7 +981,6 @@ img {
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 25px;
-  flex-wrap: wrap;
   gap: 15px;
 }
 
@@ -998,6 +997,7 @@ img {
 
 .bundle-pricing {
   text-align: right;
+  flex-shrink: 0;
 }
 
 .bundle-price {
@@ -1079,7 +1079,7 @@ img {
 /* Bundle Responsive */
 @media (max-width: 768px) {
   .bundle-header {
-    flex-direction: column;
+    flex-wrap: wrap;
   }
 
   .bundle-pricing {
