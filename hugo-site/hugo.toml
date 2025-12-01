@@ -7,7 +7,7 @@ theme = 'nervous'
   description = "Discord Community Management & Moderation Agency"
   tagline = "Build thriving brand communities on Discord"
   ogImage = "images/og-home.jpg"
-  calendlyURL = "https://calendly.com/nervous/intro"
+  calendlyURL = "mailto:hello@nervous.net?subject=I%20am%20nervous!!"
 
 [params.contact]
   cta = "Contact Us"
