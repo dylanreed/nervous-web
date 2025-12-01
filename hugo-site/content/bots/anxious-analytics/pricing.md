@@ -7,7 +7,7 @@ image: "anxious-analytics.webp"
 tagline: "Because your community is more than a message count."
 tiers:
   - name: "Starter"
-    price: "$19"
+    price: "$29"
     checkoutUrl: "https://buy.stripe.com/test_anxious_starter"
     features:
       - "Weekly email reports"
@@ -17,7 +17,7 @@ tiers:
       - "Single report version"
       - "Up to 3 email recipients"
   - name: "Pro"
-    price: "$49"
+    price: "$79"
     checkoutUrl: "https://buy.stripe.com/test_anxious_pro"
     features:
       - "Everything in Starter"
@@ -28,7 +28,7 @@ tiers:
       - "Growth projections"
       - "Up to 10 email recipients"
   - name: "Enterprise"
-    price: "$99"
+    price: "$199"
     checkoutUrl: "https://buy.stripe.com/test_anxious_enterprise"
     features:
       - "Everything in Pro"
