@@ -7,7 +7,7 @@ subtitle: "Professional Ticketing Workflows for Discord Communities"
 intro: "When your community needs help, they shouldn't have to shout into the void. 10-4 creates private ticket channels where users get dedicated support without cluttering your public channels. Staff can claim tickets, loop in teammates, and close with optional ratings—while every conversation gets preserved as a searchable transcript."
 image: "ten_four_walkies.png"
 imageAlt: "10-4 ticketing illustration"
-price: "$7.99/month"
+price: "Starting at $7.99/month"
 ctaText: "Get 10-4"
 docsSlug: "ten-four"
 features:

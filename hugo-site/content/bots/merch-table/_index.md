@@ -7,7 +7,7 @@ subtitle: "Connect your community to your Shopify store."
 intro: "Merch Table lets you offer exclusive products to members based on their Discord roles — Server Boosters, Patreon supporters, or any custom role you create. Perfect for creators, gaming communities, and anyone who wants to reward their most engaged Discord members with exclusive merch."
 image: "norris-builder.webp"
 imageAlt: "merch table illustration"
-price: "$29.99/month"
+price: "Starting at $29.99/month"
 ctaText: "Get merch table"
 docsSlug: "merch-table"
 features:
