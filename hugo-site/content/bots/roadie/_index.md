@@ -6,7 +6,7 @@ tagline: "Turn event attendees into lifelong community members."
 subtitle: "QR-powered Discord onboarding for live events."
 image: "roadie-badge.webp"
 imageAlt: "roadie illustration"
-price: "Starting at $xx.xx/month"
+price: "Starting at $16.99/month"
 ctaText: "Schedule a Demo"
 features:
   - "Instant QR code onboarding — no typing server addresses"
