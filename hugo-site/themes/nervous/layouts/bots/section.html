@@ -32,7 +32,7 @@
                 <div class="case-study">
                     <div class="content-block">
                         <div class="content-block-text">
-                            <h2>{{ .Title | lower }}</h2>
+                            <h2>{{ .Title | title }}</h2>
                             <p class="bot-tagline">{{ .Params.tagline }}</p>
                             <p><strong>{{ .Params.subtitle }}</strong></p>
                             {{ with .Params.intro }}<p>{{ . | safeHTML }}</p>{{ end }}
@@ -91,7 +91,7 @@
     <div class="container">
         <div class="content-block bot-detail-header">
             <div class="content-block-text">
-                <h1>{{ .Title | lower }}</h1>
+                <h1>{{ .Title | title }}</h1>
                 <p class="bot-tagline">{{ .Params.tagline }}</p>
                 <p><strong>{{ .Params.subtitle }}</strong></p>
                 <p>{{ .Params.intro | safeHTML }}</p>
