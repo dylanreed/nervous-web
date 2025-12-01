@@ -7,32 +7,34 @@ image: "anxious-analytics.webp"
 tagline: "Because your community is more than a message count."
 tiers:
   - name: "Starter"
-    price: "$8"
+    price: "$19"
     features:
       - "Weekly email reports"
       - "Community Pulse (top topics)"
       - "Basic engagement metrics"
       - "Message & reaction tracking"
-      - "Single email recipient"
+      - "Single report version"
+      - "Up to 3 email recipients"
   - name: "Pro"
-    price: "$15"
+    price: "$49"
     features:
       - "Everything in Starter"
       - "Monthly summary reports"
       - "Quality Measure scoring"
       - "Sentiment analysis"
       - "Executive & Team report versions"
-      - "Up to 5 email recipients"
+      - "Growth projections"
+      - "Up to 10 email recipients"
   - name: "Enterprise"
-    price: "$25"
+    price: "$99"
     features:
       - "Everything in Pro"
       - "Event performance tracking"
       - "Staff engagement metrics"
-      - "Growth projections"
       - "Full nervous bot integration"
+      - "Custom report timing"
+      - "Priority expert analysis"
       - "Unlimited email recipients"
-      - "Priority support"
 comparison:
   - feature: "Weekly email reports"
     starter: true
@@ -66,9 +68,13 @@ comparison:
     starter: false
     pro: true
     enterprise: true
+  - feature: "Growth projections"
+    starter: false
+    pro: true
+    enterprise: true
   - feature: "Email recipients"
-    starter: "1"
-    pro: "5"
+    starter: "3"
+    pro: "10"
     enterprise: "Unlimited"
   - feature: "Event performance tracking"
     starter: false
@@ -78,15 +84,15 @@ comparison:
     starter: false
     pro: false
     enterprise: true
-  - feature: "Growth projections"
-    starter: false
-    pro: false
-    enterprise: true
   - feature: "Full nervous bot integration"
     starter: false
     pro: false
     enterprise: true
-  - feature: "Priority support"
+  - feature: "Custom report timing"
+    starter: false
+    pro: false
+    enterprise: true
+  - feature: "Priority expert analysis"
     starter: false
     pro: false
     enterprise: true

@@ -7,31 +7,33 @@ image: "roadie-badge.webp"
 tagline: "Turn event attendees into lifelong community members."
 tiers:
   - name: "Starter"
-    price: "$6"
+    price: "$15"
     features:
       - "Up to 3 events"
       - "Basic QR code generation"
       - "Single role assignment"
-      - "100 scans per event"
-      - "7-day scan history"
+      - "500 scans per event"
+      - "14-day scan history"
   - name: "Pro"
-    price: "$12"
+    price: "$39"
     features:
       - "Everything in Starter"
       - "Unlimited events"
       - "Multi-tier role mapping"
-      - "1,000 scans per event"
+      - "5,000 scans per event"
       - "Branded QR codes"
-      - "30-day scan history"
+      - "VIP tier support"
+      - "60-day scan history"
   - name: "Enterprise"
-    price: "$20"
+    price: "$149"
     features:
       - "Everything in Pro"
       - "Unlimited scans"
       - "Custom welcome messages"
       - "Analytics dashboard"
       - "CSV/API export"
-      - "90-day scan history"
+      - "Custom branding"
+      - "Unlimited scan history"
       - "Priority support"
 comparison:
   - feature: "Event limit"
@@ -47,14 +49,18 @@ comparison:
     pro: "Multi-tier"
     enterprise: "Multi-tier"
   - feature: "Scans per event"
-    starter: "100"
-    pro: "1,000"
+    starter: "500"
+    pro: "5,000"
     enterprise: "Unlimited"
   - feature: "Scan history"
-    starter: "7 days"
-    pro: "30 days"
-    enterprise: "90 days"
+    starter: "14 days"
+    pro: "60 days"
+    enterprise: "Unlimited"
   - feature: "Branded QR codes"
+    starter: false
+    pro: true
+    enterprise: true
+  - feature: "VIP tier support"
     starter: false
     pro: true
     enterprise: true
@@ -67,6 +73,10 @@ comparison:
     pro: false
     enterprise: true
   - feature: "CSV/API export"
+    starter: false
+    pro: false
+    enterprise: true
+  - feature: "Custom branding"
     starter: false
     pro: false
     enterprise: true

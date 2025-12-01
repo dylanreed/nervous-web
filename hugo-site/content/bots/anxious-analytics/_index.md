@@ -7,7 +7,7 @@ subtitle: "Community intelligence that actually matters."
 intro: "Anxious Analytics delivers actionable insights into your Discord community's health—straight to your inbox. No complicated dashboards. No digging through data. Just clear weekly and monthly reports that tell you what's working, what's not, and exactly what to do about it. Powered by real experts and AI, with privacy built in from the start."
 image: "anxious-analytics.webp"
 imageAlt: "anxious analytics illustration"
-price: "Starting at $18.99/month"
+price: "Starting at $19/month"
 ctaText: "Get Anxious Analytics"
 docsSlug: "anxious-analytics"
 features:

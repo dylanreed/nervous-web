@@ -7,7 +7,7 @@ subtitle: "QR-powered Discord onboarding for live events."
 intro: "Capitalize on the excitement of in-person events. Roadie lets attendees scan a QR code to instantly join your Discord server with automatic role assignment—no manual searching or typing required. Keep the momentum going long after the event ends."
 image: "roadie-badge.webp"
 imageAlt: "roadie illustration"
-price: "Starting at $14.99/month"
+price: "Starting at $15/month"
 ctaText: "Get Roadie"
 docsSlug: "roadie"
 features:
