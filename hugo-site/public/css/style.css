@@ -158,11 +158,14 @@ img {
   color: var(--white);
   padding: 12px 28px;
   border-radius: 25px;
-  font-weight: 600;
+  font-family: 'TT Travels', sans-serif;
+  font-weight: 800;
+  font-size: 0.875rem;
   border: 2px solid var(--blue);
   transition: background 0.2s, transform 0.2s, border-color 0.2s, box-shadow 0.2s;
   cursor: pointer;
   white-space: nowrap;
+  text-decoration: none;
 }
 
 .btn:hover {
@@ -170,6 +173,7 @@ img {
   border-color: var(--blue-dark);
   color: var(--white);
   transform: translateY(-2px);
+  text-decoration: none;
 }
 
 .btn:focus {
@@ -194,6 +198,7 @@ img {
   background: var(--blue);
   border-color: var(--blue);
   color: var(--white);
+  text-decoration: none;
 }
 
 .btn-secondary:focus {
@@ -1206,10 +1211,10 @@ pre code {
 }
 
 .project-tab {
-  padding: 10px 16px;
+  padding: 12px 24px;
   background: transparent;
   border: 2px solid var(--blue);
-  border-radius: 30px;
+  border-radius: 25px;
   font-family: 'TT Travels', sans-serif;
   font-weight: 800;
   font-size: 0.875rem;
