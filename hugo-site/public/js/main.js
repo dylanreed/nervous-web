@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
     switchToProject(projectParam);
   }
 
-  // Bot Carousel - shows 3 cards at a time
+  // Bot Carousel - shows 2 cards at a time
   const carouselTrack = document.querySelector('.carousel-track');
   const carouselCards = document.querySelectorAll('.carousel-card');
   const carouselDotsContainer = document.querySelector('.carousel-dots');
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (carouselTrack && carouselCards.length > 0) {
     let currentIndex = 0;
     let autoRotateInterval;
-    const visibleCount = 3;
+    const visibleCount = 2;
     const totalCards = carouselCards.length;
 
     // Create dots (one per card position)
